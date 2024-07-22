@@ -1,30 +1,41 @@
 import {useEffect} from 'react'
+import './NavBar.scss';
+
 
 const NavBar = () => {
     
   const bar = [
     {
-    id: 0,
-    title: 'Home',
-    path: '/home',
+        title: 'Home',
+        path: '/home',
     }
     ,
     {
-    id: 1,
-    title: 'About us',
-    path: '/about',
+        title: 'About me',
+        path: '/about',
+    }
+    ,
+    {
+        title: 'My portfolio',
+        path: '/portfolio'
+    }
+    ,
+    {
+        title: 'More',
+        path: '/more'
     }
 ]
     
     return (
-        <nav className="nav-bar">
-            {bar.map((bars, index) => {
-                <li key={index}>
-                    {bars.id}
+        <nav className='gfg'>
+            
+            {bar.map((bars, index) => (
+                <ol key={index}>
                     {bars.title}
-                    {bars.path}
-                </li>
-            })}
+                    {/* {bars.path} */}
+                </ol>
+            ))}
+            
         </nav>
     );
 }

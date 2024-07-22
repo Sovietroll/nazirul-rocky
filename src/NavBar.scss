@@ -1,0 +1,18 @@
+@import 'mixin';
+@import 'variables';
+
+$fonts: 'Roboto';
+$primary-color: #ab99ca;
+$spacing: 2rem;
+$font-weight: bold;
+
+.gfg {
+  font-family: $fonts;
+  font-weight: $font-weight;
+  background-color: rgb(116, 171, 255);
+  padding: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  @include flex-center;
+}
+
