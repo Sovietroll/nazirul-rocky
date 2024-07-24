@@ -1,5 +1,6 @@
 import {useEffect} from 'react'
 import './NavBar.scss';
+import {Link} from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -31,8 +32,11 @@ const NavBar = () => {
             
             {bar.map((bars, index) => (
                 <ol key={index}>
-                    {bars.title}
-                    {/* {bars.path} */}
+                    <Link
+                    className='bars-link'
+                    to={bars.path}>
+                        {bars.title}
+                        </Link>
                 </ol>
             ))}
             

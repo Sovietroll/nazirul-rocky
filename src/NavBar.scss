@@ -1,7 +1,7 @@
 @import 'mixin';
 @import 'variables';
 
-$fonts: 'Roboto';
+$fonts: 'Arial';
 $primary-color: #ab99ca;
 $spacing: 2rem;
 $font-weight: bold;
@@ -9,10 +9,14 @@ $font-weight: bold;
 .gfg {
   font-family: $fonts;
   font-weight: $font-weight;
-  background-color: rgb(116, 171, 255);
+  background-color: $primary-color;
   padding: 1px;
   border-radius: 10px;
   cursor: pointer;
   @include flex-center;
+
+  // .bars-link{
+  //   dsjcskdj
+  // }
 }
 
