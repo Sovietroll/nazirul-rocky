@@ -1,6 +1,5 @@
-import {useEffect} from 'react'
 import './NavBar.scss';
-import {Link} from 'react-router-dom';
+import {Outlet,Link} from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -21,26 +20,24 @@ const NavBar = () => {
         path: '/portfolio'
     }
     ,
-    {
-        title: 'More',
-        path: '/more'
-    }
+
 ]
     
     return (
         <nav className='gfg'>
             
             {bar.map((bars, index) => (
-                <ol key={index}>
+                <ul key={index}>
                     <Link
-                    className='bars-link'
-                    to={bars.path}>
+                        to={bars.path}
+                    >
                         {bars.title}
-                        </Link>
-                </ol>
+                    </Link>
+                </ul>
             ))}
-            
+             <Outlet />
         </nav>
+        
     );
 }
  

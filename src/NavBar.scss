@@ -2,21 +2,40 @@
 @import 'variables';
 
 $fonts: 'Arial';
-$primary-color: #ab99ca;
+$primary-color: #1c2431;
+$mainColor: #30d48f;
 $spacing: 2rem;
-$font-weight: bold;
+$bold: bold;
 
+body{
+  background: rgb(224, 237, 254);
+  margin: 0;
+  padding: 0;
+  
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: $mainColor;
+  transition: .2s;
+}
 .gfg {
   font-family: $fonts;
-  font-weight: $font-weight;
+  font-weight: $bold;
   background-color: $primary-color;
   padding: 1px;
   border-radius: 10px;
   cursor: pointer;
   @include flex-center;
-
-  // .bars-link{
-  //   dsjcskdj
-  // }
 }
-
+.main-text{
+  font-family: $fonts;
+  color: $mainColor;
+  font-weight: 700;
+  font-size: 80px;
+  margin: 50px;
+  @include flex-center;
+}
