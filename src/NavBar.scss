@@ -31,11 +31,14 @@ a:hover{
   cursor: pointer;
   @include flex-center;
 }
-.main-text{
+.about-me{
   font-family: $fonts;
   color: $mainColor;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 50px;
   margin: 50px;
   @include flex-center;
+}
+.list-1{
+  display: inline-block;
 }
