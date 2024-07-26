@@ -12,6 +12,10 @@ const AboutMe = () => {
         </ul>
 
         <ul>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia inventore numquam commodi perspiciatis possimus quae praesentium fugit distinctio, atque temporibus nesciunt, impedit corporis, quod neque iure corrupti magni laudantium!
+        </ul>
+
+        <ul>
           Nazirul Syafiq Young Rockie
         </ul>
 

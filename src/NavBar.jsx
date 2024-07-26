@@ -1,5 +1,7 @@
 import './NavBar.scss';
 import {Outlet,Link} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
 
 const NavBar = () => {
@@ -24,20 +26,34 @@ const NavBar = () => {
 ]
     
     return (
-        <nav className='gfg'>
-            
+    <>
+
+        <nav className='navbar-main'>
+
+        <div
+                className="lg-container">
+                <img className="lg" 
+                src='src/images/lg.png' alt="logo" width={90} />
+            </div>
+
             {bar.map((bars, index) => (
-                <ul key={index}>
+                <div key={index}>
                     <Link
                         to={bars.path}
                     >
                         {bars.title}
                     </Link>
-                </ul>
-            ))}
-             <Outlet />
+                    
+                </div>
+            ))
+            }
+        <div className='icon-container'>
+            <FontAwesomeIcon icon={faMoon} inverse className="icon"/>
+        </div>
+
         </nav>
-        
+
+    </>
     );
 }
  

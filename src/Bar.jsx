@@ -1,10 +1,26 @@
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import {useState} from 'react';
 
 const Bar = () => {
-  const now = 60;
+  const [scroll,setScroll] = useState('');
+
+  addEventListener("scroll", (event) => {
+    setScroll(window.scrollY);
+  })
   
   return ( 
-    <ProgressBar now={40} />
+    <ProgressBar 
+      style={{
+        position: "sticky",
+        top: 30,
+        height: 8
+      }}
+      animated 
+      striped 
+      variant="success" 
+      max={350}
+      now = {scroll}
+      />
   );
 }
  

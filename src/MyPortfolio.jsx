@@ -1,6 +1,18 @@
 const MyPortfolio = () => {
   return ( 
-    <h1>Portfolio</h1>
+    <>
+      <h2>
+        Tools used in making this blog
+      </h2>
+      <div>
+        <li>React.js</li>
+        <li>SASS</li>
+        <li>Bootstrap</li>
+        <li>NPM</li>
+        <li></li>
+
+      </div>
+    </>
    );
 }
  

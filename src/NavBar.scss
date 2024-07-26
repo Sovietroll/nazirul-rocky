@@ -1,6 +1,5 @@
 @import 'mixin';
 @import 'variables';
-// @import '~bootstrap/scss/bootstrap';
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 $fonts: 'Arial';
@@ -9,31 +8,82 @@ $mainColor: #30d48f;
 $spacing: 2rem;
 $bold: bold;
 
-body{
-  background: rgb(224, 237, 254);
-  margin: 0;
-  padding: 0;
-  font-family: $fonts; 
-  height: 100rem;
-}
+// * {    
+//   margin: 0 !important;
+//   padding: 0 !important;
+// }
 
+body{
+  background: rgb(255, 255, 255);
+  margin: 0px;
+  padding: 0px;
+  font-family: $fonts; 
+  height: 50rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
 a{
   color: white;
   text-decoration: none;
+  @include transition;
+
 }
 a:hover{
   color: $mainColor;
-  transition: .2s;
+  @include transition;
+
 }
-.gfg {
+// .lg-container{
+//   margin: 0;
+//   padding: 0;
+//   z-index: 20;
+//   margin-right: 200px;
+//   .lg{
+//     position: absolute;
+//     top: 0;
+//     left: 0px;
+//     z-index: 20;
+//   }
+// }
+.navbar-main {
+  display: grid;
+  grid-template-columns: (100px 100px 100px 100px 50px);
+  justify-content: center;
+  align-items: center;
   font-family: $fonts;
   font-weight: $bold;
   background-color: $primary-color;
-  padding: 1px;
-  border-radius: 10px;
+  padding: 2px;
+  border-radius: 5px;
   cursor: pointer;
-  @include flex-center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  
+  .lg-container{
+  margin: 0;
+  padding: 0;
+  }
+
+  ul{
+    margin: 0;
+    padding-left: 0;
+    padding: 10px;
+  }
+  .icon-container{
+    display: flex;
+    margin-left: 80px;
+
+  }
+  .icon{
+    @include transition;
+  }
+  .icon:hover{
+    opacity: 50%;
+    @include transition;
+  }
 }
+
 .about-me{
   font-family: $fonts;
   color: $mainColor;
@@ -53,3 +103,4 @@ li {
 // .list-1{
 //   background-color: black;
 // }
+

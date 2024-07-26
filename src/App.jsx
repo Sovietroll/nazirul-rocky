@@ -3,11 +3,9 @@ import Home from './Home.jsx';
 import AboutMe from './AboutMe.jsx';
 import MyPortfolio from './MyPortfolio';
 import Bar from './Bar.jsx';
-
 import './App.css';
 import './NavBar.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ProgressBar from 'react-bootstrap/ProgressBar';
 
 function App() {
   const now = 60;
@@ -15,7 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <NavBar/>
+    <NavBar />
     <Bar />
 
       <Routes>
