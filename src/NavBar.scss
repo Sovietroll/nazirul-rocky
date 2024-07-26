@@ -1,5 +1,7 @@
 @import 'mixin';
 @import 'variables';
+// @import '~bootstrap/scss/bootstrap';
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 $fonts: 'Arial';
 $primary-color: #1c2431;
@@ -11,7 +13,8 @@ body{
   background: rgb(224, 237, 254);
   margin: 0;
   padding: 0;
-  
+  font-family: $fonts; 
+  height: 100rem;
 }
 
 a{
@@ -39,6 +42,14 @@ a:hover{
   margin: 50px;
   @include flex-center;
 }
-.list-1{
-  display: inline-block;
+.skill-list{
+  margin: auto;
+  padding: auto;
+
 }
+li {
+  list-style:inside;
+}
+// .list-1{
+//   background-color: black;
+// }

@@ -6,13 +6,13 @@ const AboutMe = () => {
       <h1 className="about-me">
         About Me
       </h1>
-      <p>
+      <div>
         <ul>
           Currently making portfolio page
         </ul>
 
         <ul>
-          Name
+          Nazirul Syafiq Young Rockie
         </ul>
 
         <ul>
@@ -23,13 +23,9 @@ const AboutMe = () => {
           Qualifications
         </ul>
 
-        <ul style={{
-          padding: 0,
-          width: 100,
-          // display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+        <ul
+          className="skill-list"
+        >
           <h2>Skills</h2>
           <li className="list-1">Adobe Photoshop</li>
           <li>Adobe Illustrator</li>
@@ -42,7 +38,7 @@ const AboutMe = () => {
 
 
         </ul>
-      </p>
+      </div>
     </>
    );
 }
