@@ -7,6 +7,9 @@ import './App.css';
 import './NavBar.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+
+
+
 function App() {
   const now = 60;
   document.title= "Zero Blog";
@@ -15,7 +18,6 @@ function App() {
     <BrowserRouter>
     <NavBar />
     <Bar />
-
       <Routes>
         
         <Route path="home" element={<Home />} />

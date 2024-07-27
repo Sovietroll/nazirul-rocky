@@ -46,19 +46,23 @@ a:hover{
 //   }
 // }
 .navbar-main {
-  display: grid;
-  grid-template-columns: (100px 100px 100px 100px 50px);
-  justify-content: center;
-  align-items: center;
+  // display: grid;
+  // grid-template-columns: (100px 100px 100px 100px 50px);
+  @include flex-center;
   font-family: $fonts;
   font-weight: $bold;
   background-color: $primary-color;
-  padding: 2px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   position: sticky;
   top: 0;
   z-index: 10;
+
+  // .navbar-center{
+  //   @include flex-center;
+
+  // }
   
   .lg-container{
   margin: 0;

@@ -12,8 +12,9 @@ const Bar = () => {
     <ProgressBar 
       style={{
         position: "sticky",
-        top: 30,
-        height: 8
+        top: 0,
+        height: 8,
+        width: "100%"
       }}
       animated 
       striped 
