@@ -7,7 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const NavBar = () => {
-    
+
+
   const bar = [
     {
         title: 'Home',
@@ -46,6 +47,7 @@ const NavBar = () => {
                 className='navbar-center'>
                     <Link
                         to={bars.path}
+                        
                     >
                         {bars.title}
                     </Link>

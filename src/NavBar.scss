@@ -14,7 +14,7 @@ $bold: bold;
 // }
 
 body{
-  background: rgb(255, 255, 255);
+  background: rgb(187, 187, 187);
   margin: 0px;
   padding: 0px;
   font-family: $fonts; 
@@ -26,13 +26,19 @@ a{
   color: white;
   text-decoration: none;
   @include transition;
-
+	background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
 }
 a:hover{
   color: $mainColor;
+  background-size: 100% .12em;
   @include transition;
-
 }
+a:focus {
+  text-decoration: underline;
+  color: $mainColor;
+  @include transition;
+}
+
 // .lg-container{
 //   margin: 0;
 //   padding: 0;
@@ -51,7 +57,6 @@ a:hover{
   @include flex-center;
   font-family: $fonts;
   font-weight: $bold;
-  background-color: $primary-color;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -107,4 +112,6 @@ li {
 // .list-1{
 //   background-color: black;
 // }
+.contact-main{
 
+}
