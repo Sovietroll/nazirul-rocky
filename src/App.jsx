@@ -1,7 +1,7 @@
 import NavBar from './NavBar.jsx';
 import Home from './Home.jsx';
 import AboutMe from './AboutMe.jsx';
-import MyPortfolio from './MyPortfolio';
+import Contact from './Contact';
 import Bar from './Bar.jsx';
 import './App.css';
 import './NavBar.scss';
@@ -22,7 +22,7 @@ function App() {
         
         <Route path="home" element={<Home />} />
           <Route path="about" element = {<AboutMe />} />
-          <Route path="portfolio" element = {<MyPortfolio />} />
+          <Route path="contact" element = {<Contact />} />
       </Routes>
 
     </BrowserRouter>

@@ -20,8 +20,8 @@ const NavBar = () => {
     }
     ,
     {
-        title: 'My portfolio',
-        path: '/portfolio'
+        title: 'Contact',
+        path: '/contact'
     }
     ,
 
