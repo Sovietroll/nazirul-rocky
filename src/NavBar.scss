@@ -113,5 +113,18 @@ li {
 //   background-color: black;
 // }
 .contact-main{
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position:absolute;
+  bottom: 10px;
+  color: rgb(128, 0, 9);
+}
+.contact-main.visible {
+  opacity: 1;
+  position:absolute;
+  color: rgb(0, 128, 53);
+
+  top: 200px;
+
 
 }

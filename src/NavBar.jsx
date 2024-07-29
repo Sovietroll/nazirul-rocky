@@ -57,9 +57,9 @@ const NavBar = () => {
             
 
             <Col>
-        <div className='icon-container'>
+        {/* <div className='icon-container'>
             <FontAwesomeIcon icon={faMoon} inverse className="icon"/>
-        </div>
+        </div> */}
         </Col>
         
         
