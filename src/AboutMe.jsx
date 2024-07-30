@@ -1,18 +1,24 @@
+import {useState, useEffect} from 'react';
+import useFadeIn from "./useFadeIn.jsx";
 
 
 const AboutMe = () => {
+
+  const visible = useFadeIn();
+
   return ( 
     <>
       <h1 className="about-me">
         About Me
       </h1>
-      <div>
+      <div className={`about-me-under ${visible ? 'visible' : ''}`}>
+        
         <ul>
           Currently making portfolio page
         </ul>
 
         <ul>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia inventore numquam commodi perspiciatis possimus quae praesentium fugit distinctio, atque temporibus nesciunt, impedit corporis, quod neque iure corrupti magni laudantium!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, alias.
         </ul>
 
         <ul>

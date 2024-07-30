@@ -1,19 +1,14 @@
-import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import useFadeIn from "./useFadeIn.jsx";
 
 const Contact = () => {
-  const [visible, setVisible] = useState(false);
 
-  // when  the component 'mounts', it trigger the useEffect
-  useEffect(() => {
-    setVisible(true);
-  }, []);
-
+  const visible = useFadeIn();
 
   return ( 
     <>
-      <h1 className={`contact-main ${visible ? 'visible' : ''}`}>
-        You can contact me here
+      <h1 className={`contact-main ${visible ? 'visible' : 'Nonvisible'}`}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, in.
       </h1>
 
     </>
