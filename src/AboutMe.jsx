@@ -15,6 +15,11 @@ const AboutMe = () => {
         className='bubbleHead'/>
         
       </h1>
+
+      <h1
+      style={{fontWeight: "bold"}}>
+        This is branch testing
+      </h1>
       <div className={`about-me-under ${visible ? 'visible' : ''}`}>
         
         <ul>
