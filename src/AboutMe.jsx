@@ -20,6 +20,7 @@ const AboutMe = () => {
       style={{fontWeight: "bold"}}>
         This is branch testing
         This is from the Macbook
+        This is from Windows
       </h1>
       <div className={`about-me-under ${visible ? 'visible' : ''}`}>
         
