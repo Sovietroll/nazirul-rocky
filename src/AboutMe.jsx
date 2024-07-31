@@ -10,6 +10,10 @@ const AboutMe = () => {
     <>
       <h1 className="about-me">
         About Me
+
+        <img src="src/images/me bubble head.png" alt="head" 
+        className='bubbleHead'/>
+        
       </h1>
       <div className={`about-me-under ${visible ? 'visible' : ''}`}>
         

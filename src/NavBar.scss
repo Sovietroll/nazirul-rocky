@@ -27,30 +27,21 @@ a{
   text-decoration: none;
   @include transition;
 	background: linear-gradient(currentColor, currentColor) bottom / 0 .1em no-repeat;
+
+  &:hover{
+    color: $mainColor;
+    background-size: 100% .12em;
+    @include transition;
+  }
 }
-a:hover{
-  color: $mainColor;
-  background-size: 100% .12em;
-  @include transition;
-}
+
 a:focus {
   text-decoration: underline;
   color: $mainColor;
   @include transition;
 }
 
-// .lg-container{
-//   margin: 0;
-//   padding: 0;
-//   z-index: 20;
-//   margin-right: 200px;
-//   .lg{
-//     position: absolute;
-//     top: 0;
-//     left: 0px;
-//     z-index: 20;
-//   }
-// }
+
 .navbar-main {
   // display: grid;
   // grid-template-columns: (100px 100px 100px 100px 50px);
@@ -86,11 +77,13 @@ a:focus {
   }
   .icon{
     @include transition;
+    
+    &:hover{
+      opacity: 50%;
+      @include transition;
+    }
   }
-  .icon:hover{
-    opacity: 50%;
-    @include transition;
-  }
+
 }
 
 .about-me{
@@ -98,8 +91,22 @@ a:focus {
   color: $mainColor;
   font-weight: 700;
   font-size: 50px;
-  margin: 50px;
   @include flex-center;
+  
+  margin:{
+  top: 50px;
+  }
+  img{
+    display: block;
+    width: 400px;
+  }
+}
+.about-me-under{
+  color: red;
+  
+  ul{
+    color: green;
+  }
 }
 
 // }
@@ -107,10 +114,12 @@ a:focus {
   margin: auto;
   padding: auto;
 
+  li {
+    list-style:inside;
+    color: red;
+  }
 }
-li {
-  list-style:inside;
-}
+
 // .list-1{
 //   background-color: black;
 // }
