@@ -1,0 +1,104 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+body {
+  background: rgb(187, 187, 187);
+  margin: 0px;
+  padding: 0px;
+  font-family: "Arial";
+  height: 50rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(currentColor, currentColor) bottom/0 0.1em no-repeat;
+}
+a:hover {
+  color: #30d48f;
+  background-size: 100% 0.12em;
+  transition: 0.3s ease-in-out;
+}
+
+a:focus {
+  text-decoration: underline;
+  color: #30d48f;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Arial";
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar-main .lg-container {
+  margin: 0;
+  padding: 0;
+}
+.navbar-main ul {
+  margin: 0;
+  padding-left: 0;
+  padding: 10px;
+}
+.navbar-main .icon-container {
+  display: flex;
+  margin-left: 80px;
+}
+.navbar-main .icon {
+  transition: 0.3s ease-in-out;
+}
+.navbar-main .icon:hover {
+  opacity: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.about-me {
+  font-family: "Arial";
+  color: #30d48f;
+  font-weight: 700;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+.about-me img {
+  display: block;
+  width: 400px;
+}
+
+.about-me-under {
+  color: red;
+}
+.about-me-under ul {
+  color: green;
+}
+
+.skill-list {
+  margin: auto;
+  padding: auto;
+}
+.skill-list li {
+  list-style: inside;
+  color: red;
+}
+
+.contact-main, .about-me {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.contact-main.visible, .about-me.visible {
+  opacity: 1;
+}/*# sourceMappingURL=NavBar.css.map */

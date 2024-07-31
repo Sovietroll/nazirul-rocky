@@ -7,7 +7,7 @@ const Contact = () => {
 
   return ( 
     <>
-      <h1 className={`contact-main ${visible ? 'visible' : 'Nonvisible'}`}>
+      <h1 className={`contact-main ${visible ? 'visible' : ''}`}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, in.
       </h1>
 

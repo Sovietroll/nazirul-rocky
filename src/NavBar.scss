@@ -8,17 +8,13 @@ $mainColor: #30d48f;
 $spacing: 2rem;
 $bold: bold;
 
-// * {    
-//   margin: 0 !important;
-//   padding: 0 !important;
-// }
-
 body{
-  background: rgb(187, 187, 187);
+  background: #1f2028;
+  color: white;
   margin: 0px;
   padding: 0px;
   font-family: $fonts; 
-  height: 50rem;
+  height: 100rem;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -43,8 +39,7 @@ a:focus {
 
 
 .navbar-main {
-  // display: grid;
-  // grid-template-columns: (100px 100px 100px 100px 50px);
+
   @include flex-center;
   font-family: $fonts;
   font-weight: $bold;
@@ -55,10 +50,7 @@ a:focus {
   top: 0;
   z-index: 10;
 
-  // .navbar-center{
-  //   @include flex-center;
-
-  // }
+}
   
   .lg-container{
   margin: 0;
@@ -84,51 +76,43 @@ a:focus {
     }
   }
 
-}
 
+// ---------------------------------------
 .about-me{
-  font-family: $fonts;
-  color: $mainColor;
-  font-weight: 700;
-  font-size: 50px;
-  @include flex-center;
-  
-  margin:{
-  top: 50px;
-  }
+  color: white;
+  margin-top: 50px;
   img{
-    display: block;
     width: 400px;
+    float: right;
   }
-}
-.about-me-under{
-  color: red;
-  
-  ul{
-    color: green;
-  }
-}
+  .about-me-Description{
 
-// }
-.skill-list{
-  margin: auto;
-  padding: auto;
-
-  li {
-    list-style:inside;
-    color: red;
+    ul{
+      font-size: 50px;
+      padding-top: 80px;
+      text-align: left;
+    }
   }
 }
 
-// .list-1{
-//   background-color: black;
-// }
-.contact-main, .about-me-under{
+// -------------------------------------------------------
+
+.contact-main, .about-me{
   transition: opacity 1s ease-in-out;
   opacity: 0;
-  // font-size: 30px;
 } 
 
-.contact-main.visible, .about-me-under.visible {  
+.contact-main.visible, .about-me.visible {  
   opacity: 1;
+}
+.about-me-Description.none{
+  transition: opacity 1s ease-in-out;
+
+ font-size: 0px;
+}
+.about-me-Description.visible{
+  transition: opacity 1s ease-in-out;
+  font-size: 100px;
+
+
 }
