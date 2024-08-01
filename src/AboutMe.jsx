@@ -1,5 +1,6 @@
 
 import useFadeIn from "./useFadeIn.jsx";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
 
@@ -13,13 +14,11 @@ const AboutMe = () => {
         className='bubbleHead'/>
 
 
-
-      <div className={`about-me-Description ${visible? 'visible' : 'none'}`}>
-
+      <motion.div animate={{ x:100 }} />
+      <div className= 'about-me-Description'>
         <ul>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, alias.
         </ul>
-
       </div>
 
 
