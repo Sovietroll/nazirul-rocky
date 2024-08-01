@@ -81,38 +81,25 @@ a:focus {
 .about-me{
   color: white;
   margin-top: 50px;
+
   img{
     width: 400px;
+    display: flex;
     float: right;
   }
   .about-me-Description{
+    padding-top: 100px;
 
-    ul{
+    p{
       font-size: 50px;
-      padding-top: 80px;
       text-align: left;
+      &:first-child{
+        // background-color: black;
+      }
     }
   }
 }
 
 // -------------------------------------------------------
 
-.contact-main, .about-me{
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-} 
 
-.contact-main.visible, .about-me.visible {  
-  opacity: 1;
-}
-.about-me-Description.none{
-  transition: opacity 1s ease-in-out;
-
- font-size: 0px;
-}
-.about-me-Description.visible{
-  transition: opacity 1s ease-in-out;
-  font-size: 100px;
-
-
-}

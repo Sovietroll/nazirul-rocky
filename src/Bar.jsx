@@ -13,7 +13,7 @@ const Bar = () => {
       style={{
         position: "sticky",
         top: 0,
-        height: 8,
+        height: 5,
         width: "100%"
       }}
       animated 

@@ -15,9 +15,11 @@ function App() {
   document.title= "Zero Blog";
 
   return (
+    
     <BrowserRouter>
-    <NavBar />
     <Bar />
+
+    <NavBar />
       <Routes>
         
         <Route path="home" element={<Home />} />
