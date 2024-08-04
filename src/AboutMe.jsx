@@ -1,9 +1,7 @@
 import {motion} from "framer-motion";
 import TransitionText from "./TransitionText";
 // import { Player } from '@lordicon/react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import {useState} from 'react';
 
 const AboutMe = () => {
 
@@ -28,7 +26,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
             <p>Self Taught Web Developer</p> 
           </TransitionText>
           <TransitionText delay = {.5}>
-              <p>Nazirul Syafiq bin Young Rockie.</p>
+              <p style={{color: "grey"}}>Nazirul Syafiq bin Young Rockie.</p>
           </TransitionText> 
           </div>
           <motion.div
@@ -45,10 +43,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
       </div>
 
-      <div className="element"
-      style={{color: "black"}}> 
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ipsam eos eaque? Blanditiis possimus iusto asperiores voluptatum ipsa, aliquam repellat.
-      </div>
+      arrow here
 
       <TransitionText
       style={{marginTop: "50px"}}>
