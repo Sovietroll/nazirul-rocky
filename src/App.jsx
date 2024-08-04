@@ -6,6 +6,7 @@ import Bar from './Bar.jsx';
 import './App.css';
 import './NavBar.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
