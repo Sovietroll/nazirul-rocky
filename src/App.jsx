@@ -6,8 +6,7 @@ import Bar from './Bar.jsx';
 import './App.css';
 import './NavBar.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 
 
 
@@ -19,8 +18,15 @@ function App() {
     
     <BrowserRouter>
     <Bar />
+    <ThemeProvider
+      breakpoints={['xl']}
+      minBreakpoint='sm'
+    >
+      
+      <NavBar />
 
-    <NavBar />
+    </ThemeProvider>
+   
       <Routes>
         
         <Route path="home" element={<Home />} />

@@ -9,6 +9,20 @@ $spacing: 2rem;
 $bold: bold;
 $extraBold: 700;
 
+/* Custom styles for the xxl breakpoint */
+@media (min-width: 900px) {
+  .navbar-main {
+    background-color: blue;
+  }
+}
+
+/* Styles starting from the sm breakpoint */
+@media (min-width: 2000px) {
+  .navbar-main {
+    background-color: green;
+  }
+}
+
 body{
   background: #1f2028;
   color: white;
@@ -83,35 +97,58 @@ a:focus {
 .about-me{
   color: white;
 
-  .about-me-one{
+  &-one{
     @include flex-center;
-    background-color: purple;
+    background-color: rgb(0, 0, 128);
     font-weight: $extraBold;
     line-height: 1.5;
 
-    .about-me-Description{
+    &-desc{
+      font-size: 50px;
       text-align: left;
+
+      &-selftaught{
+        background-color: black;
+      }
+
       p{
-        font-size: 50px;
+        // font-size: 50px;
         &:first-child{
           // background-color: black;
         }
       }
+
     }
   }
-  .section-container{
-    background-color: rgb(162, 162, 162, 0.5);
+  &-section-container{
+    // background-color: rgba(162, 162, 162, 0.5);
     display: block;
-    float: right;
-    text-align: right;
+    position: relative;
+    padding-left: 400px;
+
+    &-body{
+      // background-color: white
+    }
+
+    img{
+      // float: left;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    section{
+     @include nopadmarg;
+    }
     h1{
       font-weight: $extraBold;
+      
     }
     h2{
       font-weight: $bold;
     }
     li{
-      list-style-position: inside
+      list-style-position: inside;
     };
   }
 }
