@@ -1,30 +1,29 @@
 import {motion} from "framer-motion";
 import TransitionText from "./TransitionText";
-import {useState} from 'react';
-// import { ClassValue, clsx } from "clsx";
-// import { twMerge } from "tailwind-merge";
-
+import MotionFlip from "./MotionFlip";
+import {useEffect, useState} from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const AboutMe = () => {
 
 
 
 const [hover, setHover] = useState(false);
+const [hoverImg, setHoverImg] = useState(false);
+
+
 
 const MouseHover = () => {
   const sum = hover? 
-  (<motion.div style={{cursor: "pointer"}}
-    initial = {{ opacity: 0, y: 10}}
-    animate = {{opacity: 1, y: 0}}>
+  (<MotionFlip>
     Graphic Designer
-  </motion.div>
-    )
+  </MotionFlip>)
   : 
-  (<motion.div
-    initial = {{ opacity: 0, y: 10}}
-    animate = {{opacity: 1, y: 0}}>
-    Web Developer 
-  </motion.div>)
+  (<MotionFlip>
+    Self Taught Web Developer
+  </MotionFlip>)
     return sum
  }
 
@@ -36,6 +35,26 @@ const YearTotal = ({yearThen, yearAfter}) => {
   return(sum)
 }
 
+useEffect(() => {
+  
+  const interval = setInterval(() => {
+    setHover(hover => !hover)
+  },5000);
+
+  hover?(
+  <MotionFlip>
+    Graphic Designer
+  </MotionFlip>
+  )
+  : 
+  (<MotionFlip>
+    Self Taught Web Developer
+  </MotionFlip>)
+
+  return() => {
+    clearInterval(interval)
+  }
+},[]);
 
   return ( 
 
@@ -47,8 +66,8 @@ const YearTotal = ({yearThen, yearAfter}) => {
           <TransitionText >
 
             <div 
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+            // onMouseEnter={() => setHover(true)}
+            // onMouseLeave={() => setHover(false)}
             className="about-me-one-desc-selftaught"
             >
               <MouseHover />
@@ -68,57 +87,97 @@ const YearTotal = ({yearThen, yearAfter}) => {
             transition={{
             ease: "linear",
             duration: .4}}>
-              <img src="src/images/me bubble head.png" alt="head"
-              style={{width: "400px"}} 
-                className='bubbleHead'/>
+
+              <img 
+                src="src/images/me bubble head.png" 
+                alt="head"
+                style={{width: "400px"}} 
+                className='bubbleHead'
+                // onMouseEnter = {()=> setHoverImg(true)}
+                // onMouseLeave = {()=> setHoverImg(false)}
+
+              />
+
           </motion.div>
 
 
       </div>
 
-      arrow here
-
+      {/* arrow here---------------------------------- */}
+    <Container>
       <TransitionText
       style={{marginTop: "50px"}}>
 
         
 
-
-          <div className="about-me-section-container">
-
-          < img src="src/images/01G1.png" style={{width: "400px", backgroundColor: "white"}}/>
+        
+          <div className="about-me-section">
+{/*< img src="src/images/01G1.png" style={{width: "400px", backgroundColor: "white"}}/> */}
           
           <div className="about-me-section-container-body">
-            <h1>My Experiences</h1>
-                <section>
-                  <h2>Graphic Designer cum Video Editor cum Motion Graphic</h2>
-                  <h3>2021 - 2024 {'\u00B7'} <YearTotal yearThen = {2021} yearAfter={2024}/> years </h3>
 
+            <Row>
+            <h1>My Experiences</h1>
+            </Row>
+
+
+            <Row>
+              <Col className="Col">
+                
+
+                <section>
+                  <Col>
+                  <h2>Freelance Web Developer</h2>
+                  </Col>
+                  <h3>2023 - Present {'\u00B7'} <YearTotal yearThen = {2023} yearAfter={2024}/> years </h3>
                     <ul>
-                      <li>Create digital content</li>
-                      <li>Create visually appealing design for various mediums</li>
-                      <li>Collaborate with clients or project managers</li>
-                      <li>Utilize WorPress to manage and update website content</li>
+                      <li>Ensure websites are visually appealing and user-friendly.</li>
+                      <li>Use Git for version control to manage and track changes in code.</li>
                     </ul>
                 </section>
+                </Col>
 
+                <Col className="Col">
                 <section>
-                  <h2>Career Break</h2>
-                  <h3>2021 - 2024 {'\u00B7'} <YearTotal yearThen = {2020} yearAfter={2021}/> year </h3>
-                  <p>Opened my first ever agriculture company</p>
+                <Col>
+                  <h2>Graphic Designer / Video Editor / Motion Graphic</h2>
+                  <h3>2021 - 2024 {'\u00B7'} <YearTotal yearThen = {2021} yearAfter={2024}/> years </h3>
+                </Col>
+                    <ul>
+                      <li>Create digital content</li>
+                      <li>Collaborate with clients or project managers</li>
+                    </ul>
                 </section>
+                </Col>
 
-                <section>
-                  <h2>Graphic Designer</h2>
-                  <h3>2018 - 2019 {'\u00B7'} <YearTotal yearThen = {2018} yearAfter={2019}/>year</h3>
-                  <ul>
-                    <li>Design visually appealing graphics</li>
-                  </ul>
-                </section>
+                </Row>
+
+
+                <Row>
+                  <Col className="Col">
+                  <section>
+                    <h2>Career Break</h2>
+                    <h3>2020 - 2021 {'\u00B7'} <YearTotal yearThen = {2020} yearAfter={2021}/> year </h3>
+                    <p>Opened my first ever agriculture company</p>
+                  </section>
+                  </Col>
+
+                  <Col className="Col">
+                  <section>
+                    <h2>Graphic Designer</h2>
+                    <h3>2018 - 2019 {'\u00B7'} <YearTotal yearThen = {2018} yearAfter={2019}/>year</h3>
+                    <ul>
+                      <li>Design visually appealing graphics</li>
+                    </ul>
+                  </section>
+                  </Col>
+
+                </Row>
           </div>
         
           </div>
       </TransitionText>
+      </Container>
     </div>
 
    );
