@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import TransitionText from "./TransitionText";
 import MotionFlip from "./MotionFlip";
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,67 +10,37 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const AboutMe = () => {
 
+  const [hover, setHover] = useState(false);
+  const [titleIndex, setTitleIndex] = useState(0);
+  const titles = ["Graphic Designer", "Self Taught Web Developer", "Video Editor", "Motion Graphic"];
+  
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
+    },3500);
+  
+    return() => {
+      clearInterval(interval)
+    }
+  },[]);
 
-const [hover, setHover] = useState(false);
-
-const HoverArrowIconTrue = () => {
-  const sum = <p>TRUE</p>
-
-
-  return sum
-}
-
-const HoverArrowIconFalse = () => {
-const sum = 
-  <FontAwesomeIcon icon={faChevronDown} 
-  className="icon-arrow"/>;
-  <p>TRUE</p>;
-
-  return sum;
-}
-
-const MouseHover = () => {
-  const sum =   hover?(
+const TitleStart  = () => {
+  return (
     <MotionFlip>
-      Graphic Designer
+      {titles[titleIndex]}
     </MotionFlip>
-    )
-    : 
-    (<MotionFlip>
-      Self Taught Web Developer
-    </MotionFlip>)
-    return sum
+  )
  }
 
 const thisYear = new Date().getFullYear();
-
 const YearTotal = ({yearThen, yearAfter}) => {
   const total = yearThen - yearAfter;  
   const sum = Math.abs(total);
   return(sum)
 }
 
-useEffect(() => {
-  
-  const interval = setInterval(() => {
-    setHover(hover => !hover)
-  },3500);
 
-  hover?(
-  <MotionFlip>
-    Graphic Designer
-  </MotionFlip>
-  )
-  : 
-  (<MotionFlip>
-    Self Taught Web Developer
-  </MotionFlip>)
-
-  return() => {
-    clearInterval(interval)
-  }
-},[]);
 
   return ( 
 
@@ -84,7 +54,7 @@ useEffect(() => {
             <div 
             className="about-me-one-desc-selftaught"
             >
-              {/* <MouseHover /> */}
+              <TitleStart />
               {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
               </div> 
 
@@ -110,8 +80,6 @@ useEffect(() => {
               />
 
           </motion.div>
-
-
       </div>
 
       {/* Arrow HERE */}
@@ -119,30 +87,28 @@ useEffect(() => {
         style={{marginTop: "20px",
         display: "inline-block",
         backgroundColor: "black"}}
-        onMouseOver={() => {HoverArrowIconTrue()}}
-        onMouseOut={() => {HoverArrowIconFalse()}}
         >
-        {hover?
-            <FontAwesomeIcon icon={faChevronDown} 
-            className="icon-arrow"/>
-            : 
-            <HoverArrowIconTrue/>
-            
-        }
+         FSAFASF
+         {/* <FontAwesomeIcon icon={faChevronDown} /> */}
         
       </Row>
       {/* Arrow HERE */}
-
+    
+    {/* < img src="src/images/01G1.png" className="imgexp"/> */}
 
     <Container>
-      <TransitionText
-      style={{marginTop: "20px"}}>
+    <motion.div
+        initial ={{scale: 1.2, y: 10}}
+        animate={{scale:1, y: 0}}
+        transition={{ease: "linear"}}
+        className="imgexp"
+    >
+    < img src="src/images/01G1.png" style={{width: "200px"}}/>
+    </motion.div>
 
-        
-
-        
+      <TransitionText style={{marginTop: "20px"}}>
           <div className="about-me-section">
-{/*< img src="src/images/01G1.png" style={{width: "400px", backgroundColor: "white"}}/> */}
+            
           
           <div className="about-me-section-container-body">
 

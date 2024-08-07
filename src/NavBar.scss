@@ -9,19 +9,19 @@ $spacing: 2rem;
 $bold: bold;
 $extraBold: 700;
 
-/* Custom styles for the xxl breakpoint */
-@media (min-width: 900px) {
-  .navbar-main {
-    background-color: blue;
-  }
-}
+// /* Custom styles for the xxl breakpoint */
+// @media (min-width: 900px) {
+//   .navbar-main {
+//     background-color: blue;
+//   }
+// }
 
-/* Styles starting from the sm breakpoint */
-@media (min-width: 2000px) {
-  .navbar-main {
-    background-color: green;
-  }
-}
+// /* Styles starting from the sm breakpoint */
+// @media (min-width: 2000px) {
+//   .navbar-main {
+//     background-color: green;
+//   }
+// }
 
 body{
   background: #1f2028;
@@ -107,7 +107,7 @@ a:focus {
 
   &-one{
     @include flex-center;
-    background-color: rgb(0, 23, 128);
+    // background-color: rgb(0, 23, 128);
     font-weight: $extraBold;
     line-height: 1.5;
 
@@ -140,16 +140,12 @@ a:focus {
     .Col{
       border-radius: 15px;
       margin: 5px;
-      padding: 30px;
+      padding: 80px;
       background-color: #2E3039;
+      position: relative;
     };
     
-    img{
-      // float: left;
-      // position: absolute;
-      // top: 0;
-      // left: 10px;
-    };
+ 
 
     section{
      @include nopadmarg;
@@ -177,6 +173,12 @@ a:focus {
     //   font-weight: 300;
     // }
   }
+  .imgexp{
+    position: absolute;
+    top: 500px;
+    left: 305px;
+    z-index: 50;
+  };
 }
 
 // -------------------------------------------------------
