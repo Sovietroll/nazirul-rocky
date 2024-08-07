@@ -5,25 +5,41 @@ import {useEffect, useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const AboutMe = () => {
 
 
 
 const [hover, setHover] = useState(false);
-const [hoverImg, setHoverImg] = useState(false);
+
+const HoverArrowIconTrue = () => {
+  const sum = <p>TRUE</p>
 
 
+  return sum
+}
+
+const HoverArrowIconFalse = () => {
+const sum = 
+  <FontAwesomeIcon icon={faChevronDown} 
+  className="icon-arrow"/>;
+  <p>TRUE</p>;
+
+  return sum;
+}
 
 const MouseHover = () => {
-  const sum = hover? 
-  (<MotionFlip>
-    Graphic Designer
-  </MotionFlip>)
-  : 
-  (<MotionFlip>
-    Self Taught Web Developer
-  </MotionFlip>)
+  const sum =   hover?(
+    <MotionFlip>
+      Graphic Designer
+    </MotionFlip>
+    )
+    : 
+    (<MotionFlip>
+      Self Taught Web Developer
+    </MotionFlip>)
     return sum
  }
 
@@ -39,7 +55,7 @@ useEffect(() => {
   
   const interval = setInterval(() => {
     setHover(hover => !hover)
-  },5000);
+  },3500);
 
   hover?(
   <MotionFlip>
@@ -59,18 +75,16 @@ useEffect(() => {
   return ( 
 
     <div className={`about-me`}>
-
+      
       <div className="about-me-one">
         <div className= 'about-me-one-desc'>
 
           <TransitionText >
 
             <div 
-            // onMouseEnter={() => setHover(true)}
-            // onMouseLeave={() => setHover(false)}
             className="about-me-one-desc-selftaught"
             >
-              <MouseHover />
+              {/* <MouseHover /> */}
               {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
               </div> 
 
@@ -93,9 +107,6 @@ useEffect(() => {
                 alt="head"
                 style={{width: "400px"}} 
                 className='bubbleHead'
-                // onMouseEnter = {()=> setHoverImg(true)}
-                // onMouseLeave = {()=> setHoverImg(false)}
-
               />
 
           </motion.div>
@@ -103,10 +114,29 @@ useEffect(() => {
 
       </div>
 
-      {/* arrow here---------------------------------- */}
+      {/* Arrow HERE */}
+      <Row 
+        style={{marginTop: "20px",
+        display: "inline-block",
+        backgroundColor: "black"}}
+        onMouseOver={() => {HoverArrowIconTrue()}}
+        onMouseOut={() => {HoverArrowIconFalse()}}
+        >
+        {hover?
+            <FontAwesomeIcon icon={faChevronDown} 
+            className="icon-arrow"/>
+            : 
+            <HoverArrowIconTrue/>
+            
+        }
+        
+      </Row>
+      {/* Arrow HERE */}
+
+
     <Container>
       <TransitionText
-      style={{marginTop: "50px"}}>
+      style={{marginTop: "20px"}}>
 
         
 
@@ -158,7 +188,9 @@ useEffect(() => {
                   <section>
                     <h2>Career Break</h2>
                     <h3>2020 - 2021 {'\u00B7'} <YearTotal yearThen = {2020} yearAfter={2021}/> year </h3>
-                    <p>Opened my first ever agriculture company</p>
+                    <ul>
+                      <li>Opened my first ever agriculture company</li>
+                    </ul>
                   </section>
                   </Col>
 
