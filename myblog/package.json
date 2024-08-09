@@ -1,5 +1,6 @@
 {
   "name": "myblog",
+  "homepage": "http://localhost:5173/home",
   "private": true,
   "version": "0.0.0",
   "type": "module",

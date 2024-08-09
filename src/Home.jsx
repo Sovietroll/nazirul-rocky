@@ -12,8 +12,10 @@ const Home = () => {
       style={{marginTop:"50px"}}
     >
 
-      <h1>Home</h1>
-      <p>Welcome to Nazirul Rocky blog</p>
+      <h1>Hi</h1>
+      <p>I am Nazirul</p>
+      <p>Designer</p>
+      <p>Developer</p>
 
     </motion.div>
 

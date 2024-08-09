@@ -12,7 +12,7 @@ const AboutMe = () => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = ["Graphic Designer", "Web Developer", "Video Editor", "Motion Graphic"];
+  const titles = ["Self learn developer","Graphic Designer", "Video Editor", "Motion Graphic"];
   
 
   useEffect(() => {
@@ -81,6 +81,74 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
           </motion.div>
       </div>
+        <p style={{fontSize: "25px"}}>
+          Back in 2023, I decided to try to create my own custom website at WordPress just for fun. I literally went into an infinity hole of coding and web development. I instantly fell in love with it. Fast-forward to today, I still studying and learning to code various languages and tools in hope of becoming a <b>Front End Developer</b> and the end goal is <b>Full Stack Developer</b>.   
+        </p>
+
+      <Container className="skills" >
+
+        <Row className="skills-row">
+
+        <Col className="skills-dev-col">
+
+              <Col>
+                <img src="src/images/designerIcon.png" style={{width: "120px"}}/>
+              </Col >
+
+              <Col className="skills-dev-col-1">
+                Developer
+              </Col >
+
+              <Col>
+               I take pleasure in coding from the basics and thrive on bringing visions to life in the browser.
+              </Col>
+
+              <Col className="skills-dev-col-2">
+                <Col>
+                <span style={{color: "pink"}}>Languages I speak:</span>
+                  <Col>
+                    HTML, CSS, Javascript, JSX Sass, Git, Bootstrap
+                  </Col>
+                </Col>
+
+                <Col  className="skills-dev-col-3">
+                  Dev Tools:
+                  <ul style={{listStyle: "none"}}>
+                    <li>Bootstrap</li>
+                    <li>Github</li>
+                    <li>VS Code</li>
+                    <li>Framer Motion</li>
+                  </ul>
+                </Col>
+              </Col>
+        
+        </Col>
+
+        <Col className="skills-des-col">
+        <Col className="skills-des-col-row1">
+
+                <img src="src/images/designerIcon.png" style={{width: "200px"}}/>
+              </Col >
+
+              <Col style={{backgroundColor: "black"}}>
+                Designer
+              </Col >
+
+              <Col  style={{backgroundColor: "green"}}>
+                <Col>What I do:
+                
+                  <Col>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, at?
+                  </Col>
+                </Col>
+              </Col>
+        
+        </Col>
+
+        </Row>
+      </Container>
+
+
 
       {/* Arrow HERE */}
       <Row 
@@ -94,7 +162,6 @@ const YearTotal = ({yearThen, yearAfter}) => {
       </Row>
       {/* Arrow HERE */}
     
-    {/* < img src="src/images/01G1.png" className="imgexp"/> */}
 
     <Container>
     <motion.div
@@ -123,12 +190,12 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
                 <section>
                   <Col>
-                  <h2>Freelance Web Developer</h2>
+                  <h2>Self learn Web Developer</h2>
                   </Col>
                   <h3>2023 - Present {'\u00B7'} <YearTotal yearThen = {2023} yearAfter={2024}/> years </h3>
                     <ul>
-                      <li>Ensure websites are visually appealing and user-friendly.</li>
-                      <li>Use Git for version control to manage and track changes in code.</li>
+                      <li>Learn the whole world about web design.</li>
+                      <li>Targeting to become offical Full Stack developer at the height of my career.</li>
                     </ul>
                 </section>
                 </Col>
@@ -140,8 +207,8 @@ const YearTotal = ({yearThen, yearAfter}) => {
                   <h3>2021 - 2024 {'\u00B7'} <YearTotal yearThen = {2021} yearAfter={2024}/> years </h3>
                 </Col>
                     <ul>
-                      <li>Create digital content</li>
-                      <li>Collaborate with clients or project managers</li>
+                      <li>Create digital content.</li>
+                      <li>Collaborate with clients or project managers.</li>
                     </ul>
                 </section>
                 </Col>
@@ -155,7 +222,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
                     <h2>Career Break</h2>
                     <h3>2020 - 2021 {'\u00B7'} <YearTotal yearThen = {2020} yearAfter={2021}/> year </h3>
                     <ul>
-                      <li>Opened my first ever agriculture company</li>
+                      <li>Opened my first ever agriculture company.</li>
                     </ul>
                   </section>
                   </Col>
@@ -165,7 +232,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
                     <h2>Graphic Designer</h2>
                     <h3>2018 - 2019 {'\u00B7'} <YearTotal yearThen = {2018} yearAfter={2019}/>year</h3>
                     <ul>
-                      <li>Design visually appealing graphics</li>
+                      <li>Design visually appealing graphics.</li>
                     </ul>
                   </section>
                   </Col>

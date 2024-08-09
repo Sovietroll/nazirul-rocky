@@ -1,10 +1,10 @@
 import './NavBar.scss';
-import {Outlet,Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {Link} from "react-router-dom";
 
 const NavBar = () => {
 
@@ -38,6 +38,9 @@ const NavBar = () => {
                     className="lg-container">
                     <img className="lg" 
                     src='src/images/lg.png' alt="logo" width={90} />
+                    {/* <Route>
+                        <Redirect to= "/home"/>
+                    </Route> */}
                 </div>
             </Col>
             

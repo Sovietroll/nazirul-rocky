@@ -3,6 +3,7 @@ import Home from './Home.jsx';
 import AboutMe from './AboutMe.jsx';
 import Contact from './Contact';
 import Bar from './Bar.jsx';
+import Footer from './Footer.jsx'
 import './App.css';
 import './NavBar.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -28,11 +29,12 @@ function App() {
     </ThemeProvider>
    
       <Routes>
-        
         <Route path="home" element={<Home />} />
           <Route path="about" element = {<AboutMe />} />
           <Route path="contact" element = {<Contact />} />
       </Routes>
+
+      <Footer/>
 
     </BrowserRouter>
   )

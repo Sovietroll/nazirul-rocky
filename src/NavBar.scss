@@ -71,6 +71,12 @@ a:focus {
   .lg-container{
   margin: 0;
   padding: 0;
+  @include transition;
+
+  &:hover{
+    opacity: .5;
+    @include transition;
+  }
   }
 
   ul{
@@ -184,4 +190,44 @@ a:focus {
 
 // -------------------------------------------------------
 
+.footer{
+  @include flex-center;
+  background-color: black;
+ margin:{
+  top: 100px;
+ }
+}
 
+
+.skills{
+  background-color: #2E3039;
+  @include nopadmarg;
+  padding: 50px;
+  border-radius: 20px;
+
+  &-row{
+    @include nopadmarg;
+
+  }
+
+  &-dev-col{
+    @include nopadmarg;
+    color: white;
+    background-color: rgba(59, 12, 57, 0.5);
+    &-1{
+      
+      font-weight: $extraBold;
+      font-size: 30px;
+    }
+    &-2{
+    padding-top: 20px;
+      &-col{
+        color: rgb(20, 114, 221);
+      }
+    }
+    &-3{
+      padding: inherit;
+    }
+  }
+  
+}
