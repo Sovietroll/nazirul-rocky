@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
-import useFadeIn from "./useFadeIn.jsx";
+
 
 const Contact = () => {
+  // const [url, setUrl] = useState('https://github.com/Sovietroll/myblog')
 
-  const visible = useFadeIn();
+  const LinkedUrl = 'https://www.linkedin.com/in/nazirul-syafiq-young-rockie-359289311/';
+  const GitHub = 'https://github.com/Sovietroll/myblog';
+  const email = "nazirulrocky@gmail.com";
 
   return ( 
     <>
-      <h1 className={`contact-main ${visible ? 'visible' : ''}`}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, in.
-      </h1>
-
+      <h1><a href={GitHub}>Github</a></h1>
+      <h1><a href={LinkedUrl}>LinkedLink</a></h1>
+      <h1>Contact me at @gmail <a href={email}>nazirulrocky@gmail.com</a></h1>
     </>
    );
 }

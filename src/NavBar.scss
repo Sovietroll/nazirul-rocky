@@ -174,10 +174,11 @@ a:focus {
     // }
   }
   .imgexp{
-    position: absolute;
-    top: 500px;
-    left: 305px;
-    z-index: 50;
+    // position: absolute;
+    position:static;
+    // top: 500px;
+    // left: 305px;
+    z-index: 10;
   };
 }
 

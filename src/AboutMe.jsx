@@ -12,7 +12,7 @@ const AboutMe = () => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = ["Graphic Designer", "Self Taught Web Developer", "Video Editor", "Motion Graphic"];
+  const titles = ["Graphic Designer", "Web Developer", "Video Editor", "Motion Graphic"];
   
 
   useEffect(() => {
