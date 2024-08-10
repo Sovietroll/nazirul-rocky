@@ -1,7 +1,15 @@
 # myBlog
 
-First attempt in making my React project
+My first ever blog also as resume/portfolio
 
-1. Making a simple minimalist with responsive blog 
-2. Using SASS
-3. Commit to branch
+Languages used:
+JSX
+Javascript
+SASS
+HTML
+CSS
+
+Tools used:
+Node?
+Bootstrap
+Framer Motrion

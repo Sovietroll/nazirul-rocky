@@ -10,14 +10,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
 
 
-
 function App() {
   const now = 60;
   document.title= "Zero Blog";
 
+
   return (
-    
     <BrowserRouter>
+
     <Bar />
     
     <ThemeProvider
@@ -33,7 +33,7 @@ function App() {
     </ThemeProvider>
    
       <Routes>
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="about" element = {<AboutMe />} />
         <Route path="contact" element = {<Contact />} />
       </Routes>

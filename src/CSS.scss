@@ -136,7 +136,7 @@ a:focus {
     }
   }
   &-section{
-    text-align: left;
+    text-align: center;
 
     &-body{
       // background-color: white
@@ -146,7 +146,7 @@ a:focus {
     .Col{
       border-radius: 15px;
       margin: 5px;
-      padding: 80px;
+      padding: 40px;
       background-color: #2E3039;
       position: relative;
     };
@@ -168,7 +168,7 @@ a:focus {
     };
 
     li{
-      // list-style-position: inside;
+      list-style-position: inside;
       color: #a9adc1;
       font-size: 30px;
       font-weight: 300;
@@ -185,6 +185,7 @@ a:focus {
     // top: 100%;
     // left: 405px;
     z-index: 10;
+    filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   };
 }
 
