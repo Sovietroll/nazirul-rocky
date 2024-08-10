@@ -1,23 +1,15 @@
 import { motion } from "framer-motion";
+import AboutMe from "./AboutMe";
 
 
 
 const Home = () => {
 
   return (
-
-    <motion.div
-      initial = {{ opacity: 0, y: 10}}
-      animate = {{opacity: 1, y: 0}}
-      style={{marginTop:"50px"}}
-    >
-
-      <h1>Hi</h1>
-      <p>I am Nazirul</p>
-      <p>Designer</p>
-      <p>Developer</p>
-
-    </motion.div>
+    <>
+        {/* <AboutMe/>
+        <Contact/> */}
+    </>
 
     );
 }

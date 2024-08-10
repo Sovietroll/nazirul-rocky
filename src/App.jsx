@@ -5,7 +5,7 @@ import Contact from './Contact';
 import Bar from './Bar.jsx';
 import Footer from './Footer.jsx'
 import './App.css';
-import './NavBar.scss';
+import './CSS.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
 
@@ -19,6 +19,7 @@ function App() {
     
     <BrowserRouter>
     <Bar />
+    
     <ThemeProvider
       breakpoints={['xl']}
       minBreakpoint='sm'
@@ -26,12 +27,15 @@ function App() {
       
       <NavBar />
 
+      <AboutMe/>
+      <Contact/>
+      
     </ThemeProvider>
    
       <Routes>
         <Route path="home" element={<Home />} />
-          <Route path="about" element = {<AboutMe />} />
-          <Route path="contact" element = {<Contact />} />
+        <Route path="about" element = {<AboutMe />} />
+        <Route path="contact" element = {<Contact />} />
       </Routes>
 
       <Footer/>

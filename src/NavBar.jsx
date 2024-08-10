@@ -1,4 +1,4 @@
-import './NavBar.scss';
+import './CSS.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import Container from 'react-bootstrap/Container';
@@ -37,7 +37,7 @@ const NavBar = () => {
                 <div
                     className="lg-container">
                     <img className="lg" 
-                    src='src/images/lg.png' alt="logo" width={90} />
+                    src='src/images/lg.png' alt="logo" width={150} />
                     {/* <Route>
                         <Redirect to= "/home"/>
                     </Route> */}
@@ -45,7 +45,7 @@ const NavBar = () => {
             </Col>
             
              
-            {bar.map((bars, index) => (
+            {/* {bar.map((bars, index) => (
                 <Col  xs={3} key={index}
                 className='navbar-center'>
                     <Link
@@ -56,7 +56,7 @@ const NavBar = () => {
                     </Link>
                 </Col>
             ))
-            }
+            } */}
             
 
             <Col>

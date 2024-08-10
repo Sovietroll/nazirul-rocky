@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import './CSS.scss';
+
 
 const AboutMe = () => {
 
@@ -45,9 +47,9 @@ const YearTotal = ({yearThen, yearAfter}) => {
   return ( 
 
     <div className={`about-me`}>
-      
       <div className="about-me-one">
         <div className= 'about-me-one-desc'>
+        <h1>Hi My name is</h1>
 
           <TransitionText >
 
@@ -73,34 +75,42 @@ const YearTotal = ({yearThen, yearAfter}) => {
             duration: .4}}>
 
               <img 
-                src="src/images/me bubble head.png" 
+                src="src/images/me.jpg" 
                 alt="head"
-                style={{width: "400px"}} 
-                className='bubbleHead'
+                style={{width: "350px",
+                  borderRadius: "100%",
+                  padding: "20px"
+                }} 
               />
 
           </motion.div>
       </div>
-        <p style={{fontSize: "25px"}}>
+        <p style={{fontSize: "25px",
+          paddingLeft: "100px",
+          paddingRight: "100px",
+          marginTop: "50px",
+          marginBottom: "50px"
+
+        }}>
           Back in 2023, I decided to try to create my own custom website at WordPress just for fun. I literally went into an infinity hole of coding and web development. I instantly fell in love with it. Fast-forward to today, I still studying and learning to code various languages and tools in hope of becoming a <b>Front End Developer</b> and the end goal is <b>Full Stack Developer</b>.   
         </p>
 
       <Container className="skills" >
 
-        <Row className="skills-row">
+        <Row className="g-3" >
 
-        <Col className="skills-dev-col">
+        <Col className="skills-dev-col" >
 
-              <Col>
+              <Col >
                 <img src="src/images/designerIcon.png" style={{width: "120px"}}/>
               </Col >
 
-              <Col className="skills-dev-col-1">
+              <Col className="skills-dev-col-1" >
                 Developer
               </Col >
 
-              <Col>
-               I take pleasure in coding from the basics and thrive on bringing visions to life in the browser.
+              <Col style={{backgroundColor: "purple"}}>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia maxime harum corrupti et rerum omnis sed error deleniti similique. Necessitatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, accusantium?
               </Col>
 
               <Col className="skills-dev-col-2">
@@ -125,6 +135,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
         </Col>
 
         <Col className="skills-des-col">
+
         <Col className="skills-des-col-row1">
 
                 <img src="src/images/designerIcon.png" style={{width: "200px"}}/>

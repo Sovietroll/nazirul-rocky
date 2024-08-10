@@ -1,0 +1,168 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+body {
+  background: #1f2028;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Arial";
+  height: 100rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(currentColor, currentColor) bottom/0 0.1em no-repeat;
+}
+a:hover {
+  color: #30d48f;
+  background-size: 100% 0.12em;
+  transition: 0.3s ease-in-out;
+}
+
+a:focus {
+  text-decoration: underline;
+  color: #30d48f;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Arial";
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.lg-container {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+}
+.lg-container:hover {
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  padding: 10px;
+}
+
+.icon-container {
+  display: flex;
+  margin-left: 80px;
+}
+
+.icon {
+  transition: 0.3s ease-in-out;
+}
+.icon:hover {
+  opacity: 50%;
+  transition: 0.3s ease-in-out;
+}
+
+.about-me {
+  color: white;
+}
+.about-me .icon-arrow {
+  height: 50px;
+}
+.about-me .icon-arrow:hover {
+  opacity: 50%;
+}
+.about-me-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.about-me-one-desc {
+  font-size: 50px;
+  text-align: left;
+}
+.about-me-one-desc-selftaught {
+  background-color: black;
+  display: inline-block;
+}
+.about-me-section {
+  text-align: left;
+}
+.about-me-section .Col {
+  border-radius: 15px;
+  margin: 5px;
+  padding: 80px;
+  background-color: #2E3039;
+  position: relative;
+}
+.about-me-section section {
+  padding: 0px;
+  margin: 0px;
+}
+.about-me-section h1 {
+  text-align: center;
+  font-weight: 700;
+}
+.about-me-section h2 {
+  font-weight: bold;
+}
+.about-me-section li {
+  color: #a9adc1;
+  font-size: 30px;
+  font-weight: 300;
+}
+.about-me .imgexp {
+  position: absolute;
+  z-index: 10;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  margin-top: 100px;
+}
+
+.skills {
+  background-color: #2E3039;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 20px;
+  font-size: 30px;
+  overflow: hidden;
+}
+.skills-row {
+  padding: 0px;
+  margin: 0px;
+}
+.skills-dev-col {
+  color: white;
+  background-color: rgba(59, 12, 57, 0.5);
+}
+.skills-dev-col-1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+.skills-dev-col-2 {
+  padding-top: 20px;
+}
+.skills-dev-col-2-col {
+  color: rgb(20, 114, 221);
+}
+.skills-dev-col-3 {
+  padding: inherit;
+}/*# sourceMappingURL=CSS.css.map */

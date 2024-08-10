@@ -181,9 +181,9 @@ a:focus {
   }
   .imgexp{
     // position: absolute;
-    position:static;
-    // top: 500px;
-    // left: 305px;
+    position:absolute;
+    // top: 100%;
+    // left: 405px;
     z-index: 10;
   };
 }
@@ -202,8 +202,9 @@ a:focus {
 .skills{
   background-color: #2E3039;
   @include nopadmarg;
-  padding: 50px;
   border-radius: 20px;
+  font-size: 30px;
+  overflow: hidden;
 
   &-row{
     @include nopadmarg;
@@ -211,22 +212,26 @@ a:focus {
   }
 
   &-dev-col{
-    @include nopadmarg;
+    // @include nopadmarg;
+
     color: white;
     background-color: rgba(59, 12, 57, 0.5);
     &-1{
       
       font-weight: $extraBold;
       font-size: 30px;
+      
     }
     &-2{
     padding-top: 20px;
       &-col{
         color: rgb(20, 114, 221);
+        
       }
     }
     &-3{
       padding: inherit;
+      
     }
   }
   
