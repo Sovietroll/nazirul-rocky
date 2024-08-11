@@ -193,47 +193,62 @@ a:focus {
 
 .footer{
   @include flex-center;
+  @include nopadmarg;
   background-color: black;
  margin:{
   top: 100px;
  }
 }
 
-
+// ! skill here
 .skills{
+  .vr{
+    // width: .5px;
+    background-color:#1f2028;
+  }
+  .g-3{
+    // border-left: 10px;
+    // border-style: solid;
+  }
   background-color: #2E3039;
   @include nopadmarg;
   border-radius: 20px;
   font-size: 30px;
   overflow: hidden;
-
   &-row{
     @include nopadmarg;
-
   }
 
   &-dev-col{
-    // @include nopadmarg;
-
     color: white;
     background-color: rgba(59, 12, 57, 0.5);
-    &-1{
-      
-      font-weight: $extraBold;
-      font-size: 30px;
-      
+  }
+
+  .skills-col{
+    padding: 50px;
+
+    img{
+      width: 120px;
     }
-    &-2{
-    padding-top: 20px;
-      &-col{
-        color: rgb(20, 114, 221);
-        
+    &-1{
+      @include paddingTopBottom;
+      font-weight: $extraBold;
+      font-size: 35px;
+      // background-color: rgb(255, 117, 117);
+      &-desc{
+        // background-color: rgb(160, 97, 255);
       }
     }
+    &-2{  
+      @include paddingTopBottom;
+      // background-color: green;
+      }
+  
     &-3{
-      padding: inherit;
-      
+      @include paddingTopBottom;
+      // background-color: rgb(255, 0, 30);
     }
   }
+  
   
 }
