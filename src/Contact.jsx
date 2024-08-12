@@ -10,7 +10,7 @@ const Contact = () => {
 
   return ( 
     <>
-    <h1>CONTACT</h1>
+    <h1>TESTIMONIALS</h1>
       <h2><a href={GitHub}>Github</a></h2>
       <h2><a href={LinkedUrl}>LinkedLink</a></h2>
       <h2>Contact me at @gmail <a href={email}>nazirulrocky@gmail.com</a></h2>

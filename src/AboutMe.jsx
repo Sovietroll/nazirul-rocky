@@ -2,9 +2,7 @@ import {motion} from "framer-motion";
 import TransitionText from "./TransitionText";
 import MotionFlip from "./MotionFlip";
 import {useEffect, useState, useRef} from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './CSS.scss';
@@ -15,8 +13,28 @@ const AboutMe = () => {
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = ["Self learn developer","Graphic Designer", "Video Editor", "Motion Graphic"];
+  const [open, setOpen] = useState(false);
   
+  const OpenText = () => {
+    const textOpen = 
+    (
+      <p style={{fontSize: "25px",
+        paddingLeft: "100px",
+        paddingRight: "100px",
+        marginTop: "50px",
+        marginBottom: "50px"
+      }}
+      className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
+      >
+      In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
+      </p>
+    );
 
+    open? textOpen : null;
+   
+    return textOpen;
+ 
+  }
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
@@ -45,12 +63,17 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
 
   return ( 
-
+<Container>
     <div className={`about-me`}>
       <div className="about-me-one">
-        <div className= 'about-me-one-desc'>
+        <Row>
+        <Col>
         <h1>Hi My name is</h1>
-
+        <TransitionText delay = {.5}>
+              <h1 
+                className="h1 text-wrap">Nazirul Syafiq bin Young Rockie.</h1>
+          </TransitionText> 
+          
           <TransitionText >
 
             <div 
@@ -62,12 +85,10 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
           </TransitionText>
 
-          <TransitionText delay = {.5}>
-              <p 
-                style={{color: "grey"}}>Nazirul Syafiq bin Young Rockie.</p>
-          </TransitionText> 
-          </div>
-          <motion.div
+          </Col>
+
+          <Col>
+                      <motion.div
             initial ={{scale: 1.2, y: 10}}
             animate={{scale:1, y: 0}}
             transition={{
@@ -76,24 +97,56 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
               <img 
                 src="src/images/me.jpg" 
-                alt="head"
-                style={{width: "350px",
-                  borderRadius: "100%",
-                  padding: "20px"
+                className="img-fluid rounded-circle"
+                style={{maxWidth: "100%", height: "auto"
                 }} 
               />
 
           </motion.div>
-      </div>
-        <p style={{fontSize: "25px",
-          paddingLeft: "100px",
-          paddingRight: "100px",
-          marginTop: "50px",
-          marginBottom: "50px"
+          </Col>
 
-        }}>
-          Back in 2023, I decided to try to create my own custom website at WordPress just for fun. I literally went into an infinity hole of coding and web development. I instantly fell in love with it. Fast-forward to today, I still studying and learning to code various languages and tools in hope of becoming a <b>Front End Developer</b> and the end goal is <b>Full Stack Developer</b>.  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia culpa, consequuntur inventore laudantium dolorum numquam vitae perferendis, fugit quaerat officiis similique ducimus distinctio voluptates rem quos. Esse earum pariatur voluptate m totam animi dolorem tenetur  exercitationem iste totam reiciendis accusantium minus, culpa quas dolor sunt, tempore incidunt. Ipsa, minus aliquam molestias mollitia provid
-        </p>
+          </Row>
+      </div>
+      
+      <Container>
+      <Row>
+
+      <p style={{fontSize: "25px",
+            paddingLeft: "100px",
+            paddingRight: "100px",
+            marginTop: "50px",
+            marginBottom: "50px"
+          }}
+          className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
+          >
+          In 2023, I started building a custom web-...
+          </p>   
+
+          <Button
+          onClick={() => setOpen(!open)}
+          aria-controls="text-paragraph"
+          aria-expanded={open}
+        >See more</Button>
+
+        <Collapse in={open}>
+        <OpenText/>
+          {/* <p style={{fontSize: "25px",
+            paddingLeft: "100px",
+            paddingRight: "100px",
+            marginTop: "50px",
+            marginBottom: "50px"
+          }}
+          className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
+          >
+          In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
+          </p>  */}
+        </Collapse>
+
+
+      </Row>
+      </Container>
+
+      {/* In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer. */}
 
       <Container className="skills" >
 
@@ -136,7 +189,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
         
         </Col>
 
-          <div class="vr"></div>
+          <div className="vr"></div>
         
 
         <Col className="skills-col">
@@ -276,7 +329,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
       </TransitionText>
       </Container>
     </div>
-
+</Container>
    );
 }
  

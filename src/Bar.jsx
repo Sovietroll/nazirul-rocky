@@ -23,10 +23,6 @@ const Bar = () => {
     }
   },[
 
-    // console.log(`scrollHeight ${scrollHeight}`),
-    // console.log(`windowHeight ${windowHeight}`),
-    console.log(`scrollPosition ${scrollPosition}`),
-
   ])
 
   const endOfScrollY = (scrollHeight - windowHeight);
@@ -36,7 +32,7 @@ const Bar = () => {
     style={{
       position: "sticky",
       top: 0,
-      height: "50px",
+      height: "20px",
       width: "100%",
       zIndex: 100
     }}

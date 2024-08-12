@@ -2,26 +2,31 @@
 @import 'variables';
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-$fonts: 'Arial';
+$fonts: 'Roboto', 'Segoe UI';
 $primary-color: #1c2431;
 $mainColor: #30d48f;
 $spacing: 2rem;
 $bold: bold;
 $extraBold: 700;
 
-// /* Custom styles for the xxl breakpoint */
-// @media (min-width: 900px) {
-//   .navbar-main {
-//     background-color: blue;
-//   }
-// }
-
-// /* Styles starting from the sm breakpoint */
-// @media (min-width: 2000px) {
-//   .navbar-main {
-//     background-color: green;
-//   }
-// }
+$font-family-sans-serif:
+  // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Windows
+  "Segoe UI",
+  // Android
+  Roboto,
+  // Basic web fallback
+  "Helvetica Neue", Arial,
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
 body{
   background: #1f2028;
