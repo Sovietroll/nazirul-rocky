@@ -122,7 +122,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
           In 2023, I started building a custom web-...
           </p>   
 
-          <Button
+          {/* <Button
           onClick={() => setOpen(!open)}
           aria-controls="text-paragraph"
           aria-expanded={open}
@@ -130,7 +130,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
         <Collapse in={open}>
         <OpenText/>
-          {/* <p style={{fontSize: "25px",
+          <p style={{fontSize: "25px",
             paddingLeft: "100px",
             paddingRight: "100px",
             marginTop: "50px",
@@ -139,8 +139,8 @@ const YearTotal = ({yearThen, yearAfter}) => {
           className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
           >
           In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
-          </p>  */}
-        </Collapse>
+          </p> 
+        </Collapse> */}
 
 
       </Row>
@@ -162,7 +162,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
                 Developer
               </Col >
 
-              <Col className="skills-col-1-desc">
+              <Col className="skills-col-1-desc text-wrap fs-5 fs-md-3 fs-sm-7 px-1 px-md-5">
                I enjoy building projects from the ground up and love transforming concepts into reality in the browser.
               </Col>
 
