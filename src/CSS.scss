@@ -207,18 +207,11 @@ a:focus {
 
 // ! skill here
 .skills{
-  .vr{
-    // width: .5px;
-    background-color:#1f2028;
-  }
-  .g-3{
-    // border-left: 10px;
-    // border-style: solid;
-  }
+
+ 
   background-color: #2E3039;
   @include nopadmarg;
   border-radius: 20px;
-  font-size: 30px;
   overflow: hidden;
   &-row{
     @include nopadmarg;
@@ -239,6 +232,7 @@ a:focus {
       @include paddingTopBottom;
       font-weight: $extraBold;
       font-size: 35px;
+      
       // background-color: rgb(255, 117, 117);
       &-desc{
         // background-color: rgb(160, 97, 255);

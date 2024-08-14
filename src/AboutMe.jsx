@@ -87,26 +87,30 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
           </Col>
 
-          <Col>
-                      <motion.div
+
+          </Row>
+          
+      </div>
+      
+      
+          <Col className="col">
+          <motion.div
             initial ={{scale: 1.2, y: 10}}
             animate={{scale:1, y: 0}}
             transition={{
             ease: "linear",
             duration: .4}}>
 
-              <img 
+              <img  
                 src="src/images/me.jpg" 
-                className="img-fluid rounded-circle"
-                style={{maxWidth: "100%", height: "auto"
+                className="img-fluid rounded-circle w-100"
+                style={{width: "50%", height: "auto",
                 }} 
               />
 
           </motion.div>
           </Col>
-
-          </Row>
-      </div>
+      
       
       <Container>
       <Row>
@@ -117,7 +121,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
             marginTop: "50px",
             marginBottom: "50px"
           }}
-          className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
+          className="fs-4 fs-md-3 fs-sm-1 px-2 px-md-5"
           >
           In 2023, I started building a custom web-...
           </p>   
@@ -155,20 +159,25 @@ const YearTotal = ({yearThen, yearAfter}) => {
         <Col className="skills-col" >
 
               <Col>
-                <img src="src/images/codeIcon.png"/>
+                <img src="src/images/codeIcon.png" className="img-fluid"/>
               </Col >
 
-              <Col className="skills-col-1" >
+              <Col className="skills-col-1 text-wrap fs-1 fs-md-5 fs-sm-1 px-0 px-md-5" >
                 Developer
               </Col >
 
-              <Col className="skills-col-1-desc text-wrap fs-5 fs-md-3 fs-sm-7 px-1 px-md-5">
+              <Col className="skills-col-1-desc text-wrap 
+              fs-6
+             ">
                I enjoy building projects from the ground up and love transforming concepts into reality in the browser.
               </Col>
 
               <Col className="skills-col-2">
                 <Col>
-                <span style={{color: "pink"}}>Languages I speak:</span>
+                <span style={{color: "pink"}}
+                  className="fs-3 fs-md-5 fs-sm-1 px-0 px-md-5"
+                >
+                  Languages I speak:</span>
                   <Col>
                     HTML, CSS, Javascript, JSX, SASS, Git
                   </Col>
