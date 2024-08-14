@@ -12,7 +12,7 @@ const AboutMe = () => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = ["Self learn developer","Graphic Designer", "Video Editor", "Motion Graphic"];
+  const titles = ["Self Learn Developer","Graphic Designer", "Video Editor", "Motion Graphic"];
   const [open, setOpen] = useState(false);
   
   const OpenText = () => {
@@ -67,63 +67,56 @@ const YearTotal = ({yearThen, yearAfter}) => {
     <div className={`about-me`}>
       <div className="about-me-one">
         <Row>
-        <Col>
-        <h1>Hi My name is</h1>
-        <TransitionText delay = {.5}>
-              <h1 
-                className="h1 text-wrap">Nazirul Syafiq bin Young Rockie.</h1>
-          </TransitionText> 
-          
-          <TransitionText >
+          <Col>
+            <h1 className="display-6 fw-normal">Hi My name is</h1>
+            <TransitionText delay = {.5}>
+                  <h1 
+                    className="display-5 fw-normal ">Nazirul Syafiq bin Young Rockie.</h1>
+              </TransitionText> 
+              
+              <TransitionText >
 
-            <div 
-            className="about-me-one-desc-selftaught"
-            >
-              <TitleStart />
-              {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
-              </div> 
+                <div className="about-me-one-desc-selftaught display-6">
+                  {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
+                  <TitleStart />
+                  {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
+                  </div> 
 
-          </TransitionText>
+              </TransitionText>
 
-          </Col>
+            </Col>
 
 
           </Row>
           
       </div>
       
-      
-          <Col xs={6} md={6}>
+      {/* MY PIC */}
+        <Col>
           <motion.div
             initial ={{scale: 1.2, y: 10}}
             animate={{scale:1, y: 0}}
             transition={{
             ease: "linear",
             duration: .4}}>
-
               <img  
                 src="src/images/me.jpg" 
-                className="img-fluid rounded-circle"
-                
-              />
+                className="img-me img-fluid rounded-circle img-responsive"
 
+              />
           </motion.div>
-          </Col>
+        </Col>
+      {/* MY PIC */}
       
       
       <Container>
-      <Row>
+        <Row>
 
-      <p style={{fontSize: "25px",
-            paddingLeft: "100px",
-            paddingRight: "100px",
-            marginTop: "50px",
-            marginBottom: "50px"
-          }}
-          className="fs-4 fs-md-3 fs-sm-1 px-2 px-md-5"
-          >
-          In 2023, I started building a custom web-...
-          </p>   
+          <p
+              className="lead"
+              >
+              In 2023, I started building a custom web-...
+              </p>   
 
           {/* <Button
           onClick={() => setOpen(!open)}
@@ -158,10 +151,10 @@ const YearTotal = ({yearThen, yearAfter}) => {
         <Col className="skills-col" >
 
               <Col>
-                <img src="src/images/codeIcon.png" className="img-fluid"/>
+                <img src="src/images/codeIcon.png" className="img-skills"/>
               </Col >
 
-              <Col className="skills-col-1 text-wrap fs-1 fs-md-5 fs-sm-1 px-0 px-md-5" >
+              <Col className="skills-col-1 text-wrap fs-1" >
                 Developer
               </Col >
 
@@ -203,7 +196,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
         <Col className="skills-col">
 
               <Col>
-                <img src="src/images/designerIcon.png" className="img-fluid"/>
+                <img src="src/images/designerIcon.png" className="img-skills"/>
               </Col>
             
               <Col className="skills-col-1" >
@@ -240,17 +233,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
 
 
-      {/* Arrow HERE */}
-      <Row 
-        style={{marginTop: "20px",
-        display: "inline-block",
-        backgroundColor: "black"}}
-        >
-         FSAFASF
-         {/* <FontAwesomeIcon icon={faChevronDown} /> */}
-        
-      </Row>
-      {/* Arrow HERE */}
+
     
 
     <Container>
@@ -260,14 +243,18 @@ const YearTotal = ({yearThen, yearAfter}) => {
         transition={{ease: "linear"}}
         className="imgexp"
     >
-    < img src="src/images/01G1.png" style={{width: "200px"}}/>
+    < img src="src/images/01G1.png" 
+    className="img-responsive"
+    style={{width: "25%",
+      height: "auto"
+    }}/>
     </motion.div>
 
       <TransitionText style={{marginTop: "20px"}}>
           <div className="about-me-section">
             
           
-          <div className="about-me-section-container-body">
+          <div className="about-me-section-container-body  experience-rows" >
 
             <Row>
             <h1>My Experiences</h1>
@@ -282,10 +269,12 @@ const YearTotal = ({yearThen, yearAfter}) => {
                   <h2>Self learn Web Developer</h2>
                   </Col>
                   <h3>2023 - Present {'\u00B7'} <YearTotal yearThen = {2023} yearAfter={2024}/> years </h3>
-                    <ul>
+
+                    <ul className="">
                       <li>Learn the whole world about web design.</li>
                       <li>Targeting to become offical Full Stack developer at the height of my career.</li>
                     </ul>
+
                 </section>
                 </Col>
 
