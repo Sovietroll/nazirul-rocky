@@ -93,7 +93,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
       </div>
       
       
-          <Col className="col">
+          <Col xs={6} md={6}>
           <motion.div
             initial ={{scale: 1.2, y: 10}}
             animate={{scale:1, y: 0}}
@@ -103,9 +103,8 @@ const YearTotal = ({yearThen, yearAfter}) => {
 
               <img  
                 src="src/images/me.jpg" 
-                className="img-fluid rounded-circle w-100"
-                style={{width: "50%", height: "auto",
-                }} 
+                className="img-fluid rounded-circle"
+                
               />
 
           </motion.div>
@@ -204,7 +203,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
         <Col className="skills-col">
 
               <Col>
-                <img src="src/images/designerIcon.png"/>
+                <img src="src/images/designerIcon.png" className="img-fluid"/>
               </Col>
             
               <Col className="skills-col-1" >
