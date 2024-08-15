@@ -1,10 +1,10 @@
-import {motion} from "framer-motion";
+import {color, motion, useAnimationControls,useSpring } from "framer-motion";
 import TransitionText from "./TransitionText";
 import MotionFlip from "./MotionFlip";
 import {useEffect, useState, useRef} from 'react';
 import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './CSS.scss';
 
 
@@ -12,9 +12,28 @@ const AboutMe = () => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = ["Self Learn Developer","Graphic Designer", "Video Editor", "Motion Graphic"];
+  const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
   const [open, setOpen] = useState(false);
+  const controls = useAnimationControls();
+
+  const wrapperVariants = {
+    dont: {
+      x: 0
+    },
+    move: {
+      x: 10
+    }
+  }
   
+const animationDuration = () =>{
+  controls.start('move');
+  const animation = setInterval(() => {
+    controls.start("dont");
+    clearInterval(animation);
+  },500)
+  
+}
+// !
   const OpenText = () => {
     const textOpen = 
     (
@@ -39,6 +58,7 @@ const AboutMe = () => {
     const interval = setInterval(() => {
       setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
     },3500);
+
   
     return() => {
       clearInterval(interval)
@@ -61,8 +81,8 @@ const YearTotal = ({yearThen, yearAfter}) => {
 }
 
 
-
-  return ( 
+//!-------------------------------------------------
+return ( 
 <Container>
     <div className={`about-me`}>
       <div className="about-me-one">
@@ -154,7 +174,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
                 <img src="src/images/codeIcon.png" className="img-skills"/>
               </Col >
 
-              <Col className="skills-col-1 text-wrap fs-1" >
+              <Col className="skills-col-1">
                 Developer
               </Col >
 
@@ -167,7 +187,7 @@ const YearTotal = ({yearThen, yearAfter}) => {
               <Col className="skills-col-2">
                 <Col>
                 <span style={{color: "pink"}}
-                  className="fs-3 fs-md-5 fs-sm-1 px-0 px-md-5"
+                  className=""
                 >
                   Languages I speak:</span>
                   <Col>
@@ -237,20 +257,17 @@ const YearTotal = ({yearThen, yearAfter}) => {
     
 
     <Container>
-    <motion.div
+
+      <TransitionText style={{marginTop: "20px", position: "relative"}}>
+
+      <motion.div
         initial ={{scale: 1.2, y: 10}}
         animate={{scale:1, y: 0}}
         transition={{ease: "linear"}}
-        className="imgexp"
     >
-    < img src="src/images/01G1.png" 
-    className="img-responsive"
-    style={{width: "25%",
-      height: "auto"
-    }}/>
+      < img src="src/images/01G1.png" 
+      className="imgexp img-responsive"/>
     </motion.div>
-
-      <TransitionText style={{marginTop: "20px"}}>
           <div className="about-me-section">
             
           
@@ -276,6 +293,30 @@ const YearTotal = ({yearThen, yearAfter}) => {
                     </ul>
 
                 </section>
+                <Col>
+
+                  <h4>Portfolio  </h4> 
+                  {/* onMouseLeave={()=> controls.start("dont")}> */}
+
+                  <div onClick={() => animationDuration()}>
+
+                      <motion.div
+                        variants={wrapperVariants}
+                        transition={{type:"spring",
+                          damping: 10,
+                          mass: 0.75,
+                          stiffness: 100,}}
+                        initial="dont"
+                        animate={controls}
+                        >
+
+                          <FontAwesomeIcon icon={faArrowRight} style={{color: "#ffffff",}} className="arrow-right"/>
+
+                      </motion.div>
+
+                  </div>
+
+                </Col>
                 </Col>
 
             </Row>
