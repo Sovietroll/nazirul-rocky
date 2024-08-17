@@ -81,37 +81,25 @@ const YearTotal = ({yearThen, yearAfter}) => {
 }
 
 
-//!-------------------------------------------------
+//!------------------------------------------------------------------------------------------------
 return ( 
-<Container>
-    <div className={`about-me`}>
-      <div className="about-me-one">
+<Container  className={`about-me`}>
+
+     
+      <Container  className="about-me-one">
         <Row>
-          <Col>
-            <h1 className="display-6 fw-normal">Hi My name is</h1>
+          
+          <Col className="col-12 col-sm-3">
+
+            <h1 className="fs-2 fw-normal">Hi My name is</h1>
             <TransitionText delay = {.5}>
                   <h1 
-                    className="display-5 fw-normal ">Nazirul Syafiq bin Young Rockie.</h1>
+                    className="fs-1 fw-normal ">Nazirul Syafiq bin Young Rockie.</h1>
               </TransitionText> 
               
-              <TransitionText >
-
-                <div className="about-me-one-desc-selftaught display-6">
-                  {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
-                  <TitleStart />
-                  {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
-                  </div> 
-
-              </TransitionText>
 
             </Col>
 
-
-          </Row>
-          
-      </div>
-      
-      {/* MY PIC */}
         <Col>
           <motion.div
             initial ={{scale: 1.2, y: 10}}
@@ -126,6 +114,34 @@ return (
               />
           </motion.div>
         </Col>
+        <TransitionText >
+
+          <Col className="">
+            {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
+            {/* <TitleStart  className="about-me-one-desc-selftaught display-6"/> */}
+            {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
+          </Col>
+
+        </TransitionText>
+          </Row>
+          </Container>
+      
+      
+      {/* MY PIC */}
+        {/* <Col>
+          <motion.div
+            initial ={{scale: 1.2, y: 10}}
+            animate={{scale:1, y: 0}}
+            transition={{
+            ease: "linear",
+            duration: .4}}>
+              <img  
+                src="src/images/me.jpg" 
+                className="img-me img-fluid rounded-circle img-responsive"
+
+              />
+          </motion.div>
+        </Col> */}
       {/* MY PIC */}
       
       
@@ -294,12 +310,12 @@ return (
 
                 </section>
                 <Col>
-
-                  <h4>Portfolio  </h4> 
-                  {/* onMouseLeave={()=> controls.start("dont")}> */}
-
-                  <div onClick={() => animationDuration()}>
-
+                  <h4
+                    style={{display: "flex",justifyContent: "center",
+                    }}
+                  ><span style={{paddingRight: "15px"}}>Portfolio</span>
+                  {/* PORTFOLIO LINK */}
+                      <a href="https://www.youtube.com/">
                       <motion.div
                         variants={wrapperVariants}
                         transition={{type:"spring",
@@ -308,14 +324,14 @@ return (
                           stiffness: 100,}}
                         initial="dont"
                         animate={controls}
+                        onClick = {()=> animationDuration()}
                         >
-
                           <FontAwesomeIcon icon={faArrowRight} style={{color: "#ffffff",}} className="arrow-right"/>
-
                       </motion.div>
-
-                  </div>
-
+                      </a>
+                      </h4> 
+                  {/* onMouseLeave={()=> controls.start("dont")}> */}
+ 
                 </Col>
                 </Col>
 
@@ -366,7 +382,7 @@ return (
           </div>
       </TransitionText>
       </Container>
-    </div>
+    
 </Container>
    );
 }

@@ -31,6 +31,7 @@ $breakpoints: (
   .img-me {
     width: 100%;
     height: auto;
+    background-color: #53feb7;
   }
   .experience-rows{
     // background-color: rgb(255, 19, 19);
@@ -50,12 +51,17 @@ $breakpoints: (
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   };
 }
+@media (min-width: map-get($breakpoints, lg)){
+  .img-me {
+    width: 50%;
+    height: auto;
+    background-color: #5353fe;
+
+  }
+}
 //! MD SIZE
 @media (min-width: map-get($breakpoints, md)){
-  .img-me {
-    width: 40%;
-    height: auto;
-  }
+
   .experience-rows{
     background-color: rgb(198, 182, 255);
     font-size: 25px;
