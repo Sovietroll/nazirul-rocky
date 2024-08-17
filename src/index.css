@@ -1,6 +1,6 @@
-
-.nav-bar{
-  display: flex;
-  background-color: aquamarine;
-  padding: 1px;
+#root{
+  padding: 0px;
+}
+body{
+  padding: 10px;
 }

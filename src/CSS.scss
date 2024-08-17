@@ -29,7 +29,7 @@ $breakpoints: (
 //! XS SIZE
 @media (min-width:map-get($breakpoints,xs)){
   .img-me {
-    width: 100%;
+    width: 70%;
     height: auto;
     background-color: #53feb7;
   }
@@ -44,9 +44,9 @@ $breakpoints: (
   }
   .imgexp{
     position:absolute;
-    top: 4%;
-    left: -30%;
-    width: 50%;
+    top: 0%;
+    left: -15%;
+    width: 35%;
     z-index: 10;
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   };
@@ -80,6 +80,14 @@ $breakpoints: (
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   };
 }
+
+// * LINES COLOR
+hr,.vr{
+  color: #131317;
+}
+
+
+// * LINES COLOR
 
 body{
   background: #1f2028;

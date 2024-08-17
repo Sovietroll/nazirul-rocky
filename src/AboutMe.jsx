@@ -1,7 +1,7 @@
 import {color, motion, useAnimationControls,useSpring } from "framer-motion";
 import TransitionText from "./TransitionText";
 import MotionFlip from "./MotionFlip";
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState, useRef, useCallback} from 'react';
 import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -15,13 +15,17 @@ const AboutMe = () => {
   const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
   const [open, setOpen] = useState(false);
   const controls = useAnimationControls();
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const wrapperVariants = {
     dont: {
-      x: 0
+      x: 0,
+
     },
     move: {
-      x: 10
+      x: 10,
+
+      
     }
   }
   
@@ -52,18 +56,24 @@ const animationDuration = () =>{
     open? textOpen : null;
    
     return textOpen;
- 
   }
+  const handleWindowResize = useCallback(event => {
+    setWindowWidth(window.innerWidth);
+  })
+
+  //! USEFFECT
   useEffect(() => {
     const interval = setInterval(() => {
       setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
     },3500);
+    window.addEventListener('resize', handleWindowResize)
 
   
     return() => {
-      clearInterval(interval)
+      clearInterval(interval),
+      window.removeEventListener('resize', handleWindowResize)
     }
-  },[]);
+  },[handleWindowResize]);
 
 const TitleStart  = () => {
   return (
@@ -80,7 +90,12 @@ const YearTotal = ({yearThen, yearAfter}) => {
   return(sum)
 }
 
+const Lines = () => {
+  const verticalLine =  <div className="vr p-0"></div>;
+  const horizontalLine = <hr></hr>;
 
+  return windowWidth > 500 ? verticalLine : horizontalLine 
+}
 //!------------------------------------------------------------------------------------------------
 return ( 
 <Container  className={`about-me`}>
@@ -89,18 +104,23 @@ return (
       <Container  className="about-me-one">
         <Row>
           
-          <Col className="col-12 col-sm-3">
+        <Col className="col-12 col-sm-3 p-4 nameHi">
 
-            <h1 className="fs-2 fw-normal">Hi My name is</h1>
-            <TransitionText delay = {.5}>
-                  <h1 
-                    className="fs-1 fw-normal ">Nazirul Syafiq bin Young Rockie.</h1>
-              </TransitionText> 
-              
+           <h1 className="fs-3 fw-normal col-12">Hi, I'm</h1>
 
-            </Col>
+            
+          <TransitionText delay = {.5}>
+              <h1 className="fs-1 fw-normal ">Nazirul Syafiq</h1>
+          </TransitionText> 
+            
+          <Col className="">
+            {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
+            <TitleStart  className="about-me-one-desc-selftaught fs-1"/>
+            {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
+          </Col>
+        </Col>
 
-        <Col>
+        <Col className="m-3">
           <motion.div
             initial ={{scale: 1.2, y: 10}}
             animate={{scale:1, y: 0}}
@@ -116,11 +136,6 @@ return (
         </Col>
         <TransitionText >
 
-          <Col className="">
-            {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
-            {/* <TitleStart  className="about-me-one-desc-selftaught display-6"/> */}
-            {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
-          </Col>
 
         </TransitionText>
           </Row>
@@ -225,9 +240,9 @@ return (
               </Col>
         
         </Col>
+     
+          <Lines/>
 
-          <div className="vr"></div>
-        
 
         <Col className="skills-col">
 
@@ -315,13 +330,14 @@ return (
                     }}
                   ><span style={{paddingRight: "15px"}}>Portfolio</span>
                   {/* PORTFOLIO LINK */}
-                      <a href="https://www.youtube.com/">
+                      <a href="https://www.google.com/">
                       <motion.div
                         variants={wrapperVariants}
-                        transition={{type:"spring",
-                          damping: 10,
-                          mass: 0.75,
-                          stiffness: 100,}}
+                        transition={{
+                          type:"spring",
+                          damping: 5,
+                          mass: .3,
+                          stiffness: 200}}
                         initial="dont"
                         animate={controls}
                         onClick = {()=> animationDuration()}
@@ -330,7 +346,6 @@ return (
                       </motion.div>
                       </a>
                       </h4> 
-                  {/* onMouseLeave={()=> controls.start("dont")}> */}
  
                 </Col>
                 </Col>
