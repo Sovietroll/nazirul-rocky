@@ -102,22 +102,26 @@ return (
 
      
       <Container  className="about-me-one">
-        <Row>
+        <Row >
           
-        <Col className="col-12 col-sm-3 p-4 nameHi">
-
-           <h1 className="fs-3 fw-normal col-12">Hi, I'm</h1>
-
-            
+        <Col className="col-12 col-sm-3 p-4 nameHi  " align="center">
+        <Col>
+        <Col>
+          <h1 className="fs-3 fw-normal col-12">Hi, I'm</h1>
+          </Col>
+          <Col>
           <TransitionText delay = {.5}>
               <h1 className="fs-1 fw-normal ">Nazirul Syafiq</h1>
           </TransitionText> 
+          </Col>
+
             
           <Col className="">
             {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
             <TitleStart  className="about-me-one-desc-selftaught fs-1"/>
             {/* GRAPHIC DESIGNER / SELF TAUGHT WEB DEVELOPER HERE */}
           </Col>
+        </Col>
         </Col>
 
         <Col className="m-3">
@@ -129,7 +133,7 @@ return (
             duration: .4}}>
               <img  
                 src="src/images/me.jpg" 
-                className="img-me img-fluid rounded-circle img-responsive"
+                className="img-me img-fluid rounded img-responsive"
 
               />
           </motion.div>

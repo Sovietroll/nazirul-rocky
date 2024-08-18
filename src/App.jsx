@@ -17,29 +17,18 @@ function App() {
 
   return (
     <BrowserRouter>
-
-    <Bar />
-    
-    <ThemeProvider
-      breakpoints={['xl']}
-      minBreakpoint='sm'
-    >
-      
+    <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
+    <Bar/>
       <NavBar />
-
-      <AboutMe/>
-      <Contact/>
-      
-    </ThemeProvider>
-   
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} /> 
         <Route path="about" element = {<AboutMe />} />
         <Route path="contact" element = {<Contact />} />
       </Routes>
 
       <Footer/>
-
+      
+      </ThemeProvider>
     </BrowserRouter>
   )
 }

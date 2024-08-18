@@ -1,15 +1,40 @@
-# myBlog
+# Nazirul Rocky Blog - Resume/Portfolio
 
-My first ever blog also as resume/portfolio
+Welcome to my personal blog, where I showcase my work, projects, and skills as a web developer. This blog serves as both my resume and portfolio, highlighting my journey and expertise in web development.
 
-Languages used:
-JSX
-Javascript
-SASS
-HTML
-CSS
+## 🚀 Languages Used
+- **JSX**
+- **JavaScript**
+- **SASS**
+- **HTML**
+- **CSS**
 
-Tools used:
-Node?
-Bootstrap
-Framer Motrion
+## 🛠 Tools/Library Used
+- **React.js**
+- **react-bootstrap**
+- **Bootstrap**
+- **Framer Motion**
+- **FontAwesome**
+- **Github**
+- **VSCode**
+- **hamburger-react by Luuk**
+- **React library by Tuan Anh Phung @phung_cz**
+
+
+## 🙌 Blog inspired by: 
+- **Matt Farley**
+- **Josh W Comeau**
+- **Kent C. Dodds**
+
+## 🧑‍🏫 My tutor :
+- **SuperSimpleDev**
+- **NetNinja**
+- **StackOverflow**
+- **Reddit**
+- **Google**
+- **Discord Coder Community**
+- **Chatgpt**
+- **My stressed brain**
+- **and my closed friends**
+
+[Visit My Blog](https://ongoing(will-update-soon).com)
