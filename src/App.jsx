@@ -1,6 +1,5 @@
 import NavBar from './NavBar.jsx';
 import Home from './Home.jsx';
-import AboutMe from './AboutMe.jsx';
 import Contact from './Contact';
 import Bar from './Bar.jsx';
 import Footer from './Footer.jsx'
@@ -22,7 +21,6 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} /> 
-        <Route path="about" element = {<AboutMe />} />
         <Route path="contact" element = {<Contact />} />
       </Routes>
 

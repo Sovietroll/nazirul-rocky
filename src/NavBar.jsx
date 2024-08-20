@@ -3,14 +3,33 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdown} from 'react-bootstrap';
-import {Link} from "react-router-dom";
-
+import BurgerMenu from './BurgerMenu';
+import { motion } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react'
 
 const NavBar = () => {
-    const [isOpen, setOpen] = useState(false)
+    const [isOpen, setOpen] = useState(false);
     const [checked, setChecked] = useState(true);
 
+    const [rotate, setRotate] = useState(false);
+
+    // * Prevent scrolling
+    isOpen? document.body.style.overflow = "hidden": document.body.style.overflow = "auto";
+    console.log(isOpen);
+
+    const [hamburgerOpen, setHamburgerOpen] = useState(false);
+    const toggleHamburger = () => {
+        setHamburgerOpen(!hamburgerOpen);
+        console.log('click')
+    }
+    
+    const burgerburgerMenu = 
+    <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+     >
+        <BurgerMenu/>
+    </motion.div>
     const bar = [
         {
             title: 'Home',
@@ -29,7 +48,7 @@ const NavBar = () => {
         ,
 
 ]
-const burger = <Hamburger toggled={isOpen} toggle={setOpen} />
+const burgerIcon = <Hamburger toggled={isOpen} toggle={setOpen} />
     
     return (
         
@@ -62,23 +81,12 @@ const burger = <Hamburger toggled={isOpen} toggle={setOpen} />
             ))
             } */}
 
-        <Col> {/* Navbar */}
-    <Navbar variant="dark" expand="lg">
-      <Container>
-        
-        {/* <Navbar.Brand href="#home"></Navbar.Brand> */}
-        <Navbar.Toggle aria-controls="navbar-dark-example" />
+        <Col> {/* Hamburger */}
+        <div className='hamburger' onClick={toggleHamburger}>
+         {burgerIcon}
+         {isOpen && burgerburgerMenu}
+        </div>
 
-        <Navbar.Collapse id="navbar-dark-example">
-          <Nav>
-            <Dropdown.Item href="#/action-1" active>
-            Action
-            </Dropdown.Item>
-          </Nav>
-        </Navbar.Collapse>
-
-      </Container>
-    </Navbar>
         </Col>
                  
 

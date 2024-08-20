@@ -47,10 +47,17 @@ $breakpoints: (
     top: 0%;
     left: -15%;
     width: 35%;
-    z-index: 10;
+    z-index: 2;
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
-  };
+  };  
+  
+  .hamburger{
+    display: fixed;
+    z-index: 10;
+  }
 }
+
+
 @media (min-width: map-get($breakpoints, lg)){
   .img-me {
     width: 50%;
@@ -58,7 +65,10 @@ $breakpoints: (
     background-color: #5353fe;
 
   }
+  
 }
+
+
 //! MD SIZE
 @media (min-width: map-get($breakpoints, md)){
 
@@ -79,7 +89,28 @@ $breakpoints: (
     z-index: 10;
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   };
+  .hamburger{
+    display: none;
+  }
 }
+//! hamburger ---------------------------------------
+// .hamburger{
+//   display: none;
+// }
+.hamburgerListDown{
+  position: absolute;
+  background: rgba(255, 0, 0, 0.5);
+  @include transition;
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  left: -3%;
+  z-index: 100;
+  li{
+    list-style-type: none
+  }
+}
+//! hamburger---------------------------------------
 
 // * LINES COLOR
 hr,.vr{
@@ -164,7 +195,7 @@ a:focus {
   }
 
 
-// ---------------------------------------
+//! ---------------------------------------
 .about-me{
   color: white;
 
@@ -251,7 +282,7 @@ a:focus {
   // };
 }
 
-// -------------------------------------------------------
+//! -------------------------------------------------------
 
 .footer{
   @include flex-center;
@@ -303,6 +334,4 @@ a:focus {
       // background-color: rgb(255, 0, 30);
     }
   }
-  
-  
 }
