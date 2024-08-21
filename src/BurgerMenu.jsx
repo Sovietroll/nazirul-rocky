@@ -1,8 +1,12 @@
 import {Link} from "react-router-dom";
+import { Squeeze as Hamburger } from 'hamburger-react';
+import { useState } from "react";
 
 
-const BurgerMenu = () => {
+const BurgerMenu = ({hamburgerOpen, toggleHamburger }) => {
+  const [isOpen, setOpen] = useState(false);/* burger icon animation */
 
+  console.log('hamburgerOpen received by BurgerMenu:', hamburgerOpen);
 
   const bar = [
     {
@@ -17,25 +21,20 @@ const BurgerMenu = () => {
     ,
 
 ]
-  
+
   return ( 
-    <nav className='hamburgerListDown'>
+    <div className= 'hamburgerListDown' onClick={toggleHamburger}>
+       
       <ul>
              {bar.map((bars, index) => (
-                <div  xs={3} key={index}
-                className='navbar-center'>
-                    <Link
-                        to={bars.path}
-                        
-                    >
-                        {bars.title}
-                    </Link>
-                </div>
-            ))
-            }
+              <li xs={3} key={index} className='navbar-center'>
+                <Link to={bars.path}>{bars.title}</Link>
+              </li>
+               ))
+              }
    
       </ul>
-    </nav>
+    </div>
    );
 }
  

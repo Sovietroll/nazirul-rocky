@@ -66,7 +66,8 @@ const animationDuration = () =>{
     const interval = setInterval(() => {
       setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
     },3500);
-    window.addEventListener('resize', handleWindowResize)
+    window.addEventListener('resize', handleWindowResize);
+    Lines();
 
   
     return() => {
@@ -94,7 +95,7 @@ const Lines = () => {
   const verticalLine =  <div className="vr p-0"></div>;
   const horizontalLine = <hr></hr>;
 
-  return windowWidth > 500 ? verticalLine : horizontalLine 
+  return windowWidth > 1000 ? verticalLine : horizontalLine 
 }
 //!------------------------------------------------------------------------------------------------
 return ( 

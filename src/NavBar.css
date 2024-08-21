@@ -39,7 +39,7 @@ a:focus {
   cursor: pointer;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1;
 }
 .navbar-main .lg-container {
   margin: 0;
