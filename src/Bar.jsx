@@ -34,7 +34,7 @@ const Bar = () => {
       top: 0,
       height: "10px",
       width: "100%",
-      zIndex: 10
+      zIndex: 2
     }}
     animated 
     variant="info" 

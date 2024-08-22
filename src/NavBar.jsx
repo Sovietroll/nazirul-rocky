@@ -1,47 +1,32 @@
 import './CSS.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from 'react';
 import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdown} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
 import BurgerMenu from './BurgerMenu.jsx';
+import {BurgerIcon} from './BurgerIcon.jsx';
 
 const NavBar = ({style}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
-    const [click, setClick] = useState(0);
+    const [click, setClick] = useState(false);
 
-    // * Prevent scrolling
-    isOpen? document.body.style.overflow = "hidden": document.body.style.overflow = "auto";
+    const [scroll, setScroll] = useState(false);
+    const disableScroll = () => document.body.style.overflow = "hidden";
+    const enableScroll = () => document.body.style.overflow = "auto";
 
-    const toggleHamburger = () => {
+    const clicky = () => {
         setHamburgerOpen(!hamburgerOpen);
+        setScroll(!scroll);
+        hamburgerOpen? enableScroll(): disableScroll();
     }
 
-    // const burgerburgerMenu = 
-    //     hamburgerOpen? (
-    //         document.body.style.overflow = "hidden",
-    //         <motion.div 
-    //             initial= {{opacity: 0}}
-    //             animate = {{opacity: 1}}
-   
-    //         >
-    //             <BurgerMenu/>
-    //         </motion.div>
-    //     ) :
-    //     (
-    //         document.body.style.overflow = "auto"
-    //     );
+
     const bar = [
         {
             title: 'Home',
-            path: '/home',
-        }
-        ,
-        {
-            title: 'About me',
-            path: '/about',
+            path: '/',
         }
         ,
         {
@@ -49,9 +34,14 @@ const NavBar = ({style}) => {
             path: '/contact'
         }
         ,
-
-]
     
+    ]
+    const begeIcon = 
+    <div className='div-burger-icon' 
+        onClick={clicky} >
+            <Hamburger toggled={isOpen} toggle={setOpen}/>
+    </div>
+
     return (
         
     <Container fluid>
@@ -60,39 +50,41 @@ const NavBar = ({style}) => {
 
             <Col> {/*LOGO*/}
                 
-                    
-                    <img className="lg" 
-                    src='src/images/lg.png' alt="logo" width={150} />
+                <Link to = "/">
+                <img className="lg" 
+                    src='src/images/lg.png' alt="logo" width={150}/>
+                </Link>
                 
             </Col>
             
 
         <Col className=" col-2 col-lg-1 d-md-none"> {/* Hamburger */}
 
-        <div className=''>
-            <div onClick={toggleHamburger} style={{zIndex: 100}}><Hamburger toggled={isOpen} toggle={setOpen}/></div>
+        <div className='div-burger'>
+            {begeIcon}
             <AnimatePresence>
-                {hamburgerOpen && (<motion.div 
-                initial= {{opacity: 0,
-                    // x:100
-
-                }}
-                
-                animate = {{
-                    opacity: 1.,
-                    // x:0
-                    // filter: "blur(5px)",
-                 }}
-                exit= {{ 
-                    opacity: 0,
-                    // filter: "blur(5px)",
-                    transition: { ease: "easeIn"}
-                 }}
-                >
-                    <BurgerMenu hamburgerOpen = {hamburgerOpen}/>   
+                {hamburgerOpen && 
+                (<motion.div 
+                    initial= {{opacity: 0}}
+                    animate = {{opacity: 1.}}
+                    exit= {{ 
+                        opacity: 0,
+                        transition: { ease: "linear", duration: .2}
+                    }}
+                    >
+                    <div className= 'hamburgerListDown'>
+                        <ul>
+                            {bar.map((bars, index) => (
+                            <li xs={3} key={index} className='navbar-center'>
+                                <Link to={bars.path} onClick={clicky}>{bars.title}</Link>
+                            </li>
+                            ))
+                            }
+   
+                        </ul>
+                    </div> 
                 </motion.div>)}
             </AnimatePresence>
-            {/* {hamburgerOpen && burgerburgerMenu} */}
         </div>
 
         </Col>

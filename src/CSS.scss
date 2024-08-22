@@ -47,7 +47,7 @@ $breakpoints: (
     top: 0%;
     left: -15%;
     width: 35%;
-    z-index: 1;
+    z-index:1;
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   };  
   
@@ -89,22 +89,39 @@ $breakpoints: (
 
 }
 //!  ---------------------- hamburger ---------------------
+.div-burger{
+  &-icon{
+    @include flex-center;
+    position: relative;
+    z-index: 1000;
+  }
+}
+.div-burger-inside{
+  // @include flex-center;
+  position: fixed;
+  top: 0%;
+  right: 10%;
+  background-color: blue
+}
 
 .hamburgerListDown{
   @include transition;
   position: fixed;
-  position: absolute;
-  background: rgba(255, 0, 0, 0.5);
-  top: 10;
-  left: -0.7%;
-  width: 100%;
-  height: 1000%;
+  // position: absolute;
+  background: rgba(0, 0, 0, 0.85);
 
-  z-index: 1;
+  top: 0%;
+  bottom: 0;
+  right: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
   animation: blur-in 1.5s forwards;
+  @include transition;
   li{
     list-style-type: none;
-    background: grey;
+    padding: 20px;
+    // background: grey;
   }
 }
 @keyframes blur-in {

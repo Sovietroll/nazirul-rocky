@@ -11,7 +11,7 @@ import twitter from 'react-useanimations/lib/twitter';
 const Footer = () => {
 
   return ( 
-    <Container fluid  className="footer">
+    <Container fluid  className="footer" id="footer">
 
 
       <Row>

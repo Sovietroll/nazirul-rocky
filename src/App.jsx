@@ -16,6 +16,8 @@ function App() {
 
   return (
     <BrowserRouter>
+    <button onClick={(e)=> {e.preventDefault();
+      window.location.replace("/footer");}}>Go</button>
     <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
     <Bar/>
       <NavBar />

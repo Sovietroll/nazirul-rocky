@@ -6,6 +6,7 @@ import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './CSS.scss';
+import { Link } from 'react-router-dom';
 
 
 const AboutMe = () => {
@@ -16,6 +17,17 @@ const AboutMe = () => {
   const [open, setOpen] = useState(false);
   const controls = useAnimationControls();
   const [windowWidth, setWindowWidth] = useState(0);
+
+
+  const windowScrollTo = () => {
+    window.scrollTo(0,0);
+  }
+
+  const floating = {
+    position: 'sticky',
+    top: 0
+  }
+
 
   const wrapperVariants = {
     dont: {
@@ -66,9 +78,8 @@ const animationDuration = () =>{
     const interval = setInterval(() => {
       setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
     },3500);
+    handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
-    Lines();
-
   
     return() => {
       clearInterval(interval),
@@ -95,12 +106,13 @@ const Lines = () => {
   const verticalLine =  <div className="vr p-0"></div>;
   const horizontalLine = <hr></hr>;
 
-  return windowWidth > 1000 ? verticalLine : horizontalLine 
+  return windowWidth > 500 ? verticalLine : horizontalLine 
 }
 //!------------------------------------------------------------------------------------------------
 return ( 
 <Container  className={`about-me`}>
 
+  <Link to = 'footer'><button style ={floating}>UP</button></Link>
      
       <Container  className="about-me-one">
         <Row >
@@ -249,7 +261,7 @@ return (
           <Lines/>
 
 
-        <Col className="skills-col">
+        <Col className="skills-col" id="test">
 
               <Col>
                 <img src="src/images/designerIcon.png" className="img-skills"/>
