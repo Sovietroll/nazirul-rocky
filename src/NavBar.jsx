@@ -4,8 +4,7 @@ import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdo
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
-import BurgerMenu from './BurgerMenu.jsx';
-import {BurgerIcon} from './BurgerIcon.jsx';
+
 
 const NavBar = ({style}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
@@ -18,6 +17,7 @@ const NavBar = ({style}) => {
 
     const clicky = () => {
         setHamburgerOpen(!hamburgerOpen);
+        setOpen(!isOpen);
         setScroll(!scroll);
         hamburgerOpen? enableScroll(): disableScroll();
     }
@@ -61,12 +61,13 @@ const NavBar = ({style}) => {
         <Col className=" col-2 col-lg-1 d-md-none"> {/* Hamburger */}
 
         <div className='div-burger'>
-            {begeIcon}
+            {begeIcon} {/* HAMBURGER ICON */}
             <AnimatePresence>
                 {hamburgerOpen && 
                 (<motion.div 
                     initial= {{opacity: 0}}
-                    animate = {{opacity: 1.}}
+                    animate = {{opacity: 1}}
+                    transition = {{duration: .3}}
                     exit= {{ 
                         opacity: 0,
                         transition: { ease: "linear", duration: .2}

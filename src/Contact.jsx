@@ -1,19 +1,32 @@
-import { useEffect, useState } from "react";
-
+import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 
 const Contact = () => {
-  // const [url, setUrl] = useState('https://github.com/Sovietroll/myblog')
 
-  const LinkedUrl = 'https://www.linkedin.com/in/nazirul-syafiq-young-rockie-359289311/';
-  const GitHub = 'https://github.com/Sovietroll/myblog';
-  const email = "nazirulrocky@gmail.com";
+
+  const links = [
+    {
+      site: "Linkedin",
+      url: "https://www.linkedin.com/in/nazirul-syafiq-young-rockie-359289311/",
+    },
+    {
+      site: 'Github',
+      url: 'https://github.com/Sovietroll/myblog',
+    },
+    {
+      site: 'email',
+      url: 'nazirulrocky@gmail.com'
+    }
+  ]
+
 
   return ( 
     <>
-    <h1>TESTIMONIALS</h1>
-      <h2><a href={GitHub}>Github</a></h2>
-      <h2><a href={LinkedUrl}>LinkedLink</a></h2>
-      <h2>Contact me at @gmail <a href={email}>nazirulrocky@gmail.com</a></h2>
+    <Container fluid>
+      
+      <Row>
+        <h1>CONTACT HERE</h1>
+      </Row>
+    </Container>
     </>
    );
 }

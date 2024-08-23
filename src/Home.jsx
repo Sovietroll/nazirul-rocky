@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './CSS.scss';
 import { Link } from 'react-router-dom';
-
+import Contact from './Contact';
 
 const AboutMe = () => {
 
@@ -112,7 +112,6 @@ const Lines = () => {
 return ( 
 <Container  className={`about-me`}>
 
-  <Link to = 'footer'><button style ={floating}>UP</button></Link>
      
       <Container  className="about-me-one">
         <Row >
@@ -308,14 +307,10 @@ return (
 
       <TransitionText style={{marginTop: "20px", position: "relative"}}>
 
-      <motion.div
-        initial ={{scale: 1.2, y: 10}}
-        animate={{scale:1, y: 0}}
-        transition={{ease: "linear"}}
-    >
+
       < img src="src/images/01G1.png" 
       className="imgexp img-responsive"/>
-    </motion.div>
+  
           <div className="about-me-section">
             
           
@@ -414,7 +409,7 @@ return (
           </div>
       </TransitionText>
       </Container>
-    
+      <Contact/>
 </Container>
    );
 }

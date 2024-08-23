@@ -16,14 +16,14 @@ function App() {
 
   return (
     <BrowserRouter>
-    <button onClick={(e)=> {e.preventDefault();
-      window.location.replace("/footer");}}>Go</button>
+
     <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
     <Bar/>
+
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} /> 
-        <Route path="contact" element = {<Contact />} />
+        <Route path="/" element = {<Home />} /> 
+        <Route exact path="contact" element = {<Contact />} />
       </Routes>
 
       <Footer/>
