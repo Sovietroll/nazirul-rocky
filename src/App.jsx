@@ -3,7 +3,6 @@ import Home from './Home.jsx';
 import Contact from './Contact';
 import Bar from './Bar.jsx';
 import Footer from './Footer.jsx'
-import './App.css';
 import './CSS.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'

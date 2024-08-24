@@ -28,15 +28,17 @@ const Bar = () => {
   const endOfScrollY = (scrollHeight - windowHeight);
   return ( 
 <>
-  <ProgressBar 
+  <ProgressBar className="progressBar"
     style={{
       position: "sticky",
-      top: 0,
-      height: "10px",
+      top: '0px',
+      height: "15px",
       width: "100%",
-      zIndex: 2
+      zIndex: 2,
+      borderRadius: "2px",
+      filter: "drop-shadow(0px 4px 8px #1f2028)"
     }}
-    animated 
+    label={`Go top`}
     variant="info" 
     max={endOfScrollY}
     now = {scroll}
