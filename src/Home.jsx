@@ -54,10 +54,10 @@ const animationDuration = () =>{
     const textOpen = 
     (
       <p style={{fontSize: "25px",
-    /*     paddingLeft: "100px",
-        paddingRight: "100px", */
-        // marginTop: "50px",
-        // marginBottom: "50px"
+        paddingLeft: "100px",
+        paddingRight: "100px",
+        marginTop: "50px",
+        marginBottom: "50px"
       }}
       className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
       >
@@ -137,7 +137,7 @@ return (
         </Col>
 
         <Col className="m-3">
-          {/* <motion.div
+          <motion.div
             initial ={{scale: 1.2, y: 10}}
             animate={{scale:1, y: 0}}
             transition={{
@@ -148,7 +148,7 @@ return (
                 className="img-me img-fluid rounded img-responsive"
 
               />
-          </motion.div> */}
+          </motion.div>
         </Col>
         <TransitionText >
 
@@ -158,22 +158,7 @@ return (
           </Container>
       
       
-      {/* MY PIC */}
-        {/* <Col>
-          <motion.div
-            initial ={{scale: 1.2, y: 10}}
-            animate={{scale:1, y: 0}}
-            transition={{
-            ease: "linear",
-            duration: .4}}>
-              <img  
-                src="src/images/me.jpg" 
-                className="img-me img-fluid rounded-circle img-responsive"
 
-              />
-          </motion.div>
-        </Col> */}
-      {/* MY PIC */}
       
       
       <Container>
@@ -243,7 +228,7 @@ return (
 
                   <Col  className="skills-col-3">
                   <span>Dev Tools:</span>
-                  <ul style={{listStyle: "none"/* , padding: "0px" */}}>
+                  <ul style={{listStyle: "none", padding: "0px"}}>
                     <li>Bootstrap</li>
                     <li>Github</li>
                     <li>VS Code</li>
@@ -305,11 +290,11 @@ return (
 
     <Container>
 
-      <TransitionText>
+      <TransitionText style={{marginTop: "20px", position: "relative"}}>
 
 
-      {/* < img src="src/images/01G1.png" 
-      className="imgexp img-responsive"/> */}
+      < img src="src/images/01G1.png" 
+      className="imgexp img-responsive"/>
   
           <div className="about-me-section">
             
@@ -340,7 +325,7 @@ return (
                   <h4
                     style={{display: "flex",justifyContent: "center",
                     }}
-                  ><span style={{/* paddingRight: "15px" */}}>Portfolio</span>
+                  ><span style={{paddingRight: "15px"}}>Portfolio</span>
                   {/* PORTFOLIO LINK */}
                       <a href="https://www.google.com/">
                       <motion.div
