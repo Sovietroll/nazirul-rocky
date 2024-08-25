@@ -150,7 +150,8 @@ body{
   font-family: $font-family-sans-serif; 
 }
 body > :not(strong, .footer,.progressBar){
-  padding: 10px;
+  padding: 20px;
+  // background-color: black;
 }
 a{
   color: white;
