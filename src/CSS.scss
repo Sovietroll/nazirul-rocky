@@ -217,6 +217,9 @@ a:focus {
     }
   }
 
+  .test-row{
+    @include flex-center;
+  }
 
 //! ---------------------------------------
 .about-me{

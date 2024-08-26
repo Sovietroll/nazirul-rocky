@@ -34,6 +34,10 @@ const NavBar = ({style}) => {
             path: '/contact'
         }
         ,
+        {
+            title: 'Experience',
+            path: '/exprience'
+        }
     
     ]
     const begeIcon = 
@@ -48,15 +52,24 @@ const NavBar = ({style}) => {
 
         <Row className='navbar-main'>
 
-            <Col> {/*LOGO*/}
-                
-                <Link to = "/">
-                <img className="lg" 
-                    src='src/images/lg.png' alt="logo" width={150}/>
-                </Link>
-                
-            </Col>
+        <Col> {/*LOGO*/}
             
+            <Link to = "/">
+            <img className="lg" 
+                src='src/images/lg.png' alt="logo" width={150}/>
+            </Link>
+            
+        </Col>
+        
+        <Col className='test-row'>
+        {bar.map((bars, index) => (
+           <Col key={index}>
+                   <Link to={bars.path}>{bars.title}</Link> 
+           </Col>
+        ))}
+        </Col>
+
+
 
         <Col className=" col-2 col-lg-1 d-md-none"> {/* Hamburger */}
 
