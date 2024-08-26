@@ -4,12 +4,14 @@ import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdo
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
-
+import { Link as Relink, animateScroll as Scroll } from 'react-scroll';
 
 const NavBar = ({style}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
+
+    // const ScrollLink = Scroll.ScrollLink;
 
     const [scroll, setScroll] = useState(false);
     const disableScroll = () => document.body.style.overflow = "hidden";
@@ -25,18 +27,18 @@ const NavBar = ({style}) => {
 
     const bar = [
         {
-            title: 'Home',
-            path: '/',
+            title: 'Skills',
+            className: 'skills'
         }
         ,
         {
-            title: 'Contact',
-            path: '/contact'
+            title: 'Testimonials',
+            className: 'testimonials'
         }
         ,
         {
             title: 'Experience',
-            path: '/exprience'
+            className: 'experiences'
         }
     
     ]
@@ -60,11 +62,13 @@ const NavBar = ({style}) => {
             </Link>
             
         </Col>
+
+        {/* <Relink to="navbar-main" spy={true} smooth={true} offset={50} duration={500}>test</Relink> */}
         
         <Col className='test-row'>
         {bar.map((bars, index) => (
            <Col key={index}>
-                   <Link to={bars.path}>{bars.title}</Link> 
+                   <Relink to={bars.className}>{bars.title}</Relink> 
            </Col>
         ))}
         </Col>

@@ -6,6 +6,7 @@ import Footer from './Footer.jsx'
 import './CSS.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
+import { Link as Relink, animateScroll as Scroll } from 'react-scroll';
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
 
     <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
     <Bar/>
+
+    {/* <Relink to="experiences-container" spy={true} smooth={true} offset={50} duration={500}>test</Relink> */}
 
       <NavBar />
       <Routes>

@@ -288,7 +288,7 @@ return (
 
     
 
-    <Container>
+    <Container className="experiences">
 
       <TransitionText style={{marginTop: "20px", position: "relative"}}>
 

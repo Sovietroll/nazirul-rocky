@@ -12,7 +12,7 @@ const Contact = () => {
   ]
   
   return ( 
-    <Container fluid>
+    <Container fluid className='testimonials'>
 
     <Carousel images={images}/>
       
