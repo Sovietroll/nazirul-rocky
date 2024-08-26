@@ -19,6 +19,7 @@ Welcome to my personal blog, where I showcase my work, projects, and skills as a
 - **VSCode**
 - **hamburger-react by Luuk**
 - **React library by Tuan Anh Phung @phung_cz**
+- **react-scroll**
 
 
 ## 🙌 Blog inspired by: 

@@ -4,7 +4,7 @@ import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdo
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
-import { Link as Relink, animateScroll as Scroll } from 'react-scroll';
+import { Link as ScrollTo, animateScroll as Scroll } from 'react-scroll';
 
 const NavBar = ({style}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
@@ -50,32 +50,38 @@ const NavBar = ({style}) => {
 
     return (
         
-    <Container fluid>
+    <Container fluid className='navbar-main'>
 
-        <Row className='navbar-main'>
+        <Row className='d-flex ' /* style={{backgroundColor: "purple", border: '1px', borderStyle: 'solid'}} */>
 
-        <Col> {/*LOGO*/}
+
+
+        <Col className='col-9 col-md-6'> {/*LOGO*/}
             
-            <Link to = "/">
             <img className="lg" 
-                src='src/images/lg.png' alt="logo" width={150}/>
-            </Link>
+                src='src/images/lg.png' alt="logo" width={150}
+                onClick = {() => {window.scrollTo(0,0);}}
+                />
             
         </Col>
 
-        {/* <Relink to="navbar-main" spy={true} smooth={true} offset={50} duration={500}>test</Relink> */}
         
-        <Col className='test-row'>
+        <Col className='d-md-flex d-none justify-content-center align-items-center'>
         {bar.map((bars, index) => (
            <Col key={index}>
-                   <Relink to={bars.className}>{bars.title}</Relink> 
+                   <ScrollTo to={bars.className} spy={true} smooth={true} offset={-150} duration={10}>
+                    <Col>
+                    {bars.title}
+                    
+                    </Col>
+                    </ScrollTo> 
            </Col>
         ))}
         </Col>
 
 
 
-        <Col className=" col-2 col-lg-1 d-md-none"> {/* Hamburger */}
+        <Col className="col-2 col-md-2 d-md-none flex-shrink-1 "> {/* Hamburger */}
 
         <div className='div-burger'>
             {begeIcon} {/* HAMBURGER ICON */}
@@ -94,7 +100,7 @@ const NavBar = ({style}) => {
                         <ul>
                             {bar.map((bars, index) => (
                             <li xs={3} key={index} className='navbar-center'>
-                                <Link to={bars.path} onClick={clicky}>{bars.title}</Link>
+                                <ScrollTo to={bars.className} spy={true} smooth={true} offset={-150} duration={10} onClick={clicky}>{bars.title}</ScrollTo>
                             </li>
                             ))
                             }

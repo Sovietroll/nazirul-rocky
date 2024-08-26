@@ -44,7 +44,7 @@ const useMediaQuery = (query) => {
       icon: UseAnimations,
       iconProps: {
          animation: github, 
-         size: isDesktop? 80: 50,
+         size: isDesktop? 60: 50,
          strokeColor: whiteColor, 
          className: 'icon' },
       url: "https://www.linkedin.com/in/nazirul-syafiq-young-rockie-359289311/",
@@ -52,13 +52,13 @@ const useMediaQuery = (query) => {
     {
       id: 2,
       icon: UseAnimations,
-      iconProps: { animation: linkedin, size: isDesktop? 80: 50, strokeColor: whiteColor, className: 'icon' },
+      iconProps: { animation: linkedin, size: isDesktop? 60: 50, strokeColor: whiteColor, className: 'icon' },
       url: 'https://github.com/Sovietroll/myblog',
     },
     {
       id: 3,
       icon: UseAnimations,
-      iconProps: { animation: twitter, size: isDesktop? 80: 50, strokeColor: whiteColor, className: 'icon' },
+      iconProps: { animation: twitter, size: isDesktop? 60: 50, strokeColor: whiteColor, className: 'icon' },
       url: 'nazirulrocky@gmail.com'
     }
   ];

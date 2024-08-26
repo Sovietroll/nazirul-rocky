@@ -32,7 +32,7 @@ const Bar = () => {
     style={{
       position: "sticky",
       top: '0px',
-      height: "15px",
+      height: "10px",
       width: "100%",
       zIndex: 2,
       borderRadius: "2px",

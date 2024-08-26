@@ -54,16 +54,7 @@ $breakpoints: (
 
 }
 
-
-@media (min-width: map-get($breakpoints, lg)){
-  .img-me {
-    width: 50%;
-    height: auto;
-    background-color: #5353fe;
-
-  }
   
-}
 .icon{
   // background-color: rgb(255, 255, 255);
   // width: 100px;
@@ -71,9 +62,12 @@ $breakpoints: (
 
 //! MD SIZE
 @media (min-width: map-get($breakpoints, md)){
+  .img-me {
+    width: 50%;
+    height: auto;
 
+  }
   .experience-rows{
-    background-color: rgb(198, 182, 255);
     font-size: 25px;
   }
   .img-skills{
@@ -104,7 +98,7 @@ $breakpoints: (
   position: fixed;
   top: 0%;
   right: 10%;
-  background-color: blue
+  // background-color: blue
 }
 
 .hamburgerListDown{
@@ -149,7 +143,7 @@ body{
   color: white;
   font-family: $font-family-sans-serif; 
 }
-body > :not(strong, .footer,.progressBar){
+body > :not(strong, .footer,.progressBar,.navbar-main){
   padding: 20px;
   // background-color: black;
 }
@@ -175,21 +169,20 @@ a:focus {
 
 .navbar-main {
 
-  @include flex-center;
-  font-family: $fonts;
-  font-weight: $bold;
-  padding: 10px;
-  border-radius: 5px;
+  // @include flex-center;
+  // font-family: $fonts;
+  // font-weight: $bold;
+  // padding: 10px;
+  // border-radius: 5px;
   cursor: pointer;
   position: sticky;
   top: 0;
-  z-index: 1;
-
+  z-index: 100;
 }
   
   .lg-container{
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
   // @include transition;
 
   &:hover{
@@ -198,43 +191,41 @@ a:focus {
   }
   }
 
-  ul{
-    margin: 0;
-    padding-left: 0;
-    padding: 10px;
-  }
-  .icon-container{
-    display: flex;
-    margin-left: 80px;
+  // ul{
+  //   margin: 0;
+  //   padding-left: 0;
+  //   padding: 10px;
+  // }
+  // .icon-container{
+  //   display: flex;
+  //   margin-left: 80px;
 
-  }
-  .icon{
-    @include transition;
+  // }
+  // .icon{
+  //   @include transition;
     
-    &:hover{
-      opacity: 50%;
-      @include transition;
-    }
-  }
+  //   &:hover{
+  //     opacity: 50%;
+  //     @include transition;
+  //   }
+  // }
 
-  .test-row{
-    @include flex-center;
-  }
+
 
 //! ---------------------------------------
 .about-me{
-  color: white;
+  // color: white;
 
-  .icon-arrow{
-    height: 50px;
+  // .icon-arrow{
+  //   height: 50px;
 
-    &:hover{
-      opacity: 50%;
-    }
-  }
+  //   &:hover{
+  //     opacity: 50%;
+  //   }
+  // }
 
   &-one{
-    @include flex-center;
+    // @include flex-center;
     // background-color: rgb(168, 115, 10);
     font-weight: $extraBold;
     line-height: 1.5;
@@ -310,13 +301,6 @@ a:focus {
 
 //! -------------------------------------------------------
 
-.footer{
-  //! THIS MIGHT BE THE PADDING PROBLEM 
-  // @include flex-center;
-  // @include nopadmarg;
-  background-color: black;
-  padding: 10px;
-}
 
 // ! skill here
 .skills{
@@ -359,4 +343,17 @@ a:focus {
       // background-color: rgb(255, 0, 30);
     }
   }
+}
+// ----------------FOOTER--------------------------
+.footer{
+  //! THIS MIGHT BE THE PADDING PROBLEM 
+  // @include flex-center;
+  // @include nopadmarg;
+  background-color: black;
+  padding: 10px;
+}
+
+
+.testimonials{
+  background-color: #019457;
 }
