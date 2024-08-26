@@ -116,7 +116,7 @@ const myPic =
   transition={{
   ease: "linear",
   duration: .4}}>
-    <img  src="src/images/me.jpg" className="img-me img-fluid rounded img-responsive"
+    <img  src="src/images/me.jpg" className="img-me img-fluid img-responsive"
     />
   </motion.div>
 
@@ -125,32 +125,32 @@ return (
 <Container  className={`about-me`}>
 
      
-      <Row  className="about-me-one">
-        <Row>
+      <Row  className="mt-2 mb-2 gap-3 about-me-one justify-content-center align-items-center">
           
-          <Col className="col-12 col-sm-3 nameHi  " align="center">
-        
-            <Col>
-        
-            <Col>
-              <TransitionText delay = {.5}>
-                  <h1 className="fs-1 fw-normal "><span>Hi, I'm </span>Nazirul Syafiq</h1> {/* NAME */}
-              </TransitionText> 
+        <Col className="col-md-4" >
+
+          <Col>
+            <Col className="col-12">
+              <Col className="">
+                <TransitionText delay = {.5}>
+                    <h1 className="fs-4 "><span>Hi, I'm </span>Nazirul Syafiq</h1> {/* NAME */}
+                </TransitionText> 
+              </Col>
+
+              <Col className="">
+                <TitleStart  className="about-me-one-desc-selftaught fs-1"/> {/* ROLES */}
+              </Col>
             </Col>
 
-            
-          <Col className="">
-            <TitleStart  className="about-me-one-desc-selftaught fs-1"/> {/* ROLES */}
+
           </Col>
         </Col>
-        </Col>
 
-        <Col className="m-3">
+        <Col className="col-md-6 col-12">
           {myPic} {/* PIC */}
         </Col>
 
-          </Row>
-          </Row>
+      </Row>
       
       
 
