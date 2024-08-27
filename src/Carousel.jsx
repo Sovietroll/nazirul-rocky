@@ -46,29 +46,18 @@ const Carousel = ({ images,  }) => {
   )
   // ! CONTINUE CAROUSEL
   const variants = {
-    rightEnter: {x: 0},
-    rightExit: {x : -1000},
 
+    right: {x: 10},
+    left: {x: -10}
 
-    leftEnter: {x: 0},
-    leftExit: {x : 10},
-
-    visible: {opacity: 1}
   }
-
-  const handleClick = () => {
-    controls.start('rightEnter')
-    console.log(click)
-  }
-
-
 
 const imgCarousel =     
   <AnimatePresence>
     <motion.div
-      // variants = {variants}
-      initial = {{opacity: 0}}
-      animate = {{ opacity: 1} }
+      variants = {variants}
+      initial = {{opacity: 1}}
+      animate = { direction === "right"? 'right' : 'left'}
       transition = {{duration: 1}}
       exit={{opacity: 0}}
     >    
