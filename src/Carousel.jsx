@@ -11,7 +11,6 @@ const Carousel = ({ images,  }) => {
 
   const nextSlide = () => {
     setDirection("right");
-    controls.start('rightEnter');
     setActiveIndex((prevIndex) => 
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     )
@@ -30,12 +29,12 @@ const Carousel = ({ images,  }) => {
     {
       id: 1,
       name: 'Slide 1',
-      comment: 'Comment 1',
+      comment: 'This Comment 1',
     },
     {
       id: 0,
       name: 'Slide 2',
-      comment: 'Comment 2',
+      comment: 'This another Comment 2',
     }
   ]
 
@@ -67,11 +66,10 @@ const Carousel = ({ images,  }) => {
 const imgCarousel =     
   <AnimatePresence>
     <motion.div
-      onClick={handleClick}
-      variants = {variants}
-      initial = {'rightExit'}
-      animate = { controls } 
-      transition = {{duration: .2}}
+      // variants = {variants}
+      initial = {{opacity: 0}}
+      animate = {{ opacity: 1} }
+      transition = {{duration: 1}}
       exit={{opacity: 0}}
     >    
 
@@ -96,17 +94,6 @@ const buttons =
     &gt;</button>
   </>
 
-
-
-  const sliderVariants = {
-    hiddenRight : {
-      x: "100%",
-      opacity: 0
-    },
-    initial: {
-      y: 0,
-    },
-  }
 
 
 
