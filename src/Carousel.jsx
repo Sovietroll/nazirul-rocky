@@ -5,7 +5,7 @@ import { useState } from 'react';
 const Carousel = ({ images,  }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [click, setClick] = useState(false);
-  const [direction, setDirection] = useState(null);
+  const [direction, setDirection] = useState('left');
 
   const controls = useAnimationControls();
 
@@ -22,6 +22,11 @@ const Carousel = ({ images,  }) => {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1  
     )
   };
+
+  const handleClick = (index) => {
+    setDirection(index > activeIndex ? 'right' : 'left');
+    setActiveIndex(index);
+  }
 
   // !-------------------------------------------
 
@@ -46,30 +51,74 @@ const Carousel = ({ images,  }) => {
   )
   // ! CONTINUE CAROUSEL
   const variants = {
-
-    right: {x: 10},
-    left: {x: -10}
-
-  }
+    hiddenRight: {
+      x: "10%",
+      opacity: 1,
+    },
+    hiddenLeft: {
+      x: "-10%",
+      opacity: 1,
+    },
+    visible: {
+      x: "0%",
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y:'200%',
+      // scale: 0,
+      transition: {
+        type: "spring",
+        ease: 'easeInOut',
+        duration: 2,
+        // delay: 5
+      },
+    },
+  };
 
 const imgCarousel =     
-  <AnimatePresence>
-    <motion.div
+  <AnimatePresence /* key={activeIndex} */ style={{position: 'relative'}}>
+    <motion.img style={{width: "200px", position: "absolute", top: "100px"}}
+      key={activeIndex}
+      src={images[activeIndex]}
       variants = {variants}
-      initial = {{opacity: 1}}
-      animate = { direction === "right"? 'right' : 'left'}
-      transition = {{duration: 1}}
-      exit={{opacity: 0}}
+      initial = {direction === 'right'? 'hiddenRight' : 'hiddenLeft'}
+      animate = 'visible'
+      transition = {{
+        ease: 'easeInOut',
+        type: "spring",
+        duration: 1,
+        // delay: 2
+      }}
+      exit= {"exit"}
     >    
-
-      <img
+      {/* <Col className='m-4'> */}
+      {/* <img
         src={images[activeIndex]}
         alt={`Slide ${activeIndex}`}
         className='carousel_img'
-        style={{width: "100px"}}
+        style={{width: "200px"}}
+      /> */}
+      {/* </Col> */}
+
+      {/* <Col>
+      <ContainerTestimonies
+        name={testimonies[activeIndex].name}
+        comment={testimonies[activeIndex].comment}
       />
-        
-  </motion.div>
+      </Col> */}
+
+    </motion.img>
+    <div style={{height: '500px'}}></div>
+    <Col>
+      <ContainerTestimonies
+        name={testimonies[activeIndex].name}
+        comment={testimonies[activeIndex].comment}
+      />
+      </Col>
   </AnimatePresence>
 
 
@@ -90,15 +139,9 @@ const buttons =
     <Container className="carousel">
         <Row>
           <h1>TESTIMONIALS</h1>
-          <Col>
+          <Col> 
+            <Col className="d-block d-flex justify-content-center align-items-center" style={{}}>{imgCarousel}</Col>
 
-            {imgCarousel}
-
-
-            <ContainerTestimonies
-              name={testimonies[activeIndex].name}
-              comment={testimonies[activeIndex].comment}
-            />
             {buttons}
           </Col>
         </Row>
