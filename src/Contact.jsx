@@ -1,5 +1,6 @@
 import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 import Carousel from './Carousel';
+import CarouselBootstrap from './CarouselBootstrap';
 
 const Contact = () => {
 
@@ -13,8 +14,11 @@ const Contact = () => {
   
   return ( 
     <Container fluid className='testimonials'>
+      <h1>Testimonials</h1>
+      <h5>Peple I've worked with have said some nice things...</h5>
 
-    <Carousel images={images}/>
+    <CarouselBootstrap/>
+    {/* <Carousel images={images}/> */}
       
       {/* <Row>
         <h1>TESTIMONIALS</h1>

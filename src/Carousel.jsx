@@ -62,11 +62,11 @@ const Carousel = ({ images,  }) => {
   // ! CONTINUE CAROUSEL
   const variants = {
     hiddenRight: {
-      x: "10%",
+      x: "100%",
       opacity: 1,
     },
     hiddenLeft: {
-      x: "-10%",
+      x: "-100%",
       opacity: 1,
     },
     visible: {
@@ -110,11 +110,11 @@ const buttons =
           <Col> 
             <Col className=" justify-content-center align-items-center m-5" >
             <AnimatePresence 
-            key={activeIndex}
+            // key={activeIndex}
             >
               
-                <motion.img style={{width: "100px"}}
-                  // key={activeIndex}
+                <motion.div style={{width: "100px"}}
+                  key={activeIndex}
                   src={images[activeIndex]}
                   variants = {variants}
                   initial = {direction === 'right'? 'hiddenRight' : 'hiddenLeft'}
@@ -127,7 +127,7 @@ const buttons =
                   exit= {"exit"}
                   className='rounded'
                 >    
-                </motion.img>
+                </motion.div>
               
               
             </AnimatePresence>
