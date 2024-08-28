@@ -79,7 +79,7 @@ const NavBar = ({style}) => {
         ))}
         </Col>
 
-
+{/* ---------------------HAMBURGER------------------------------ */}
 
         <Col className="col-2 col-md-2 d-md-none flex-shrink-1 "> {/* Hamburger */}
 
@@ -96,7 +96,7 @@ const NavBar = ({style}) => {
                         transition: { ease: "linear", duration: .2}
                     }}
                     >
-                    <div className= 'hamburgerListDown'>
+                    <div className= 'hamburgerListDown '>
                         <ul>
                             {bar.map((bars, index) => (
                             <li xs={3} key={index} className='navbar-center'>

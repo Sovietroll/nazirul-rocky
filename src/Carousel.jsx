@@ -44,10 +44,20 @@ const Carousel = ({ images,  }) => {
   ]
 
   const ContainerTestimonies = ({name, comment}) => (
-    <div>
+    <motion.div
+    variants = {variants}
+    initial = {direction === 'right'? 'hiddenRight' : 'hiddenLeft'}
+    animate = 'visible'
+    transition = {{
+      ease: 'easeInOut',
+      type: "spring",
+      duration: 1,
+      // delay: 2
+    }}
+    exit= {"exit"}>
         <p>{name}</p>
         <p>{comment}</p>
-    </div>
+    </motion.div>
   )
   // ! CONTINUE CAROUSEL
   const variants = {
@@ -68,7 +78,7 @@ const Carousel = ({ images,  }) => {
     },
     exit: {
       opacity: 0,
-      y:'200%',
+      x:'200%',
       // scale: 0,
       transition: {
         type: "spring",
@@ -78,48 +88,6 @@ const Carousel = ({ images,  }) => {
       },
     },
   };
-
-const imgCarousel =     
-  <AnimatePresence /* key={activeIndex} */ style={{position: 'relative'}}>
-    <motion.img style={{width: "200px", position: "absolute", top: "100px"}}
-      key={activeIndex}
-      src={images[activeIndex]}
-      variants = {variants}
-      initial = {direction === 'right'? 'hiddenRight' : 'hiddenLeft'}
-      animate = 'visible'
-      transition = {{
-        ease: 'easeInOut',
-        type: "spring",
-        duration: 1,
-        // delay: 2
-      }}
-      exit= {"exit"}
-    >    
-      {/* <Col className='m-4'> */}
-      {/* <img
-        src={images[activeIndex]}
-        alt={`Slide ${activeIndex}`}
-        className='carousel_img'
-        style={{width: "200px"}}
-      /> */}
-      {/* </Col> */}
-
-      {/* <Col>
-      <ContainerTestimonies
-        name={testimonies[activeIndex].name}
-        comment={testimonies[activeIndex].comment}
-      />
-      </Col> */}
-
-    </motion.img>
-    <div style={{height: '500px'}}></div>
-    <Col>
-      <ContainerTestimonies
-        name={testimonies[activeIndex].name}
-        comment={testimonies[activeIndex].comment}
-      />
-      </Col>
-  </AnimatePresence>
 
 
 
@@ -140,10 +108,40 @@ const buttons =
         <Row>
           <h1>TESTIMONIALS</h1>
           <Col> 
-            <Col className="d-block d-flex justify-content-center align-items-center" style={{}}>{imgCarousel}</Col>
-
-            {buttons}
+            <Col className=" justify-content-center align-items-center m-5" >
+            <AnimatePresence 
+            key={activeIndex}
+            >
+              
+                <motion.img style={{width: "100px"}}
+                  // key={activeIndex}
+                  src={images[activeIndex]}
+                  variants = {variants}
+                  initial = {direction === 'right'? 'hiddenRight' : 'hiddenLeft'}
+                  animate = 'visible'
+                  transition = {{
+                    ease: 'easeInOut',
+                    type: "spring",
+                    duration: 1,
+                  }}
+                  exit= {"exit"}
+                  className='rounded'
+                >    
+                </motion.img>
+              
+              
+            </AnimatePresence>
+              
+            </Col>
           </Col>
+          <Col className='col-12'>
+                <ContainerTestimonies
+                        name={testimonies[activeIndex].name}
+                        comment={testimonies[activeIndex].comment}
+                      />
+              </Col>
+          <Col>{buttons}</Col>
+
         </Row>
 
 
