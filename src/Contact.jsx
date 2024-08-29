@@ -13,28 +13,11 @@ const Contact = () => {
   ]
   
   return ( 
-    <Container fluid className='testimonials'>
-      <h1>Testimonials</h1>
-      <h5>Peple I've worked with have said some nice things...</h5>
+<>
 
-    <CarouselBootstrap/>
-    {/* <Carousel images={images}/> */}
-      
-      {/* <Row>
-        <h1>TESTIMONIALS</h1>
-        <Col>
-          {testimonies.map((test) => (
-            <ContainerTestimonies
-              key={test.id}
-              name={test.name}
-              comment={test.comment}
-              pic={test.pic}
-              />  
-          ))}
-        </Col>
-      </Row> */}
+<CarouselBootstrap/>
+</>
 
-    </Container>
    );
 }
  

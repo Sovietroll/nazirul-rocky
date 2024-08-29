@@ -1,6 +1,5 @@
-import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
+import {Row, Col, Container,Button,Collapse, Fade, Carousel,} from 'react-bootstrap';
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
-import Carousel from 'react-bootstrap/Carousel';
 import { useState } from 'react';
 
 const CarouselBootstrap = () => {
@@ -24,66 +23,71 @@ const CarouselBootstrap = () => {
   }
   ]
 
-  const imageOne = 
-  <>
-    <div className=''>
-    {images.map((img) => (
-      <img
-        key={img.id}
-        src={img.loc}
-        style={{width: img.width, borderRadius: img.bd}}
-      />
-    ))}
-    </div>
-    <div>
-      <p className='fs-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, architecto.</p>
-      <h5>Nia Irwan</h5>
-      <p className='fs-6'>7Eleven staff</p>
-    </div> 
-  </>
-  return ( 
+  const carouselOne = 
 
+  <Col className='carousel-container'>
+    <div className='mb-3 mt-3'>
+      <img src='src/images/me.jpg' className='img-carousel rounded-circle img-fluid'/>
+    </div>
+    
+      <p className='fs-6 mb-4'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur eaque ullam, quos quidem dicta repudiandae in dolorum atque quam.
+      </p>
+      <h5 className='fs-5'>Nia Irwan</h5>
+      <p className='fs-6'>7Eleven staff</p>
+    
+  </Col>;
+
+
+
+
+  const carouselTwo = 
+  <Col className='carousel-container'>
+    <div className='mb-3 mt-3'>
+      <img src='src/images/me.jpg' className='img-carousel rounded-circle img-fluid'/>
+    </div>
+    
+      <p className='fs-6 mb-4'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur eaque ullam, quos quidem dicta repudiandae in dolorum atque quam.
+      </p>
+      <h5 className='fs-5'>Nia Irwan</h5>
+      <p className='fs-6'>7Eleven staff</p>
+  </Col>
+
+
+
+
+  return ( 
+<Container fluid className='testimonials p-5' >
+  
+  <h1 className='fs-4'>Testimonials</h1>
+  <h5 className='fs-6'>People I've worked with have said some nice things...</h5>
     <Carousel activeIndex={index} 
     onSelect={handleSelect} 
     data-bs-theme='light' 
     wrap={false} 
     touch={true} 
     interval={null}
-    className='mb-4 p-4'>
+    aria-hidden={false}
+    className=''>
+    
       <Carousel.Item className=''>
-        {imageOne}
+        {carouselOne}
       </Carousel.Item>
       
       <Carousel.Item className=''>
-        {imageOne}
-        {/* <div className=''><img src='src/images/me.jpg' style={{width: "200px", borderRadius: "100%"}}/></div>
-          <div>
-            <p className='fs-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, architecto.</p>
-
-            <h5>Babysuji</h5>
-            <p className='fs-6'>7Eleven staff</p>
-          </div> */}
+        {carouselTwo}
       </Carousel.Item>
+
+
     </Carousel>
+</Container>
 
-  // <div id='carouselExample' className="carousel slide" style={{backgroundColor: "green"}}>
-  //   <div className='carousel-inner'>
 
-  //       <div className='carousel-item'>
-  //         <img src='src/images/pp.webp' style={{ width: "100px"}} className='d-block w-10' id={1}/>
-  //         <h5>1st img</h5> <p>First slide</p>
-  //       </div>
-
-  //       <div className='carousel-item active'>
-  //         <img src='src/images/me.jpg' style={{ width: "100px"}} className='d-block w-10' id={2}/>
-  //         <h5>2nd img</h5> <p>Second slide</p>
-
-  //   </div>
-
-  //     <button className='carousel-control-prev' type='button' data-bs-target="#carouselExample" data-bs-slide="prev">
-  //       <span className='carousel-control-prev-icon' aria-hidden="true"></span>
-  //       <span className='visually-hidden'>Previous</span>
-  //     </button>
+      // <button className='carousel-control-prev' type='button' data-bs-target="#carouselExample" data-bs-slide="prev">
+      //   <span className='carousel-control-prev-icon' aria-hidden="true"></span>
+      //   <span className='visually-hidden'>Previous</span>
+      // </button>
 
   //     <button className='carousel-control-next' type='button' data-bs-target="#carouselExample" data-bs-slide="next">
   //       <span className='carousel-control-next-icon' aria-hidden="true"></span>

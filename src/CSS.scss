@@ -357,7 +357,61 @@ a:focus {
   padding: 10px;
 }
 
+// ----------------CAROUSEL--------------------------
 
 .testimonials{
   background-color: #019457;
+  margin: 0;
+  h1{
+    @include nopadmarg
+  }
+  li{
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  .carousel-container{
+    div{
+      // @include carouselMarginTB
+    }
+    .img-carousel{
+      width: 40%;
+    }
+    h5{
+      margin: 0px;
+    }
+    p{
+      font-size: 100px;
+      margin: 0px;
+    }
+  }
+  .carousel-indicators{
+    position: absolute;
+    // width: 50%;
+    bottom: -10%;
+    margin: 0px;
+    border-style: solid;
+    padding: 10px;
+    // margin-bottom: 0px;
+    background-color: rgb(147, 146, 146,0.8);
+    button{
+      // background-color: red;
+      width: 50px;
+      height: 10px;
+      border-style: solid;
+      border-color: white;
+      border-width: 1px;
+      // background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtNTMzLWljb24tMTE2LWwyc2R1d2ppLmpwZw.jpg');
+      // background-size: cover;
+      // background-repeat: no-repeat;
+      text-indent: 0;
+      // border-radius: 100%;
+    }
+  }
+}
+.carousel-control-next-icon{
+  display: none;
+}
+.carousel-control-prev-icon{
+  display: none;
 }
