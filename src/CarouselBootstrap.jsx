@@ -31,7 +31,7 @@ const CarouselBootstrap = () => {
     </div>
     
       <p className='fs-6 mb-4'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur eaque ullam, quos quidem dicta repudiandae in dolorum atque quam.
+       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur eaque ullam, quos quidem dicta repudiandae in dolorum atque quam. "
       </p>
       <h5 className='fs-5'>Fariq</h5>
       <p className='fs-6'>7Eleven Staff Assistant</p>
@@ -54,8 +54,12 @@ const CarouselBootstrap = () => {
       <p className='fs-6'>Officer Bank Negara Malaysia</p>
   </Col>
 
-
-
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('.carousel-indicators');
+  if (button) {
+    button.textContent = 'This is a button';
+  }
+});
 
   return ( 
 <Container fluid className='testimonials p-5' >
@@ -70,7 +74,6 @@ const CarouselBootstrap = () => {
     interval={null}
     aria-hidden={false}
     className=''>
-    
       <Carousel.Item className=''>
         {carouselOne}
       </Carousel.Item>
