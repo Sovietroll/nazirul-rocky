@@ -2,12 +2,13 @@ import {color, motion, useAnimationControls,useSpring } from "framer-motion";
 import TransitionText from "./TransitionText";
 import MotionFlip from "./MotionFlip";
 import {useEffect, useState, useRef, useCallback} from 'react';
-import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
+import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './CSS.scss';
 import { Link } from 'react-router-dom';
 import Contact from './Contact';
+import Collapse from './Collapse';
 
 const AboutMe = () => {
 
@@ -159,11 +160,12 @@ return (
       <Container>
         <Row>
 
-          <p
-              className="lead"
+          <div
+              className="lead fs-6"
               >
               In 2023, I started building a custom web-...
-              </p>   
+            <Collapse/>
+              </div>   
 
           {/* <Button
           onClick={() => setOpen(!open)}

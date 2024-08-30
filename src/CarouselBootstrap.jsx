@@ -1,7 +1,9 @@
 import {Row, Col, Container,Button,Collapse, Fade, Carousel,} from 'react-bootstrap';
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
 import { useState } from 'react';
-import IconChatLeftQuoteFill from './IconChatLeftQuoteFill'
+import IconChatLeftQuoteFill from './IconChatLeftQuoteFill';
+
+
 const CarouselBootstrap = () => {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex) => {
