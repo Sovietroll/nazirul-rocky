@@ -2,12 +2,12 @@ import {useState} from 'react'
 import {color, motion, useAnimationControls,useSpring, AnimatePresence } from "framer-motion";
 import {Row, Col, Container,Button, Fade} from 'react-bootstrap';
 
-const Collapse = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Collapse = ({isOpen,setIsOpen}) => {
+  // const [isOpen, setIsOpen] = useState(false);
 
   const handleOpening = () =>{
     setIsOpen((prev) => !prev);
-    console.log(isOpen);
+    console.log(isOpen)
   }
 
   const variant = {

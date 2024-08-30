@@ -4,7 +4,7 @@ import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdo
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
-import { Link as ScrollTo, animateScroll as Scroll } from 'react-scroll';
+import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scroll';
 
 const NavBar = ({style}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
@@ -32,15 +32,14 @@ const NavBar = ({style}) => {
         }
         ,
         {
-            title: 'Testimonials',
-            className: 'testimonials'
-        }
-        ,
-        {
             title: 'Experience',
             className: 'experiences'
         }
-    
+        ,
+        {
+            title: 'Testimonials',
+            className: 'testimonials'
+        }
     ]
     const begeIcon = 
     <div className='div-burger-icon' 

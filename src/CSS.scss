@@ -42,21 +42,14 @@ body > :not(strong, .footer,.progressBar,.navbar-main){
   // background-color: black;
 }
 a{
-  color: white;
-  text-decoration: none;
-  @include transition;
-
-  &:hover{
-    color: $logoColor;
-    background-size: 100% .12em;
-    @include transition;
-  }
-}
-
-a:focus {
-  text-decoration: underline;
   color: $logoColor;
   @include transition;
+  font-weight: normal;
+  text-decoration: none;
+}
+.active {
+  font-weight: bold;
+  text-decoration: none;
 }
 
 //! XS SIZE

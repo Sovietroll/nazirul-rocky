@@ -15,7 +15,7 @@ const AboutMe = () => {
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const controls = useAnimationControls();
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -50,26 +50,7 @@ const animationDuration = () =>{
   },500)
   
 }
-// !
-  const OpenText = () => {
-    const textOpen = 
-    (
-      <p style={{fontSize: "25px",
-        paddingLeft: "100px",
-        paddingRight: "100px",
-        marginTop: "50px",
-        marginBottom: "50px"
-      }}
-      className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
-      >
-      In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
-      </p>
-    );
 
-    open? textOpen : null;
-   
-    return textOpen;
-  }
   const handleWindowResize = useCallback(event => {
     setWindowWidth(window.innerWidth);
   })
@@ -163,35 +144,19 @@ return (
           <div
               className="lead fs-6"
               >
-              In 2023, I started building a custom web-...
-            <Collapse/>
+                {!isOpen? <p>In 2023, I started building a custom web-...</p> : null}
+              {/* // In 2023, I started building a custom web-... */}
+{/* -------------COLLAPSE BUTTON--------------- */}
+              <Collapse  isOpen={isOpen} setIsOpen={setIsOpen}/>
+{/* -------------COLLAPSE BUTTON--------------- */}
+
               </div>   
-
-          {/* <Button
-          onClick={() => setOpen(!open)}
-          aria-controls="text-paragraph"
-          aria-expanded={open}
-        >See more</Button>
-
-        <Collapse in={open}>
-        <OpenText/>
-          <p style={{fontSize: "25px",
-            paddingLeft: "100px",
-            paddingRight: "100px",
-            marginTop: "50px",
-            marginBottom: "50px"
-          }}
-          className="fs-4 fs-md-3 px-1 px-md-5 text-paragraph"
-          >
-          In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
-          </p> 
-        </Collapse> */}
 
 
       </Row>
       </Container>
 
-      {/* In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer. */}
+
 
       <Container className="skills" >
 
