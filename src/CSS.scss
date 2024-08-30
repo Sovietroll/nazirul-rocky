@@ -395,17 +395,23 @@ a:focus {
     // margin-bottom: 0px;
     background-color: rgb(147, 146, 146,0.8);
     button{
-      // background-color: red;
+      background-color: red;
       width: 50px;
       height: 10px;
       border-style: solid;
-      border-color: white;
+      border-color: rgb(28, 4, 162);
       border-width: 1px;
       background-image: url('test');
+      filter: blur(2px);
       // background-size: cover;
       // background-repeat: no-repeat;
       text-indent: 0;
       // border-radius: 100%;
+    }
+    button.active{
+      transition: 1s ease-in-out;
+      filter: blur(0px);
+      background-color: green;
     }
   }
 }
