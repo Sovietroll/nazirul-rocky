@@ -27,14 +27,14 @@ const CarouselBootstrap = () => {
 
   <Col className='carousel-container'>
     <div className='mb-3 mt-3'>
-      <img src='src/images/me.jpg' className='img-carousel rounded-circle img-fluid'/>
+      <img src='src/images/pp.webp' className='img-carousel rounded-circle img-fluid'/>
     </div>
     
       <p className='fs-6 mb-4'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur eaque ullam, quos quidem dicta repudiandae in dolorum atque quam.
       </p>
-      <h5 className='fs-5'>Nia Irwan</h5>
-      <p className='fs-6'>7Eleven staff</p>
+      <h5 className='fs-5'>Fariq</h5>
+      <p className='fs-6'>7Eleven Staff Assistant</p>
     
   </Col>;
 
@@ -50,8 +50,8 @@ const CarouselBootstrap = () => {
       <p className='fs-6 mb-4'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur eaque ullam, quos quidem dicta repudiandae in dolorum atque quam.
       </p>
-      <h5 className='fs-5'>Nia Irwan</h5>
-      <p className='fs-6'>7Eleven staff</p>
+      <h5 className='fs-5'>Megat</h5>
+      <p className='fs-6'>Officer Bank Negara Malaysia</p>
   </Col>
 
 
