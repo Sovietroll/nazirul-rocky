@@ -20,7 +20,7 @@ Welcome to my personal blog, where I showcase my work, projects, and skills as a
 - **hamburger-react by Luuk**
 - **React library by Tuan Anh Phung @phung_cz**
 - **react-scroll**
-
+- **reactsvgicons**
 
 ## 🙌 Blog inspired by: 
 - **Matt Farley**

@@ -9,8 +9,9 @@
 @import "bootstrap/scss/utilities/api";
 
 $fonts: 'Roboto','Segoe UI';
-$primary-color: #1c2431;
-$mainColor: #30d48f;
+$body-color: #1f2028;
+$logoColor: #007EE5;
+$gridColor: #2E3039;
 $spacing: 2rem;
 $bold: bold;
 $extraBold: 700;
@@ -157,7 +158,7 @@ a{
   @include transition;
 
   &:hover{
-    color: $mainColor;
+    color: $logoColor;
     background-size: 100% .12em;
     @include transition;
   }
@@ -165,7 +166,7 @@ a{
 
 a:focus {
   text-decoration: underline;
-  color: $mainColor;
+  color: $logoColor;
   @include transition;
 }
 
@@ -360,7 +361,7 @@ a:focus {
 // ----------------CAROUSEL--------------------------
 
 .testimonials{
-  background-color: #019457;
+  // background-color: #019457;
   margin: 0;
   h1{
     @include nopadmarg
@@ -390,19 +391,18 @@ a:focus {
     // width: 50%;
     bottom: -10%;
     margin: 0px;
-    border-style: solid;
+    // border-style: solid;
     padding: 10px;
     // margin-bottom: 0px;
-    background-color: rgb(147, 146, 146,0.8);
+    // background-color: rgb(147, 146, 146,0.8);
     button{
-      // background-color: rgb(34, 0, 255);
-      width: 100px;
+      background-color: #007EE5;
+      width: 10px;
       height: 10px;
       // border-style: solid;
       // border-color: rgb(28, 4, 162);
-      border-width: 1px;
+      border-width: .5px;
       background-image: url('test');
-      // filter: blur(2px);
       // background-size: cover;
       // background-repeat: no-repeat;
       border-radius: 100%;
@@ -411,9 +411,8 @@ a:focus {
     }
     button.active{
       transition: .5s ease-in-out;
-      // filter: blur(0px);
       // background-color: rgb(229, 48, 3);
-      width: 200px;
+      width: 30px;
       height: 10px;
       border-radius: 10px;
       content: 'test';

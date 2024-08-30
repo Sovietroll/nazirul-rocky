@@ -47,10 +47,10 @@ const NavBar = ({style}) => {
         onClick={clicky} >
             <Hamburger toggled={isOpen} toggle={setOpen}/>
     </div>
-
-    return (
+// !--------------------RETURN------------------------
+return (
         
-    <Container fluid className='navbar-main'>
+    <Container fluid className='navbar-main' style={{backgroundColor: 'orange'}}>
 
         <Row className='d-flex ' /* style={{backgroundColor: "purple", border: '1px', borderStyle: 'solid'}} */>
 

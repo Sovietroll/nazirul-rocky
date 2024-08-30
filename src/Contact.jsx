@@ -13,10 +13,10 @@ const Contact = () => {
   ]
   
   return ( 
-<>
+
 
 <CarouselBootstrap/>
-</>
+
 
    );
 }

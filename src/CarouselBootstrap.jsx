@@ -1,27 +1,13 @@
 import {Row, Col, Container,Button,Collapse, Fade, Carousel,} from 'react-bootstrap';
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
 import { useState } from 'react';
-
+import IconChatLeftQuoteFill from './IconChatLeftQuoteFill'
 const CarouselBootstrap = () => {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex) => {
     setIndex (selectedIndex);
   }
 
-  const images = [
-   {
-    id: 0, 
-    loc: 'src/images/me.jpg',
-    width: '100px',
-    bd: "100%"
-  },
-  {
-    id: 1,
-    loc: 'src/images/pp.webp',
-    width: '100px',
-    bd: '100%'
-  }
-  ]
 
   const carouselOne = 
 
@@ -29,12 +15,12 @@ const CarouselBootstrap = () => {
     <div className='mb-3 mt-3'>
       <img src='src/images/pp.webp' className='img-carousel rounded-circle img-fluid'/>
     </div>
-    
-      <p className='fs-6 mb-4'>
+    <h5 className='fs-5' style={{color: '#007EE5'}}><strong>Fariq</strong></h5>
+    <p className='fs-6 mb-4'>7Eleven Staff Assistant</p>
+
+      <p className='fs-6'>
        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur eaque ullam, quos quidem dicta repudiandae in dolorum atque quam. "
       </p>
-      <h5 className='fs-5'>Fariq</h5>
-      <p className='fs-6'>7Eleven Staff Assistant</p>
     
   </Col>;
 
@@ -64,8 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
   return ( 
 <Container fluid className='testimonials p-5' >
   
-  <h1 className='fs-4'>Testimonials</h1>
-  <h5 className='fs-6'>People I've worked with have said some nice things...</h5>
+  {/* <h1 className='fs-4 mb-1
+'>Testimonials</h1> */}
+  <IconChatLeftQuoteFill className="text-black-200" width='100px' height='80px' style={{color: "white"}}/>
+
+
     <Carousel activeIndex={index} 
     onSelect={handleSelect} 
     data-bs-theme='light' 

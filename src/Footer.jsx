@@ -64,14 +64,14 @@ const useMediaQuery = (query) => {
   ];
   
   return ( 
-    <Container fluid  className="footer" id="footer">
+    <Container fluid  className="footer mt-5" id="footer">
 
 
       <Row>
 
         <Col>
-        <img className="lg" 
-          src='src/images/lg.png' alt="logo" width={150} />
+        {/* <img className="lg" 
+          src='src/images/lg.png' alt="logo" width={150} /> */}
    
         <Col className=".col-sm-2"><p>A self-driven developer pursuing full-stack skills. [ongoing]</p>
         </Col>
