@@ -47,6 +47,7 @@ a{
   font-weight: normal;
   text-decoration: none;
 }
+// Conflict with carousel fonts
 .active {
   font-weight: bold;
   text-decoration: none;
@@ -380,35 +381,24 @@ hr,.vr{
     }
   }
   .carousel-indicators{
+    font-style: normal;
     position: absolute;
-    // width: 50%;
-    bottom: -10%;
+    bottom: -2%;
     margin: 0px;
-    // border-style: solid;
     padding: 10px;
-    // margin-bottom: 0px;
-    // background-color: rgb(147, 146, 146,0.8);
     button{
       background-color: #007EE5;
       width: 10px;
       height: 10px;
-      // border-style: solid;
-      // border-color: rgb(28, 4, 162);
       border-width: .5px;
-      background-image: url('test');
-      // background-size: cover;
-      // background-repeat: no-repeat;
       border-radius: 100%;
       transition: .5s ease-in-out;
-
     }
     button.active{
       transition: .5s ease-in-out;
-      // background-color: rgb(229, 48, 3);
       width: 30px;
       height: 10px;
       border-radius: 10px;
-      content: 'test';
     }
   }
 }
