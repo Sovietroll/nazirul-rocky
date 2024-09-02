@@ -1,8 +1,8 @@
 import {Row, Col, Container,Button,Collapse, Fade, Carousel,} from 'react-bootstrap';
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
 import { useState } from 'react';
-import IconChatLeftQuoteFill from './IconChatLeftQuoteFill';
-import CarouselContent from './CarouselContent'
+import CarouselContent from './CarouselContent';
+import {IconChatLeftQuoteFill} from './Icons';
 
 
 const CarouselBootstrap = () => {
@@ -15,7 +15,7 @@ const CarouselBootstrap = () => {
   return ( 
 <Container fluid className='testimonials p-2' >
   
-  <IconChatLeftQuoteFill className="text-black-200" width='100px' height='60px' style={{color: "white"}}/>
+  <IconChatLeftQuoteFill className="text-black-200" width='100px' height='60px' style={{color: "orange"}}/>
 
 
     <Carousel activeIndex={index} 
