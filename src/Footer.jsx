@@ -1,12 +1,6 @@
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container';
-import UseAnimations from "react-useanimations";
-import github from 'react-useanimations/lib/github';
-import linkedin from 'react-useanimations/lib/linkedin';
-import twitter from 'react-useanimations/lib/twitter';
+import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
-
+import {IconLinkedin, IconEmailOutline, IconSquareGithub } from './Icons';
 
 const Footer = () => {
 
@@ -29,37 +23,47 @@ const useMediaQuery = (query) => {
 
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
-  const IconLink = ({icon: IconComponent, iconProps, url, }) => (
-    <Col align="center">
-    <a href={url}>
+  const IconLink = ({icon: IconComponent, iconProps }) => (
+    <Col align="center" className='col-4'>
+    <a>
       <IconComponent {...iconProps} />
     </a>
-  </Col>
+    </Col>
   )
-  const whiteColor = "white";
 
   const links = [
+
     {
-      id: 1,
-      icon: UseAnimations,
+      id:1,
+      icon: IconLinkedin,
       iconProps: {
-         animation: github, 
-         size: isDesktop? 60: 50,
-         strokeColor: whiteColor, 
-         className: 'icon' },
-      url: "https://www.linkedin.com/in/nazirul-syafiq-young-rockie-359289311/",
-    },
+        color: 'white',
+        height : isDesktop? '70px' : '40px',
+        width: '100px',
+        className: 'text-black-200'
+      }
+    }
+    ,
     {
       id: 2,
-      icon: UseAnimations,
-      iconProps: { animation: linkedin, size: isDesktop? 60: 50, strokeColor: whiteColor, className: 'icon' },
-      url: 'https://github.com/Sovietroll/myblog',
-    },
+      icon: IconEmailOutline,
+      iconProps: {
+        color: 'white',
+        height : isDesktop? '70px' : '40px',
+        width: '100px',
+        className: 'text-black-200'
+      }
+    }
+    ,
     {
       id: 3,
-      icon: UseAnimations,
-      iconProps: { animation: twitter, size: isDesktop? 60: 50, strokeColor: whiteColor, className: 'icon' },
-      url: 'nazirulrocky@gmail.com'
+      icon: IconSquareGithub,
+      iconProps: {
+        color: 'white',
+        height : isDesktop? '70px' : '40px',
+        width: '100px',
+        className: 'text-black-200'
+      }
     }
   ];
   
@@ -70,21 +74,20 @@ const useMediaQuery = (query) => {
       <Row>
 
         <Col>
-        {/* <img className="lg" 
-          src='src/images/lg.png' alt="logo" width={150} /> */}
-   
-        <Col className=".col-sm-2"><p>A self-driven developer pursuing full-stack skills. [ongoing]</p>
+        <Col className=".col-sm-2"><p>A self-driven developer pursuing full-stack skills. [ongoing]
+        </p>
         </Col>
 
         <Row>
-        {links.map((link) =>(
+          
+        {links.map((link) => (
           <IconLink
             key={link.id}
             icon={link.icon}
             iconProps={link.iconProps}
-            url={link.url}
           />
           ))}
+          
         </Row>
 
         </Col>
