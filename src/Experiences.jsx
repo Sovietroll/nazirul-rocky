@@ -1,5 +1,5 @@
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
-import {color, motion, useAnimationControls,useSpring } from "framer-motion";
+import {motion, useAnimationControls,useSpring } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
