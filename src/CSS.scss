@@ -64,30 +64,25 @@ a{
     // background-color: rgb(255, 19, 19);
     font-size: 15px;
   }
-  .img-skills{
+  .icon-skills{
     // background-color: rgb(255, 182, 182);
-    width: 30%;
+    width: 20%;
     height: auto;
   }
-  .imgexp{
-    position:absolute;
-    top: 0%;
-    left: -15%;
-    width: 35%;
-    z-index:1;
-    filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
-  };
+
+  // .imgexp{
+  //   position:absolute;
+  //   top: 0%;
+  //   left: -15%;
+  //   width: 35%;
+  //   z-index:1;
+  //   filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
+  // };
   .img-carousel{
     width: 30%;
   }
   
 
-}
-
-  
-.icon{
-  // background-color: rgb(255, 255, 255);
-  // width: 100px;
 }
 
 //! MD SIZE
@@ -100,19 +95,18 @@ a{
   .experience-rows{
     font-size: 25px;
   }
-  .img-skills{
-    // background-color: rgb(198, 182, 255);
-    width: 20%;
+  .icon-skills{
+    width: 14%;
     height: auto;
   }
-  .imgexp{
-    position:absolute;
-    top: 3%;
-    left: -10%;
-    width: 20%;
-    z-index: 1;
-    filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
-  };
+  // .imgexp{
+  //   position:absolute;
+  //   top: 3%;
+  //   left: -10%;
+  //   width: 20%;
+  //   z-index: 1;
+  //   filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
+  // };
   .img-carousel{
     width: 30%;
   }
@@ -196,38 +190,10 @@ hr,.vr{
   }
   }
 
-  // ul{
-  //   margin: 0;
-  //   padding-left: 0;
-  //   padding: 10px;
-  // }
-  // .icon-container{
-  //   display: flex;
-  //   margin-left: 80px;
-
-  // }
-  // .icon{
-  //   @include transition;
-    
-  //   &:hover{
-  //     opacity: 50%;
-  //     @include transition;
-  //   }
-  // }
-
 
 
 //! ---------------------------------------
 .about-me{
-  // color: white;
-
-  // .icon-arrow{
-  //   height: 50px;
-
-  //   &:hover{
-  //     opacity: 50%;
-  //   }
-  // }
 
   &-one{
     // @include flex-center;
@@ -311,7 +277,7 @@ hr,.vr{
  
   background-color: #2E3039;
   @include nopadmarg;
-  border-radius: 20px;
+  // border-radius: 20px;
   overflow: hidden;
   &-row{
     @include nopadmarg;
@@ -323,7 +289,7 @@ hr,.vr{
   }
 
   .skills-col{
-    padding: 30px;
+    padding: 10px;
 
 
     &-1{
