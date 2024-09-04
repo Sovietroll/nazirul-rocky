@@ -2,10 +2,13 @@ import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import {motion, useAnimationControls,useSpring } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { initialTabs as tabs } from './ExperiencesComponent';
+import { useState } from 'react';
 
 const Experiences = ({TransitionText}) => {
-  const controls = useAnimationControls();
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
+  const controls = useAnimationControls();
   const thisYear = new Date().getFullYear();
 
   const YearTotal = ({yearThen, yearAfter}) => {
@@ -40,6 +43,22 @@ const Experiences = ({TransitionText}) => {
 
           <Row>
           <h1>My Experiences</h1>
+          {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
+
+
+          {tabs.map((item) => (
+            <li 
+              key={item.label}
+              className={item === selectedTab ? 'selected' : ''}
+              onClick={() => setSelectedTab(item)}
+            >
+              {`${item.icon} ${item.label}`}
+            </li>
+          ))}
+
+
+          {/* ---------------------------EXPERIMENTS------------------------------------------------- */}
+
           </Row>
 
 

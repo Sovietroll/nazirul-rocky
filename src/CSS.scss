@@ -155,7 +155,7 @@ a{
     backdrop-filter: blur(5px);
   }
 }
-//!  ---------------------- hamburger ---------------------
+//!  ---------------------- LINES ---------------------
 
 
 // * LINES COLOR
@@ -192,7 +192,7 @@ hr,.vr{
 
 
 
-//! ---------------------------------------
+//! --------------------ABOUT ME-------------------
 .about-me{
 
   &-one{
@@ -270,14 +270,14 @@ hr,.vr{
   // };
 }
 
-//! -------------------SKILL--------------------------------
+//! -------------------SKILLS--------------------------------
 
 .skills{
 
  
   background-color: #2E3039;
   @include nopadmarg;
-  // border-radius: 20px;
+  border-radius: 20px;
   overflow: hidden;
   &-row{
     @include nopadmarg;
