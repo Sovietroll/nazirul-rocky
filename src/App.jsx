@@ -24,7 +24,7 @@ function App() {
         <Route exact path="contact" element = {<Contact />} />
       </Routes>
 
-      <Footer/>
+      {/* <Footer/> */}
       
       </ThemeProvider>
     </BrowserRouter>

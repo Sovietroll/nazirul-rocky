@@ -2,7 +2,7 @@ import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import {IconLinkedin, IconEmailOutline, IconSquareGithub } from './Icons';
 
-const Footer = () => {
+const Footer = ({}) => {
 
 const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(false);
@@ -38,7 +38,7 @@ const useMediaQuery = (query) => {
       icon: IconLinkedin,
       iconProps: {
         color: 'white',
-        height : isDesktop? '70px' : '40px',
+        height : isDesktop? '50px' : '40px',
         width: '100px',
         className: 'text-black-200'
       }
@@ -49,7 +49,7 @@ const useMediaQuery = (query) => {
       icon: IconEmailOutline,
       iconProps: {
         color: 'white',
-        height : isDesktop? '70px' : '40px',
+        height : isDesktop? '50px' : '40px',
         width: '100px',
         className: 'text-black-200'
       }
@@ -60,7 +60,7 @@ const useMediaQuery = (query) => {
       icon: IconSquareGithub,
       iconProps: {
         color: 'white',
-        height : isDesktop? '70px' : '40px',
+        height : isDesktop? '50px' : '40px',
         width: '100px',
         className: 'text-black-200'
       }

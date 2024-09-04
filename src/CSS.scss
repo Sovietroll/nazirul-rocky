@@ -76,7 +76,10 @@ a{
     width: 35%;
     z-index:1;
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
-  };  
+  };
+  .img-carousel{
+    width: 30%;
+  }
   
 
 }
@@ -110,6 +113,9 @@ a{
     z-index: 1;
     filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   };
+  .img-carousel{
+    width: 30%;
+  }
 
 }
 //!  ---------------------- hamburger ---------------------
@@ -298,10 +304,8 @@ hr,.vr{
   // };
 }
 
-//! -------------------------------------------------------
+//! -------------------SKILL--------------------------------
 
-
-// ! skill here
 .skills{
 
  
@@ -319,15 +323,12 @@ hr,.vr{
   }
 
   .skills-col{
-    padding: 15px;
+    padding: 30px;
 
 
     &-1{
       @include paddingTopBottom;
-      font-weight: $extraBold;
-      font-size: 35px;
-      
-      // background-color: rgb(255, 117, 117);
+
       &-desc{
         // background-color: rgb(160, 97, 255);
       }
@@ -368,9 +369,6 @@ hr,.vr{
   .carousel-container{
     div{
       // @include carouselMarginTB
-    }
-    .img-carousel{
-      width: 40%;
     }
     h5{
       margin: 0px;

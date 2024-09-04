@@ -30,8 +30,8 @@ const Experiences = ({TransitionText}) => {
     <TransitionText style={{marginTop: "20px", position: "relative"}}>
 
 
-    < img src="src/images/01G1.png" 
-    className="imgexp img-responsive"/>
+    {/* < img src="src/images/01G1.png" 
+    className="imgexp img-responsive"/> */}
 
         <div className="about-me-section">
           

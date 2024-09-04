@@ -10,6 +10,7 @@ import Collapse from './Collapse';
 import Skills from './Skills';
 import Experiences from './Experiences'
 import IntroHome from './IntroHome';
+import Footer from "./Footer";
 
 const AboutMe = () => {
 
@@ -18,6 +19,7 @@ const AboutMe = () => {
   const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
   const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
+    const [matches, setMatches] = useState(false);
 
 
   const windowScrollTo = () => {
@@ -49,6 +51,7 @@ const animationDuration = () =>{
     },3500);
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
+    
   
     return() => {
       clearInterval(interval),
@@ -80,7 +83,7 @@ const myPic =
 return ( 
 <Container  className={`about-me`}>
 
-  <IntroHome {...{ TransitionText, TitleStart, myPic }} />
+<IntroHome {...{ TransitionText, TitleStart, myPic }} />
                 
       <Container>
         <Row>
@@ -101,9 +104,9 @@ return (
       </Container>
 
 
-  <Skills windowWidth={windowWidth}/>
+<Skills windowWidth={windowWidth}/>
 
-  <Experiences TransitionText={TransitionText}/>
+<Experiences TransitionText={TransitionText}/>
 
   <Contact/>
 </Container>
