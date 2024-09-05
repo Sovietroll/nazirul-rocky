@@ -1,12 +1,42 @@
 export const allIngredients = [
-    {id: 1, icon: '🍅', label: 'tomato', description: 'This is tomato'},
-    {id: 2, icon: '🍊', label: 'orange', description: 'This is orange'},
-    {id: 3, icon: '🍎', label: 'apple', description: 'This is apple'}
+
+    {
+      id: 1, 
+      icon: '🍅', 
+      label: '2023-Current', 
+      description: 'Self learn Web Developer',
+      list: 'Learn the whole world about web design.'
+    },
+
+    {
+      id: 2,
+      icon: '🍊',
+      label: '2021-2024',
+      description: 
+      'Graphic Designer / Video Editor / Motion Graphic'
+    },
+
+    {
+      id: 3,
+      icon: '🍎',
+      label: '2020-2021',
+      description: 
+      'Career Break'
+    },
+
+    {
+      id: 4,
+      icon: '🥬',
+      label: '2018-2019',
+      description: 
+      'Graphic Designer'
+    }
+
   ]
 
-  const [tomato,orange, apple] = allIngredients;
+  const [tomato,orange, apple, lettuce] = allIngredients;
 
-  export const initialTabs = [tomato, orange, apple];
+  export const initialTabs = [tomato, orange, apple, lettuce];
   // return (  );
 
  

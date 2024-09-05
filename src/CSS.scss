@@ -250,24 +250,11 @@ hr,.vr{
     };
 
     li{
-      // list-style-position: inside;
       text-decoration: none;
       color: #a9adc1;
     };
-    // p{
-    //   color: #a9adc1;
-    //   font-size: 30px;
-    //   font-weight: 300;
-    // }
   }
-  // .imgexp{
-  //   position:absolute;
-  //   top: 3%;
-  //   left: -30%;
-  //   width: 50%;
-  //   z-index: 10;
-  //   filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
-  // };
+
 }
 
 //! -------------------SKILLS--------------------------------
@@ -310,27 +297,41 @@ hr,.vr{
     }
   }
 }
-.selected{
-  background-color: orange;
-  @include transition;
-  position: relative;
+//! -------------------EXPERIENCES--------------------------------
+.experiences{
+  
+  &-tab{
+    // border-radius: 10px;
+    background-color: lightcoral;
+
+    .selected{
+      background-color: orange;
+      @include transition;
+      position: relative;
+    }
+    .non-selected{
+      background-color: rgb(255, 68, 0)
+    }
+    .tab-content{
+      // background-color: lightcoral;
+      height: 150px;
+      
+      div{
+        font-size: 20px;
+      }
+    }
+    .underline{
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $logoColor
+    }
+  }
 }
-.non-selected{
-  background-color: rgb(255, 68, 0)
-}
-.main{
-  background-color: lightcoral;
-  height: 100px;
-}
-.underline{
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: $logoColor
-}
-// ----------------FOOTER--------------------------
+
+//! ----------------FOOTER--------------------------
 .footer{
   //! THIS MIGHT BE THE PADDING PROBLEM 
   // @include flex-center;
@@ -339,7 +340,7 @@ hr,.vr{
   padding: 10px;
 }
 
-// ----------------CAROUSEL--------------------------
+//! ----------------CAROUSEL--------------------------
 
 .testimonials{
   // background-color: #019457;

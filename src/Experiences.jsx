@@ -34,16 +34,11 @@ const Experiences = ({TransitionText}) => {
     <TransitionText style={{marginTop: "20px", position: "relative"}}>
 
 
-    {/* < img src="src/images/01G1.png" 
-    className="imgexp img-responsive"/> */}
 
-        <div className="about-me-section">
-          
-        
-        <div className="about-me-section-container-body  experience-rows" >
 
-          <Row>
-          <h1>My Experiences</h1>
+    <h1>My Experiences</h1>
+
+          <Row className='experiences-tab rounded p-1'>
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 
         
@@ -51,7 +46,7 @@ const Experiences = ({TransitionText}) => {
             <Col 
 
               key={item.label}
-              className={item === selectedTab ? 'selected col-4' : 'non-selected col-4'}
+              className={item === selectedTab ? 'selected col-3' : 'non-selected col-3'}
               onClick={() => setSelectedTab(item)}
             >
             {`${item.label}`}
@@ -63,14 +58,25 @@ const Experiences = ({TransitionText}) => {
             </Col>
           ))}
 
-          
-          <Col className='col-12 main d-flex justify-content-center align-items-center'>
+
+          <Col className='tab-content col-12 d-flex justify-content-center align-items-center'>
             <AnimatePresence mode='wait'>
               <motion.div
-                key={selectedTab? selectedTab.label : 'empty'}>
+                key={selectedTab? selectedTab.label : 'empty'}
+                initial={{y:10, opacity: 0}}
+                animate={{y:0, opacity: 1}}
+                exit={{y: -20, opacity: 0, transition: 'ease', duration: .1}}
+                transition={{type: 'spring', damping: 7, stiffness: 100, duration: .1}}
+              >
                   
-                {selectedTab ? selectedTab.icon : null}
-                
+                {selectedTab ? (
+                  <> 
+                  <span className='fw-bold'>{selectedTab.description}</span> <br/>
+                  <span className='fw-light'>{selectedTab.list}</span>
+                </> )
+                :
+                null}
+              
               </motion.div>
             </AnimatePresence>
           </Col>
@@ -156,8 +162,7 @@ const Experiences = ({TransitionText}) => {
                 </Col>
 
       */}
-        </div>
-        </div>
+
     </TransitionText>
     </Container>
    );
