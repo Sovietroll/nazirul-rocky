@@ -1,5 +1,5 @@
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
-import {motion, useAnimationControls,useSpring } from "framer-motion";
+import {AnimatePresence, motion, useAnimationControls,useSpring } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { initialTabs as tabs } from './ExperiencesComponent';
@@ -16,6 +16,7 @@ const Experiences = ({TransitionText}) => {
     const sum = Math.abs(total);
     return(sum)
   }
+
   const wrapperVariants = {
     dont: {
       x: 0,
@@ -45,15 +46,30 @@ const Experiences = ({TransitionText}) => {
           <h1>My Experiences</h1>
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 
-
+        
           {tabs.map((item) => (
-            <li 
+            <Col 
               key={item.label}
               className={item === selectedTab ? 'selected' : ''}
               onClick={() => setSelectedTab(item)}
             >
-              {`${item.icon} ${item.label}`}
-            </li>
+              {`${item.icon}`}
+
+              {item === selectedTab ? (
+                <Col style={{backgroundColor: 'black'}} className=''>
+                  <AnimatePresence>
+                    <motion.div
+                      initial={{opacity: 0}}
+                      animate={{opacity: 1}}
+                      transition={{ ease: 'linear', duration: 1}}>
+                      {`${item.description}`} {`${item.label}`}
+
+                    </motion.div>
+                  </AnimatePresence>
+                  </Col>
+              ): null}
+
+            </Col>
           ))}
 
 
@@ -62,9 +78,8 @@ const Experiences = ({TransitionText}) => {
           </Row>
 
 
-          <Row>
-
-            <Col className="Col">            
+       
+            {/* <Col className="Col">            
               <section>
                 <Col>
                 <h2>Self learn Web Developer</h2>
@@ -82,7 +97,6 @@ const Experiences = ({TransitionText}) => {
                   style={{display: "flex",justifyContent: "center",
                   }}
                 ><span style={{paddingRight: "15px"}}>Portfolio</span>
-                {/* PORTFOLIO LINK */}
                     <a href="https://www.google.com/">
                     <motion.div
                       variants={wrapperVariants}
@@ -103,9 +117,9 @@ const Experiences = ({TransitionText}) => {
               </Col>
               </Col>
 
-          </Row>
+        
 
-          <Row>
+       
               <Col className="Col">
               <section>
               <Col>
@@ -118,9 +132,7 @@ const Experiences = ({TransitionText}) => {
                   </ul>
               </section>
               </Col>
-        </Row>
-             
-        <Row>
+   
               <Col className="Col">
                 <section>
                   <h2>Career Break</h2>
@@ -130,10 +142,7 @@ const Experiences = ({TransitionText}) => {
                   </ul>
                 </section>
                 </Col>
-        </Row>
-
-        <Row>
-
+   
                 <Col className="Col">
                 <section>
                   <h2>Graphic Designer</h2>
@@ -144,9 +153,8 @@ const Experiences = ({TransitionText}) => {
                 </section>
                 </Col>
 
-        </Row>
+      */}
         </div>
-      
         </div>
     </TransitionText>
     </Container>

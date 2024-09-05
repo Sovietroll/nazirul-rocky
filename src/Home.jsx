@@ -75,7 +75,7 @@ const myPic =
   transition={{
   ease: "linear",
   duration: .4}}>
-    <img  src="src/images/me.jpg" className="img-me img-fluid img-responsive"
+    <img  src="src/images/me.jpg" className="img-me rounded img-fluid img-responsive"
     />
   </motion.div>
 
