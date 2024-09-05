@@ -49,6 +49,7 @@ const Experiences = ({TransitionText}) => {
         
           {tabs.map((item) => (
             <Col 
+            
               key={item.label}
               className={item === selectedTab ? 'selected' : 'non-selected'}
               onClick={() => setSelectedTab(item)}
@@ -56,26 +57,10 @@ const Experiences = ({TransitionText}) => {
               {`${item.icon}`}
 
               {item === selectedTab ? (
-             
-                          
-             <motion.div layoutId="arrow">
-             Arrow here
-             {/* {`${item.description}`} {`${item.label}`} */}
-
-           </motion.div>
-
-
-                    // <motion.div layout
-                    //   className='selected'
-                    //   key={selectedTab? selectedTab.label : 'empty'}
-                    //   initial={{opacity: 0}}
-                    //   animate={{opacity: 1}}
-                    //   transition={{ ease: 'linear', duration: .5}}>
-                    //   Arrow here
-                    //   {/* {`${item.description}`} {`${item.label}`} */}
-
-                    // </motion.div>
-                 
+                <motion.div layoutId="underline">
+                  Arrow here
+                  {/* {`${item.description}`} {`${item.label}`} */}
+                </motion.div>           
               ): null}
 
             </Col>

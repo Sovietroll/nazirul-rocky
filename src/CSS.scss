@@ -312,6 +312,7 @@ hr,.vr{
 }
 .selected{
   background-color: orange;
+  @include transition;
 }
 .non-selected{
   background-color: rgb(255, 68, 0)
