@@ -49,23 +49,31 @@ const Experiences = ({TransitionText}) => {
         
           {tabs.map((item) => (
             <Col 
-            
+
               key={item.label}
-              className={item === selectedTab ? 'selected' : 'non-selected'}
+              className={item === selectedTab ? 'selected col-4' : 'non-selected col-4'}
               onClick={() => setSelectedTab(item)}
             >
-              {`${item.icon}`}
-
+            {`${item.label}`}
+            
               {item === selectedTab ? (
-                <motion.div layoutId="underline">
-                  Arrow here
-                  {/* {`${item.description}`} {`${item.label}`} */}
-                </motion.div>           
+                <motion.div layoutId="underline" className='underline'/>
               ): null}
 
             </Col>
           ))}
 
+          
+          <Col className='col-12 main d-flex justify-content-center align-items-center'>
+            <AnimatePresence mode='wait'>
+              <motion.div
+                key={selectedTab? selectedTab.label : 'empty'}>
+                  
+                {selectedTab ? selectedTab.icon : null}
+                
+              </motion.div>
+            </AnimatePresence>
+          </Col>
 
           {/* ---------------------------EXPERIMENTS------------------------------------------------- */}
 

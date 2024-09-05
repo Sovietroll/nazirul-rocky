@@ -313,9 +313,22 @@ hr,.vr{
 .selected{
   background-color: orange;
   @include transition;
+  position: relative;
 }
 .non-selected{
   background-color: rgb(255, 68, 0)
+}
+.main{
+  background-color: lightcoral;
+  height: 100px;
+}
+.underline{
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: $logoColor
 }
 // ----------------FOOTER--------------------------
 .footer{
