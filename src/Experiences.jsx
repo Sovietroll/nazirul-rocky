@@ -2,7 +2,7 @@ import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import {AnimatePresence, motion, useAnimationControls,useSpring } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { initialTabs as tabs } from './ExperiencesComponent';
+import { initialTabs as tabs, lists } from './ExperiencesComponent';
 import { useState } from 'react';
 
 const Experiences = ({TransitionText}) => {
@@ -29,35 +29,36 @@ const Experiences = ({TransitionText}) => {
     }
   }
   return ( 
-    <Container className="experiences">
+    <Container fluid className="experiences">
 
-    <TransitionText style={{marginTop: "20px", position: "relative"}}>
+    {/* <TransitionText style={{marginTop: "20px", position: "relative"}}> */}
 
 
 
 
     <h1>My Experiences</h1>
 
-          <Row className='experiences-tab rounded p-1'>
+          <Row className='experiences-tab'>
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 
-        
+       
           {tabs.map((item) => (
             <Col 
-
               key={item.label}
-              className={item === selectedTab ? 'selected col-3' : 'non-selected col-3'}
+              className={item === selectedTab ? 'selected' : 'non-selected'}
               onClick={() => setSelectedTab(item)}
             >
-            {`${item.label}`}
-            
+            <span className='fs-6'>
+              {`${item.label}`}
+            </span>
+
               {item === selectedTab ? (
                 <motion.div layoutId="underline" className='underline'/>
               ): null}
 
             </Col>
           ))}
-
+       
 
           <Col className='tab-content col-12 d-flex justify-content-center align-items-center'>
             <AnimatePresence mode='wait'>
@@ -69,13 +70,23 @@ const Experiences = ({TransitionText}) => {
                 transition={{type: 'spring', damping: 7, stiffness: 100, duration: .1}}
               >
                   
-                {selectedTab ? (
-                  <> 
-                  <span className='fw-bold'>{selectedTab.description}</span> <br/>
-                  <span className='fw-light'>{selectedTab.list}</span>
-                </> )
-                :
-                null}
+              {selectedTab && 
+              (
+              <>
+                <span className='fw-bold'>{selectedTab.description}</span> <br/>
+
+                {lists.filter((list) => list.id === selectedTab.id).map(
+                  item => (
+                    <ul key={item.id} className='fw-light fs-6'>
+                      <li>{item.list}</li>
+                      <li>{item.listTwo}</li>
+                    </ul>
+                  )
+                )}
+
+              </>
+              )}
+
               
               </motion.div>
             </AnimatePresence>
@@ -163,7 +174,7 @@ const Experiences = ({TransitionText}) => {
 
       */}
 
-    </TransitionText>
+    {/* </TransitionText> */}
     </Container>
    );
 }
