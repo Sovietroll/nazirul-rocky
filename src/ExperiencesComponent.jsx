@@ -62,9 +62,9 @@ export const allIngredients = [
     }
   ]
 
-  const [tomato,orange, apple, lettuce] = allIngredients;
+  const [tomato,orange, apple, ] = allIngredients;
 
-  export const initialTabs = [tomato, orange, apple, lettuce];
+  export const initialTabs = [tomato, orange, apple, ];
   // return (  );
 
  

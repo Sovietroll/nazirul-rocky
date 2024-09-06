@@ -299,46 +299,102 @@ hr,.vr{
 }
 //! -------------------EXPERIENCES--------------------------------
 .experiences{
-  
+  //* TAB NAVBAR CONTENT
   &-tab{
     // border-radius: 10px;
-    background-color: lightcoral;
-    border-radius:10px 10px 0px 0px;
+    background-color: rgb(47, 47, 47);
+    border-radius:10px 10px 10px 10px;
 
     cursor: pointer;
 
-    .selected{
-      background-color: orange;
-      position: relative;
-      // border-radius: 0px 0px 0px 0px;
-    }
-    .non-selected{
-      background-color: rgb(255, 68, 0);
-      &:hover{
-        background-color: orange;
-      }
-    }
-    .selected, .non-selected{
-      @include transition;
-      border-radius:10px 10px 0px 0px;
-      // outline: solid;
-    }
+    // !-----------------------------------------
+
+    //* TAB MAIN CONTENT
+
+    // ! HORIZONTAL TAB
+    // .tab-content{
+    //   background-color:  rgb(102, 102, 102);
+    //   border-radius: 0px 0px 10px 10px;
+    //   div{
+    //     font-size: 20px;
+    //   }
+    // }
+    // .underline{
+    //   position: absolute;
+    //   bottom: -6px;
+    //   left: 50px;
+    //   right: 50px;
+    //   height: 4px;
+    //   background: $logoColor;
+    //   border-radius: 10px;
+    //   z-index: 10;
+    // }
+    
+    // .selected{
+    //   // background-color:  rgb(102, 102, 102);
+    //   position: relative;
+    //   border-radius: 10px 10px 0px 0px;
+    // }
+    // .non-selected{
+    //   background-color: rgb(47, 47, 47);
+    //   &:hover{
+    //     background-color:  rgb(102, 102, 102);
+    //   }
+    // }
+    // .selected, .non-selected{
+    //   @include transition;
+    //   // border-radius:10px 10px 0px 0px;
+    //   padding: 5px;
+    //   // outline: solid;
+    // }
+    // !-----------------------------------------
+
+    // ! VERTICAL TAB
     .tab-content{
-      // background-color: lightcoral;
-      // height: 150px;
-      
+      background-color:  rgb(102, 102, 102);
+      border-radius: 0px 0px 10px 10px;
+      padding: 10px;
       div{
-        font-size: 20px;
+        // font-size: 20px;
       }
     }
     .underline{
       position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: $logoColor
+      bottom: 12px;
+      left: 0%;
+      right: 100%;
+      height: 30px;
+      width: 10px;
+      background: $logoColor;
+      border-radius: 10px;
+      z-index: 10;
     }
+      .selected{
+        // background-color:  rgb(102, 102, 102);
+        position: relative;
+        background-color:  rgb(102, 102, 102);
+  
+      }
+      .non-selected{
+        background-color: rgb(47, 47, 47);
+        &:hover{
+          background-color:  rgb(102, 102, 102);
+        }
+      }
+      .selected, .non-selected{
+        @include transition;
+        // border-radius:10px 10px 0px 0px;
+        // padding: 5px;
+        // outline: solid;
+      }
+      .mainDesc{
+        background-color: black;
+        list-style-type:none;
+        padding: 0px;
+        font-size: 100%;
+      }
+    // !-----------------------------------------
+
   }
 }
 .main-nav{
