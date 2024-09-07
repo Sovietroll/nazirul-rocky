@@ -17,12 +17,12 @@ const Experiences = ({TransitionText}) => {
     return(sum)
   }
 
-  const wrapperVariants = {
-    dont: {
-      x: 0,
+  const variants = {
+    left: {
+      x: -10,
 
     },
-    move: {
+    right: {
       x: 10,
 
       
@@ -51,9 +51,14 @@ const Experiences = ({TransitionText}) => {
               onClick={() => setSelectedTab(item)}
               // onPan={handlePan}
             >
-            <span className='' style={{fontSize: '65%'}}>
-              {`${item.label} ${item.icon}`}
+
+            <span className='' style={{fontSize: '65%', transition: 'ease-in-out'}}>
+              {`${item.label}`}  {item === selectedTab ?
+              (<>- {item.labelSelected}</>):null}
             </span>
+
+           
+
             <br/>
               {/* {`${item.description}`} */}
               {item === selectedTab ? (
@@ -72,9 +77,9 @@ const Experiences = ({TransitionText}) => {
             <AnimatePresence mode='wait'>
               <motion.div
                 key={selectedTab? selectedTab.label : 'empty'}
-                initial={{y:10, opacity: 0}}
-                animate={{y:0, opacity: 1}}
-                exit={{y: -20, opacity: 0, transition: 'ease', duration: .1}}
+                initial={{x:-50, opacity: 0}}
+                animate={{x:0, opacity: 1}}
+                exit={{x: -20, opacity: 0, transition: 'ease', duration: .1}}
                 transition={{type: 'spring', damping: 7, stiffness: 100, duration: .1}}
               >
                   
