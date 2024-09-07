@@ -262,7 +262,7 @@ hr,.vr{
 .skills{
 
  
-  background-color: #2E3039;
+  // background-color: #2E3039;
   @include nopadmarg;
   border-radius: 20px;
   overflow: hidden;
@@ -301,84 +301,48 @@ hr,.vr{
 .experiences{
   //* TAB NAVBAR CONTENT
   &-tab{
-    // border-radius: 10px;
-    background-color: rgb(47, 47, 47);
-    border-radius:10px 10px 10px 10px;
-
+    // background-color: $gridColor;
+    // border-radius:10px 10px 10px 10px;
     cursor: pointer;
 
-    // !-----------------------------------------
-
     //* TAB MAIN CONTENT
-
-    // ! HORIZONTAL TAB
-    // .tab-content{
-    //   background-color:  rgb(102, 102, 102);
-    //   border-radius: 0px 0px 10px 10px;
-    //   div{
-    //     font-size: 20px;
-    //   }
-    // }
-    // .underline{
-    //   position: absolute;
-    //   bottom: -6px;
-    //   left: 50px;
-    //   right: 50px;
-    //   height: 4px;
-    //   background: $logoColor;
-    //   border-radius: 10px;
-    //   z-index: 10;
-    // }
-    
-    // .selected{
-    //   // background-color:  rgb(102, 102, 102);
-    //   position: relative;
-    //   border-radius: 10px 10px 0px 0px;
-    // }
-    // .non-selected{
-    //   background-color: rgb(47, 47, 47);
-    //   &:hover{
-    //     background-color:  rgb(102, 102, 102);
-    //   }
-    // }
-    // .selected, .non-selected{
-    //   @include transition;
-    //   // border-radius:10px 10px 0px 0px;
-    //   padding: 5px;
-    //   // outline: solid;
-    // }
-    // !-----------------------------------------
-
-    // ! VERTICAL TAB
     .tab-content{
-      background-color:  rgb(102, 102, 102);
-      border-radius: 0px 0px 10px 10px;
+      // background-color: $gridColor;
+      // border-radius: 0px 0px 10px 10px;
       padding: 10px;
       div{
         // font-size: 20px;
       }
     }
-    .underline{
-      position: absolute;
-      bottom: 12px;
-      left: 0%;
-      right: 100%;
-      height: 30px;
-      width: 10px;
-      background: $logoColor;
+    .navbar-tab{
+      background-color: $gridColor;
       border-radius: 10px;
-      z-index: 10;
+      .underline{
+        position: absolute;
+        bottom: -3px;
+        left: 0%;
+        right: 0%;
+        height: 3px;
+        width: 100%;
+        background: $logoColor;
+        border-radius: 10px 10px 0px 0px;
+        z-index: 10;
+      }
     }
       .selected{
-        // background-color:  rgb(102, 102, 102);
+        // background-color: $logoColor;
         position: relative;
-        background-color:  rgb(102, 102, 102);
-  
+        border-radius: 5px;
+        font-weight: $bold;
+        // padding: 10px;
       }
       .non-selected{
-        background-color: rgb(47, 47, 47);
+        color: gray;
+        font-weight: lighter;
+
         &:hover{
-          background-color:  rgb(102, 102, 102);
+          background-color:  $logoColor;
+          border-radius: 10px;
         }
       }
       .selected, .non-selected{
@@ -388,10 +352,9 @@ hr,.vr{
         // outline: solid;
       }
       .mainDesc{
-        background-color: black;
         list-style-type:none;
         padding: 0px;
-        font-size: 100%;
+        font-size: 90%;
       }
     // !-----------------------------------------
 

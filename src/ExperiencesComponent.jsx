@@ -3,14 +3,14 @@ export const allIngredients = [
     {
       id: 1, 
       icon: '🍅', 
-      label: '2023-', 
+      label: '2023', 
       description: 'Self learn Web Developer',
     },
 
     {
       id: 2,
       icon: '🍊',
-      label: '2021-2024',
+      label: '2021',
       description: 
       'Graphic Designer / Video Editor / Motion Graphic',
 
@@ -19,7 +19,7 @@ export const allIngredients = [
     {
       id: 3,
       icon: '🍎',
-      label: '2020-2021',
+      label: '2020',
       description: 
       'Career Break',
 
@@ -28,7 +28,7 @@ export const allIngredients = [
     {
       id: 4,
       icon: '🥬',
-      label: '2018-2019',
+      label: '2018',
       description: 
       'Graphic Designer',
 
@@ -62,9 +62,8 @@ export const allIngredients = [
     }
   ]
 
-  const [tomato,orange, apple, ] = allIngredients;
+  const [tomato,orange, apple, lettuce ] = allIngredients;
 
-  export const initialTabs = [tomato, orange, apple, ];
-  // return (  );
+  export const initialTabs = [tomato, orange, apple, lettuce];
 
  

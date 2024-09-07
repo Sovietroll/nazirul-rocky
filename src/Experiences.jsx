@@ -35,14 +35,15 @@ const Experiences = ({TransitionText}) => {
   //   })
   // }
   return ( 
-    <Container fluid className="experiences">
+    <Container fluid className="experiences mt-4">
 
           <Row className='experiences-tab'>
-          {/* <h1 className=''>EXPERIENCES</h1> */}
+          <h1 className=''>EXPERIENCES</h1>
+       <hr className=''></hr>
 
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 
-          <Col className='col-6 p-0'>
+          <Col className='navbar-tab col-12 d-flex p-1'>
           {tabs.map((item) => (
             <Col 
               key={item.label}
@@ -50,10 +51,11 @@ const Experiences = ({TransitionText}) => {
               onClick={() => setSelectedTab(item)}
               // onPan={handlePan}
             >
-            <span className='fw-bold' style={{fontSize: '65%'}}>
-              {`${item.label}`}
+            <span className='' style={{fontSize: '65%'}}>
+              {`${item.label} ${item.icon}`}
             </span>
-
+            <br/>
+              {/* {`${item.description}`} */}
               {item === selectedTab ? (
                 <motion.div layoutId="underline" className='underline'/>
               ): null}
@@ -61,28 +63,12 @@ const Experiences = ({TransitionText}) => {
           ))}
            </Col>
 
-{/*           {tabs.map((item) => (
-            
-            <Col 
-              key={item.label}
-              className={item === selectedTab ? 'selected rounded' : 'non-selected '}
-              onClick={() => setSelectedTab(item)}
-              // onPan={handlePan}
-            >
-            <span className='fw-bold' style={{fontSize: '65%'}}>
-              {`${item.label}`}
-            </span>
 
-              {item === selectedTab ? (
-                <motion.div layoutId="underline" className='underline'/>
-              ): null}
+    
+           {/* <hr className=''></hr> */}
 
-            </Col>
-          ))} */}
 
-       {/* <hr className='mt-2 mb-2'></hr> */}
-
-          <Col className='tab-content col-6 d-flex justify-content-center align-items-center'>
+          <Col className='tab-content col-12 d-flex justify-content-center align-items-center'>
             <AnimatePresence mode='wait'>
               <motion.div
                 key={selectedTab? selectedTab.label : 'empty'}
@@ -95,7 +81,7 @@ const Experiences = ({TransitionText}) => {
               {selectedTab && 
               (
               <>
-                <span className='fw-bold '>{selectedTab.description}</span> <br/>
+                <span className='fw-bold'>{selectedTab.description}</span> <br/>
 
                 {lists.filter((list) => list.id === selectedTab.id).map(
                   item => (
