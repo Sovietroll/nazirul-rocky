@@ -1,7 +1,5 @@
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { initialTabs as tabs, lists } from './ExperiencesComponent';
 import { useState } from 'react';
 
@@ -64,9 +62,9 @@ const Experiences = ({TransitionText}) => {
             <AnimatePresence mode='wait'>
               <motion.div
                 key={selectedTab? selectedTab.label : 'empty'}
-                initial={{x:-50, opacity: 0}}
+                initial={{x:-10, opacity: 0}}
                 animate={{x:0, opacity: 1}}
-                exit={{x: -20, opacity: 0, transition: 'ease', duration: .1}}
+                exit={{x: -10, opacity: 0, transition: 'ease', duration: .1}}
                 transition={{type: 'spring', damping: 7, stiffness: 100, duration: .1}}
               >
                   
@@ -82,9 +80,11 @@ const Experiences = ({TransitionText}) => {
                       {selectedTab.id[3] === desc.id[3]}{
                       <li>{desc.list}</li>
                       } */}
-
                       <li>{desc.list}</li>
                       <li>{desc.listTwo}</li>
+                      <div className ={`${centerText} fw-semibold`}>
+                        Portfolio{desc.icon}
+                      </div>
                     </ul>
                   )
                 )}
