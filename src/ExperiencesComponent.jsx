@@ -59,13 +59,11 @@ export const allIngredients = [
     {
       id:3,
       list: 'Opened my first ever agriculture company.',
-      listTwo: 'Will change.',
     }
     ,
     {
       id:4,
       list: 'Design visually appealing graphics.',
-      listTwo: 'Will change.',
     }
   ]
 
