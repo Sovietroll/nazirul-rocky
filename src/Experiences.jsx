@@ -17,23 +17,10 @@ const Experiences = ({TransitionText}) => {
     return(sum)
   }
 
-  const variants = {
-    left: {
-      x: -10,
+  const centerText = 'justify-content-center align-items-center d-flex';
 
-    },
-    right: {
-      x: 10,
 
-      
-    }
-  }
 
-  // const handlePan = (event) => {
-  //   controls.start({
-  //     rotateX:0
-  //   })
-  // }
   return ( 
     <Container fluid className="experiences mt-4">
 
@@ -47,7 +34,7 @@ const Experiences = ({TransitionText}) => {
           {tabs.map((item) => (
             <Col 
               key={item.label}
-              className={item === selectedTab ? 'selected' : 'non-selected '}
+              className={item === selectedTab ? `selected ${centerText}`  : `non-selected ${centerText}`}
               onClick={() => setSelectedTab(item)}
               // onPan={handlePan}
             >
