@@ -75,16 +75,18 @@ const Experiences = ({TransitionText}) => {
 
                 {lists.filter((desc) => desc.id === selectedTab.id).map(
                   desc => (
-                    <ul key={desc.id} className='fw-light mainDesc'>
+                    <ul key={desc.id} className='fw-light mainDesc '>
 {/* 
                       {selectedTab.id[3] === desc.id[3]}{
                       <li>{desc.list}</li>
                       } */}
                       <li>{desc.list}</li>
                       <li>{desc.listTwo}</li>
-                      <div className ={`${centerText} fw-semibold`}>
-                        Portfolio{desc.icon}
-                      </div>
+
+                  
+                           {desc.icon}
+                       
+                   
                     </ul>
                   )
                 )}

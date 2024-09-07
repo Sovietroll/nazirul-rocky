@@ -46,18 +46,27 @@ export const allIngredients = [
 
   ]
 
+  const PortfolioImage = ({links, icon}) => {
+    return(
+      <div className ='portfolio-links fw-semibold p-1 rounded justify-content-center align-items-center d-flex'>
+        Portfolio 
+        <a href={links}>
+          {icon}
+        </a>
+      </div>
+    )
+  }
+
   export const lists = [
     {
       id:1,
       list: 'Learn the whole world about web design.',
       listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
       icon: 
-      <>
-        <a href='https://github.com/Sovietroll?tab=repositories'>
-        <IconGithub width='30px' height='30px'/>   
-        </a>
-     
-      </>
+      <PortfolioImage
+        links={'https://www.youtube.com/'}
+        icon={<IconGithub width='30px' height='30px'/>}
+      />
     }
     ,
     {

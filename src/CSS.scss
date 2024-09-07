@@ -356,7 +356,18 @@ hr,.vr{
         padding: 0px;
         font-size: 90%;
       }
-    // !-----------------------------------------
+      .portfolio-links{
+        border: solid; 
+        border-width: 1px;
+        width: fit-content; 
+        margin: auto;
+        color: #007EE5;
+        
+        &:hover{
+          color: white;
+        }
+      }
+// !-----------------------------------------
 
   }
 }
