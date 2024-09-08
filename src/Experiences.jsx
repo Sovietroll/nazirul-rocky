@@ -21,11 +21,10 @@ const Experiences = ({windowWidth}) => {
 
 
   return ( 
-    <Container fluid className="experiences mt-4">
+    <Container fluid className="experiences mt-2 mb-2">
 
           <Row className='experiences-tab'>
           <h1 className=''>EXPERIENCES</h1>
-       <hr className=''></hr>
 
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 

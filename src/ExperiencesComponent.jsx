@@ -65,7 +65,6 @@ export const allIngredients = [
         links={'https://reactsvgicons.com/'}
         icon={IconGithub}
       />
-
     }
     ,
     {
@@ -74,10 +73,9 @@ export const allIngredients = [
       listTwo: 'Collaborate with clients or project managers.',
       icon: 
       <PortfolioImage
-        links={'tesd'}
+        links={'https://reactsvgicons.com/'}
         icon={IconGoogleDrive}
       />
-
     }
     ,
     {
@@ -88,8 +86,11 @@ export const allIngredients = [
     {
       id:4,
       list: 'Design visually appealing graphics.',
-
-  
+      icon: 
+      <PortfolioImage
+        links={'https://reactsvgicons.com/'}
+        icon={IconGoogleDrive}
+      />
     }
   ]
 

@@ -103,10 +103,12 @@ return (
       </Row>
       </Container>
 
+      <hr className="border-3 border-danger rounded"></hr>
 
 <Skills windowWidth={windowWidth}/>
-
+<hr className="border-3 border-danger rounded"></hr>
 <Experiences windowWidth={windowWidth}/>
+<hr className="border-3 border-danger rounded"></hr>
 
   <Contact/>
 </Container>

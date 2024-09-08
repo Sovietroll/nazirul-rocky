@@ -52,11 +52,16 @@ a{
   font-weight: bold;
   text-decoration: none;
 }
+.hor-line{
+  // height: 10px;
+  // border-color: white;
+
+}
 
 //! XS SIZE
 @media (min-width:map-get($breakpoints,xs)){
   .img-me {
-    width: 70%;
+    width: 40%;
     height: auto;
     background-color: #53feb7;
   }
@@ -88,7 +93,7 @@ a{
 //! MD SIZE
 @media (min-width: map-get($breakpoints, md)){
   .img-me {
-    width: 50%;
+    width: 60%;
     height: auto;
 
   }
