@@ -48,7 +48,7 @@ export const allIngredients = [
 
   const PortfolioImage = ({links, icon}) => {
     return(
-      <div className ='portfolio-links fw-semibold p-1 rounded justify-content-center align-items-center d-flex'>
+      <div className ='portfolio-links fw-semibold p-1 mt-1 rounded justify-content-center align-items-center d-flex'>
         Portfolio 
         <a href={links}>
           {icon}
@@ -73,7 +73,11 @@ export const allIngredients = [
       id:2,
       list: 'Create digital content.',
       listTwo: 'Collaborate with clients or project managers.',
-      icon: <IconGoogleDrive/>
+      icon: 
+      <PortfolioImage
+      links={'https://www.youtube.com/'}
+      icon={<IconGoogleDrive width='30px' height='30px'/>}
+    />
     }
     ,
     {
@@ -84,7 +88,11 @@ export const allIngredients = [
     {
       id:4,
       list: 'Design visually appealing graphics.',
-      icon: <IconGoogleDrive/>
+      icon: 
+      <PortfolioImage
+      links={'https://www.youtube.com/'}
+      icon={<IconGoogleDrive width='30px' height='30px'/>}
+    />
     }
   ]
 

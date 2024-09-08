@@ -84,7 +84,7 @@ const Experiences = ({TransitionText}) => {
                       <li>{desc.listTwo}</li>
 
                   
-                           {desc.icon}
+                      {desc.icon}
                        
                    
                     </ul>
