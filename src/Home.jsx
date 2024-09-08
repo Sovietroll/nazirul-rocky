@@ -6,7 +6,6 @@ import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import './CSS.scss';
 import { Link } from 'react-router-dom';
 import Contact from './Contact';
-import Collapse from './Collapse';
 import Skills from './Skills';
 import Experiences from './Experiences'
 import IntroHome from './IntroHome';
