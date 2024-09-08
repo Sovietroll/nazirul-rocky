@@ -23,9 +23,9 @@ const IntroHome = ({TransitionText,TitleStart,myPic}) => {
       </Col>
     </Col>
 
-    {/* <Col className="col-md-6 col-12">
+    <Col className="col-md-6 col-12">
       {myPic} 
-    </Col> */}
+    </Col>
 
   </Row>
    );
