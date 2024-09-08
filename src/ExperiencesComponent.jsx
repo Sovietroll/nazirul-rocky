@@ -6,7 +6,7 @@ export const allIngredients = [
     {
       id: 1, 
       icon: '🍅', 
-      label: '2023', 
+      label: 'Now', 
       labelSelected: '2024',
       description: 'Self learn Web Developer',
     },
@@ -14,8 +14,8 @@ export const allIngredients = [
     {
       id: 2,
       icon: '🍊',
-      label: '2021',
-      labelSelected: '2024',
+      label: '2024',
+      labelSelected: '2021',
 
       description: 
       'Graphic Designer / Video Editor / Motion Graphic',
@@ -25,8 +25,8 @@ export const allIngredients = [
     {
       id: 3,
       icon: '🍎',
-      label: '2020',
-      labelSelected: '2021',
+      label: '2021',
+      labelSelected: '2020',
 
       description: 
       'Career Break',
@@ -36,8 +36,8 @@ export const allIngredients = [
     {
       id: 4,
       icon: '🥬',
-      label: '2018',
-      labelSelected: '2019',
+      label: '2020',
+      labelSelected: '2018',
 
       description: 
       'Graphic Designer',

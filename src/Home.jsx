@@ -11,13 +11,13 @@ import Skills from './Skills';
 import Experiences from './Experiences'
 import IntroHome from './IntroHome';
 import Footer from "./Footer";
+import Text from './Text';
 
 const AboutMe = () => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
-  const [isOpen, setIsOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
     const [matches, setMatches] = useState(false);
 
@@ -31,14 +31,14 @@ const AboutMe = () => {
     top: 0
   }
   
-const animationDuration = () =>{
+  const animationDuration = () =>{
   controls.start('move');
   const animation = setInterval(() => {
     controls.start("dont");
     clearInterval(animation);
   },500)
   
-}
+  }
 
   const handleWindowResize = useCallback(event => {
     setWindowWidth(window.innerWidth);
@@ -59,13 +59,13 @@ const animationDuration = () =>{
     }
   },[handleWindowResize]);
 
-const TitleStart  = () => {
-  return (
-    <MotionFlip>
-      {titles[titleIndex]}
-    </MotionFlip>
-  )
- }
+  const TitleStart  = () => {
+    return (
+      <MotionFlip>
+        {titles[titleIndex]}
+      </MotionFlip>
+    )
+  }
 
 
 const myPic = 
@@ -79,38 +79,28 @@ const myPic =
     />
   </motion.div>
 
-//!--------------------RETURN----------------------------------------------------------------------------
+
+//!-----------RETURN---------------
+
 return ( 
 <Container  className={`about-me`}>
 
-<IntroHome {...{ TransitionText, TitleStart, myPic }} />
-                
-      <Container>
-        <Row>
+  <IntroHome {...{ TransitionText, TitleStart, myPic }} />
+                  
+  <Text/>
 
-          <div
-              className="lead fs-6"
-              >
-                {!isOpen? <p>In 2023, I started building a custom web-...</p> : null}
-              {/* // In 2023, I started building a custom web-... */}
-{/* -------------COLLAPSE BUTTON--------------- */}
-              <Collapse  isOpen={isOpen} setIsOpen={setIsOpen}/>
-{/* -------------COLLAPSE BUTTON--------------- */}
+    <hr className="border-3 border-danger rounded"></hr>
 
-              </div>   
-
-
-      </Row>
-      </Container>
-
-      <hr className="border-3 border-danger rounded"></hr>
-
-<Skills windowWidth={windowWidth}/>
-<hr className="border-3 border-danger rounded"></hr>
-<Experiences windowWidth={windowWidth}/>
-<hr className="border-3 border-danger rounded"></hr>
+  <Skills windowWidth={windowWidth}/>
+  
+    <hr className="border-3 border-danger rounded"></hr>
+  
+  <Experiences windowWidth={windowWidth}/>
+  
+    <hr className="border-3 border-danger rounded"></hr>
 
   <Contact/>
+
 </Container>
    );
 }

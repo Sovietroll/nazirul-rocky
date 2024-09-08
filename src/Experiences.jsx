@@ -24,7 +24,7 @@ const Experiences = ({windowWidth}) => {
     <Container fluid className="experiences mt-2 mb-2">
 
           <Row className='experiences-tab'>
-          <h1 className=''>EXPERIENCES</h1>
+          <h1 className=''>Experiences</h1>
 
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 
