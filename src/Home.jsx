@@ -31,7 +31,7 @@ const AboutMe = () => {
     top: 0
   }
   
-  const animationDuration = () =>{
+const animationDuration = () =>{
   controls.start('move');
   const animation = setInterval(() => {
     controls.start("dont");

@@ -55,7 +55,6 @@ const Experiences = ({windowWidth}) => {
 
 
     
-           {/* <hr className=''></hr> */}
 
 
           <Col className='tab-content col-12 d-flex justify-content-center align-items-center'>

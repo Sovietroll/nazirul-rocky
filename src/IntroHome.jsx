@@ -14,18 +14,18 @@ const IntroHome = ({TransitionText,TitleStart,myPic}) => {
             </TransitionText> 
           </Col>
 
-          <Col className="">
-            <TitleStart  className="about-me-one-desc-selftaught fs-1"/> {/* ROLES */}
-          </Col>
+          {/* <Col className="">
+            <TitleStart  className="about-me-one-desc-selftaught fs-1"/>
+          </Col> */}
         </Col>
 
 
       </Col>
     </Col>
 
-    <Col className="col-md-6 col-12">
-      {myPic} {/* PIC */}
-    </Col>
+    {/* <Col className="col-md-6 col-12">
+      {myPic} 
+    </Col> */}
 
   </Row>
    );
