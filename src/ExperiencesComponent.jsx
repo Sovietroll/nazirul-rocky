@@ -46,14 +46,12 @@ export const allIngredients = [
 
   ]
 
-  const PortfolioImage = ({links, icon}) => {
+  const PortfolioImage = ({links, icon: IconComponent}) => {
     return(
-      <div className ='portfolio-links fw-semibold p-1 mt-1 rounded justify-content-center align-items-center d-flex'>
+      <a className ='portfolio-links fw-semibold p-1 mt-1 rounded justify-content-center align-items-center d-flex' href={links}>
         Portfolio 
-        <a href={links}>
-          {icon}
-        </a>
-      </div>
+         <IconComponent width = '30px' height= '30px'/>
+      </a>
     )
   }
 
@@ -64,9 +62,10 @@ export const allIngredients = [
       listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
       icon: 
       <PortfolioImage
-        links={'https://www.youtube.com/'}
-        icon={<IconGithub width='30px' height='30px'/>}
+        links={'https://reactsvgicons.com/'}
+        icon={IconGithub}
       />
+
     }
     ,
     {
@@ -75,9 +74,10 @@ export const allIngredients = [
       listTwo: 'Collaborate with clients or project managers.',
       icon: 
       <PortfolioImage
-      links={'https://www.youtube.com/'}
-      icon={<IconGoogleDrive width='30px' height='30px'/>}
-    />
+        links={'tesd'}
+        icon={IconGoogleDrive}
+      />
+
     }
     ,
     {
@@ -88,11 +88,8 @@ export const allIngredients = [
     {
       id:4,
       list: 'Design visually appealing graphics.',
-      icon: 
-      <PortfolioImage
-      links={'https://www.youtube.com/'}
-      icon={<IconGoogleDrive width='30px' height='30px'/>}
-    />
+
+  
     }
   ]
 

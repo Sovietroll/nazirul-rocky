@@ -106,7 +106,7 @@ return (
 
 <Skills windowWidth={windowWidth}/>
 
-<Experiences TransitionText={TransitionText}/>
+<Experiences windowWidth={windowWidth}/>
 
   <Contact/>
 </Container>

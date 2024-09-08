@@ -3,7 +3,7 @@ import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import { initialTabs as tabs, lists } from './ExperiencesComponent';
 import { useState } from 'react';
 
-const Experiences = ({TransitionText}) => {
+const Experiences = ({windowWidth}) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   const controls = useAnimationControls();
@@ -16,6 +16,7 @@ const Experiences = ({TransitionText}) => {
   }
 
   const centerText = 'justify-content-center align-items-center d-flex';
+  const iconSizeDesktop = windowWidth > 768;
 
 
 
@@ -76,10 +77,7 @@ const Experiences = ({TransitionText}) => {
                 {lists.filter((desc) => desc.id === selectedTab.id).map(
                   desc => (
                     <ul key={desc.id} className='fw-light mainDesc '>
-{/* 
-                      {selectedTab.id[3] === desc.id[3]}{
-                      <li>{desc.list}</li>
-                      } */}
+
                       <li>{desc.list}</li>
                       <li>{desc.listTwo}</li>
 
