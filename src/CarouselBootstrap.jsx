@@ -15,7 +15,7 @@ const CarouselBootstrap = () => {
   return ( 
 <Container fluid className='testimonials p-2' >
   
-  <IconChatLeftQuoteFill className="text-black-200" width='100px' height='60px' style={{color: "#007EE5"}}/>
+  <IconChatLeftQuoteFill className="text-black-200 quotes-icon" width='100px' height='60px'/>
 
 
     <Carousel activeIndex={index} 

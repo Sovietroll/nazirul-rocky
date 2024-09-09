@@ -20,7 +20,7 @@ const SkillRowContent = ({imgSrc, title, description, titleWhatIDo, iDo, tools, 
   </Col>
   <Col className="skills-col-2">
     <Col>
-     <span style={{color: "#007EE5"}}className="fw-bold">
+     <span className="fw-bold skills-title-do">
       {titleWhatIDo}</span>
     <Col>
       {iDo}

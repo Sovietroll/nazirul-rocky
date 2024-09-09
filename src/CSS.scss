@@ -9,9 +9,10 @@
 @import "bootstrap/scss/utilities/api";
 
 $fonts: 'Roboto','Segoe UI';
-$body-color: #1f2028;
-$logoColor: #007EE5;
-$gridColor: #2E3039;
+$body-color: #352B2E;
+$logoColor: #FF0266;
+$boldTextColor: #EF7090;
+$gridColor: #24191C;
 $spacing: 2rem;
 $bold: bold;
 $extraBold: 700;
@@ -33,7 +34,7 @@ $breakpoints: (
 }
 
 body{
-  background: #1f2028;
+  background: $body-color;
   color: white;
   font-family: $font-family-sans-serif; 
 }
@@ -117,86 +118,77 @@ a{
   }
 
 }
-//!  ---------------------- hamburger ---------------------
+//!  ---------------------- HAMBURGER ---------------------
 .div-burger{
   &-icon{
     @include flex-center;
     position: relative;
     z-index: 1000;
   }
-}
-.div-burger-inside{
-  // @include flex-center;
-  position: fixed;
-  top: 0%;
-  right: 10%;
-  // background-color: blue
+  .div-burger-inside{
+    // @include flex-center;
+    position: fixed;
+    top: 0%;
+    right: 10%;
+    // background-color: blue
+  }
+  
+  .hamburgerListDown{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.85);
+    top: 0%;
+    bottom: 0;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    animation: blur-in 1.5s forwards;
+    ul{
+      padding: 0;
+    }
+    li{
+      list-style-type: none;
+      padding: 20px;
+    }
+  }
+  @keyframes blur-in {
+    from {
+      -webkit-backdrop-filter: blur(0px);
+    }
+    to {
+      -webkit-backdrop-filter: blur(5px);
+    }
+  }
 }
 
-.hamburgerListDown{
-  position: fixed;
-  background: rgba(0, 0, 0, 0.85);
-  top: 0%;
-  bottom: 0;
-  right: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  animation: blur-in 1.5s forwards;
-  ul{
-    padding: 0;
-  }
-  li{
-    list-style-type: none;
-    padding: 20px;
-  }
-}
-@keyframes blur-in {
-  from {
-    backdrop-filter: blur(0px);
-  }
-  to {
-    backdrop-filter: blur(5px);
-  }
-}
 //!  ---------------------- LINES ---------------------
-
-
 // * LINES COLOR
 hr,.vr{
   color: #131317;
 }
 
 
-// -------------------------------------------------------
+//! ----------------------NAVBAR---------------------------------
 
 .navbar-main {
-
-  // @include flex-center;
-  // font-family: $fonts;
-  // font-weight: $bold;
-  // padding: 10px;
-  // border-radius: 5px;
   cursor: pointer;
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(46, 48, 57, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  // background-color: rgba(255, 2, 102, 0.5);
+  // backdrop-filter: blur(10px);
+  // -webkit-backdrop-filter: blur(10px);
+  .lg-container{
+
+    &:hover{
+      opacity: .5;
+      @include transition;
+    }
+    }
 }
   
-  .lg-container{
-  // margin: 0;
-  // padding: 0;
-  // @include transition;
-
-  &:hover{
-    opacity: .5;
-    @include transition;
-  }
-  }
+ 
 
 
 
@@ -304,6 +296,9 @@ hr,.vr{
       // background-color: rgb(255, 0, 30);
     }
   }
+  .skills-title-do{
+    color: $boldTextColor;
+  }
 }
 //! -------------------EXPERIENCES--------------------------------
 .experiences{
@@ -379,9 +374,9 @@ hr,.vr{
 
   }
 }
-.main-nav{
-  background-color: grey;
-}
+// .main-nav{
+//   background-color: grey;
+// }
 
 //! ----------------FOOTER--------------------------
 .footer{
@@ -393,7 +388,6 @@ hr,.vr{
 }
 
 //! ----------------CAROUSEL--------------------------
-
 .testimonials{
   // background-color: #019457;
   margin: 0;
@@ -424,7 +418,7 @@ hr,.vr{
     margin: 0px;
     padding: 10px;
     button{
-      background-color: #007EE5;
+      background-color: $logoColor;
       width: 10px;
       height: 10px;
       border-width: .5px;
@@ -438,13 +432,20 @@ hr,.vr{
       border-radius: 10px;
     }
   }
+  .carousel-control-next-icon{
+    display: none;
+  }
+  .carousel-control-prev-icon{
+    display: none;
+  }
+  .quotes-icon{
+    color: $logoColor;
+  }
+  .carousel-name{
+    color: $boldTextColor;
+  }
 }
-.carousel-control-next-icon{
-  display: none;
-}
-.carousel-control-prev-icon{
-  display: none;
-}
+
 // ! -------------TEXT-------------
 .button-text {
   // width: 10%;
