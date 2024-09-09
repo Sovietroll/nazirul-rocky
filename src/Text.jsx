@@ -1,6 +1,7 @@
 import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 import {useEffect, useState, useRef, useCallback} from 'react';
 import { useScroll, motion, useSpring, useTransform, AnimatePresence } from "framer-motion";
+import {IconArrowExpandVertical} from './Icons';
 
 const Text = () => {
 
@@ -23,14 +24,13 @@ const variant = {
   return ( 
     <Container>
     <Row>
-    {/* <Col>
-      <div className='text-truncate'>
-      In 2023, I started building a custom website on WordPress for fun and
-      </div>
-    </Col> */}
+    <Col className='fs-6'> 
+     
+    In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
+    </Col>
 
    
-    <Col className='col-12'>
+    {/* <Col className='col-12'>
 
     
     <AnimatePresence>
@@ -40,7 +40,7 @@ const variant = {
       variants={variant}
       transition={{ease:'linear'}}
       >
-      In 2023, I started building a custom website on WordPress for fun and
+       In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
     </motion.div>
     </AnimatePresence>
 
@@ -54,8 +54,10 @@ const variant = {
       onClick ={() => setIsOpen(!isOpen)}
       aria-controls='collapse-text'
       aria-expanded={isOpen}
-    />
-    </Col>
+    >
+      <IconArrowExpandVertical width='30px' height='30px'/>
+    </Button>
+    </Col> */}
       
     
 

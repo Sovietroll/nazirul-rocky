@@ -3,7 +3,7 @@ import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 
 const SkillRowContent = ({imgSrc, title, description, titleWhatIDo, iDo, tools, toolsList1, toolsList2, toolsList3, toolsList4,toolsList5,iconSizeDesktop}) => {
   return ( 
-    <Col className="skills-col fw-light" >
+    <Col className="skills-col" >
 
   <Col className='col-12'>
    <img src={imgSrc} className='icon-skills'/>

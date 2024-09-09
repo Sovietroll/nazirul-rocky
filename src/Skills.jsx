@@ -41,8 +41,8 @@ return (
         title={'Designer'}
         description=
         {' I prioritize straightforward content organization, elegant design principles, and user experiences.'}
-        titleWhatIDo={'Things I enjoy designing:'}
-        iDo={'Poster, logo, photo manipulation, vector, video tribute'}
+        titleWhatIDo={'I can design:'}
+        iDo={'Poster, logo, photo manipulation, vector, video ads'}
         tools={'Tools:'}
         toolsList1={'Photoshop'}
         toolsList2={'After Effect'}

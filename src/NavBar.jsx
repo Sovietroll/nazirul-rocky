@@ -49,9 +49,9 @@ const NavBar = ({style}) => {
 // !--------------------RETURN------------------------
 return (
         
-    <Container fluid className='navbar-main' style={{backgroundColor: 'orange'}}>
+    <Container fluid className='navbar-main'>
 
-        <Row className='d-flex ' /* style={{backgroundColor: "purple", border: '1px', borderStyle: 'solid'}} */>
+        <Row className='d-flex ' >
 
 
 

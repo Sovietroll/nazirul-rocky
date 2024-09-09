@@ -15,7 +15,7 @@ const CarouselBootstrap = () => {
   return ( 
 <Container fluid className='testimonials p-2' >
   
-  <IconChatLeftQuoteFill className="text-black-200" width='100px' height='60px' style={{color: "orange"}}/>
+  <IconChatLeftQuoteFill className="text-black-200" width='100px' height='60px' style={{color: "#007EE5"}}/>
 
 
     <Carousel activeIndex={index} 
@@ -29,11 +29,11 @@ const CarouselBootstrap = () => {
       
       <Carousel.Item>
         <CarouselContent
-          imgSrc={'src/images/me.jpg'}
+          imgSrc={'src/images/pp.webp'}
           caption = 
-            {'Lorem ipsum dolor sit amet consectetur adipisicing elit Officii facere.'}
-          nameCaption={'Nazirul'}
-          locationCaption={'Front-End Developer'}
+            {'"Saya suka bini orang."'}
+          nameCaption={'Megat'}
+          locationCaption={'Bank Negara Malaysia Officer'}
         />
       </Carousel.Item>
 
@@ -41,7 +41,7 @@ const CarouselBootstrap = () => {
         <CarouselContent
           imgSrc={'src/images/pp.webp'}
           caption = 
-            {'Lorem ipsum dolor sit amet consectetur adipisicing elit Officii facere.'}
+            {'"Saya kaki lipaq tapi Nazirul hensem."'}
           nameCaption={'Fariq'}
           locationCaption={'7e Staff'}
         />

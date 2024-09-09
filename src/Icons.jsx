@@ -100,3 +100,17 @@ export const IconGoogleDrive = (props) => {
   </svg>
   );
 }
+
+export const IconArrowExpandVertical = (props) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      height="1em"
+      width="1em"
+      {...props}
+    >
+      <path d="M13 9v6h3l-4 4-4-4h3V9H8l4-4 4 4h-3M4 2h16v2H4V2m0 18h16v2H4v-2z" />
+    </svg>
+  );
+}

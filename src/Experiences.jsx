@@ -74,7 +74,7 @@ const Experiences = ({windowWidth}) => {
 
                 {lists.filter((desc) => desc.id === selectedTab.id).map(
                   desc => (
-                    <ul key={desc.id} className='fw-light mainDesc '>
+                    <ul key={desc.id} className='mainDesc '>
 
                       <li>{desc.list}</li>
                       <li>{desc.listTwo}</li>

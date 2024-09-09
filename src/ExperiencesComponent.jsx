@@ -8,7 +8,7 @@ export const allIngredients = [
       icon: '🍅', 
       label: 'Now', 
       labelSelected: '2024',
-      description: 'Self learn Web Developer',
+      description: 'Self-taught Web Developer.',
     },
 
     {
@@ -58,8 +58,8 @@ export const allIngredients = [
   export const lists = [
     {
       id:1,
-      list: 'Learn the whole world about web design.',
-      listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
+      list: 'Building responsive and dynamic web experiences.',
+      // listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
       icon: 
       <PortfolioImage
         links={'https://reactsvgicons.com/'}
@@ -69,8 +69,8 @@ export const allIngredients = [
     ,
     {
       id:2,
-      list: 'Create digital content.',
-      listTwo: 'Collaborate with clients or project managers.',
+      list: 'Creating impactful digital media through design, video, and motion graphics.',
+      // listTwo: 'Collaborate with clients or project managers.',
       icon: 
       <PortfolioImage
         links={'https://reactsvgicons.com/'}
