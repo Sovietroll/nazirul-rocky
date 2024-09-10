@@ -68,17 +68,18 @@ const useMediaQuery = (query) => {
   ];
   
   return ( 
-    <Container fluid  className="footer mt-5" id="footer">
+    <Container fluid className="footer mt-5 p-2" id="footer">
 
 
-      <Row>
+      <Row className='p-'>
 
-        <Col>
-        <Col className=".col-sm-2"><p>A self-driven developer pursuing full-stack skills. [ongoing]
-        </p>
+       
+        <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by 
+        <br/>
+          <span className='footer-name'>Nazirul Rocky</span>        
         </Col>
 
-        <Row>
+        <Col className='col-12 d-flex mt-4 mb-4'>
           
         {links.map((link) => (
           <IconLink
@@ -88,9 +89,9 @@ const useMediaQuery = (query) => {
           />
           ))}
           
-        </Row>
-
         </Col>
+
+       
         
       </Row>
 

@@ -14,9 +14,9 @@ const IntroHome = ({TransitionText,TitleStart,myPic}) => {
             </TransitionText> 
           </Col>
 
-          {/* <Col className="">
+          <Col className="">
             <TitleStart  className="about-me-one-desc-selftaught fs-1"/>
-          </Col> */}
+          </Col>
         </Col>
 
 

@@ -9,10 +9,10 @@
 @import "bootstrap/scss/utilities/api";
 
 $fonts: 'Roboto','Segoe UI';
-$body-color: #352B2E;
-$logoColor: #FF0266;
-$boldTextColor: #EF7090;
-$gridColor: #24191C;
+$body-color: #1c2824;
+$logoColor: #95d5b2;
+$boldTextColor: #52b788;
+$gridColor: #081c15;
 $spacing: 2rem;
 $bold: bold;
 $extraBold: 700;
@@ -114,7 +114,7 @@ a{
   //   filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
   // };
   .img-carousel{
-    width: 30%;
+    width: 10%;
   }
 
 }
@@ -176,6 +176,8 @@ hr,.vr{
   position: sticky;
   top: 0;
   z-index: 100;
+  border-radius: 0 0 10px 10px;
+  background-color: $gridColor;
   // background-color: rgba(255, 2, 102, 0.5);
   // backdrop-filter: blur(10px);
   // -webkit-backdrop-filter: blur(10px);
@@ -384,7 +386,11 @@ hr,.vr{
   // @include flex-center;
   // @include nopadmarg;
   background-color: $gridColor;
-  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  &-name{
+    font-weight: bold;
+    // color: $boldTextColor;
+  }
 }
 
 //! ----------------CAROUSEL--------------------------
