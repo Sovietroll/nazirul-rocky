@@ -9,22 +9,29 @@ import ThemeProvider from 'react-bootstrap/ThemeProvider'
 
 
 function App() {
-  document.title= "myBlog";
+  document.title= "NZ blog";
+
+  const logo =
+  <img className="lg" 
+  src='src/images/newLogo.svg' alt="logo" width={'40px'} fill={'white'}
+  onClick = {() => {window.scrollTo(0,0);}}
+  />
+
+
 
 
   return (
     <BrowserRouter>
 
     <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
-
-      <NavBar />
-
+      
+      <NavBar logo={logo} />
       <Routes>
         <Route path="/" element = {<Home />} /> 
         <Route exact path="contact" element = {<Contact />} />
       </Routes>
 
-      <Footer/>
+      <Footer logo={logo}/>
       
       </ThemeProvider>
     </BrowserRouter>

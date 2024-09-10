@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scroll';
 
-const NavBar = ({style}) => {
+const NavBar = ({logo}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
@@ -51,21 +51,19 @@ return (
         
     <Container fluid className='navbar-main'>
 
-        <Row className='d-flex ' >
+        <Row className='d-flex p-1' >
 
 
 
-        <Col className='col-9 col-md-6'> {/*LOGO*/}
+        <Col className='col-10 col-sm-10 col-md-6 d-flex' style={{paddingLeft: '10px'}}> {/*LOGO*/}
             
-            <img className="lg" 
-                src='src/images/lg.png' alt="logo" width={150}
-                onClick = {() => {window.scrollTo(0,0);}}
-                />
+            {logo}
             
         </Col>
 
         
         <Col className='d-md-flex d-none justify-content-center align-items-center'>
+        
         {bar.map((bars, index) => (
            <Col key={index}>
                    <ScrollTo to={bars.className} spy={true} smooth={true} offset={-150} duration={10}>
@@ -80,7 +78,7 @@ return (
 
 {/* ---------------------HAMBURGER------------------------------ */}
 
-        <Col className="col-2 col-md-2 d-md-none flex-shrink-1 "> {/* Hamburger */}
+        <Col className="col-2 col-sm-2 col-md-2 d-md-none flex-shrink-1 "> {/* Hamburger */}
 
         <div className='div-burger'>
             {begeIcon} {/* HAMBURGER ICON */}

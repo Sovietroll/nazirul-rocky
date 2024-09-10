@@ -2,7 +2,7 @@ import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import {IconLinkedin, IconEmailOutline, IconSquareGithub } from './Icons';
 
-const Footer = ({}) => {
+const Footer = ({logo}) => {
 
 const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(false);
@@ -71,12 +71,15 @@ const useMediaQuery = (query) => {
     <Container fluid className="footer mt-5 p-2" id="footer">
 
 
-      <Row className='p-'>
+   
 
        
         <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by 
         <br/>
           <span className='footer-name'>Nazirul Rocky</span>        
+        </Col>
+        <Col>
+        {logo}
         </Col>
 
         <Col className='col-12 d-flex mt-4 mb-4'>
@@ -92,8 +95,7 @@ const useMediaQuery = (query) => {
         </Col>
 
        
-        
-      </Row>
+     
 
 
 
