@@ -3,8 +3,8 @@ import { Col } from 'react-bootstrap';
 const CarouselContent = ({imgSrc, caption, nameCaption, locationCaption}) => {
   return ( 
 
-    <Col className='carousel-container fw-normal'>
-    <div className='mb-3 mt-3 '>
+    <Col className='carousel-container fw-normal mt-2'>
+    <div className=''>
       <img src={imgSrc} className='img-carousel rounded-circle'/>
     </div>
 

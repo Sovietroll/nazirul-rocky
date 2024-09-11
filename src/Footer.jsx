@@ -24,10 +24,10 @@ const useMediaQuery = (query) => {
 
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
-  const IconLink = ({icon: IconComponent, iconProps }) => (
+  const IconLink = ({icon: IconComponent, url }) => (
     <Col align="center" className='col-4'>
-    <a>
-      <IconComponent {...iconProps} />
+    <a href={url}>
+      <IconComponent height={isDesktop? '50px' : '40px'} color='white' width='100px' className='footer-icons'/>
     </a>
     </Col>
   )
@@ -37,34 +37,22 @@ const useMediaQuery = (query) => {
     {
       id:1,
       icon: IconLinkedin,
-      iconProps: {
-        color: 'white',
-        height : isDesktop? '50px' : '40px',
-        width: '100px',
-        className: 'text-black-200'
-      }
+      url: 'https://www.linkedin.com/in/nazirul-syafiq-young-rockie-359289311/',
+
     }
     ,
     {
       id: 2,
       icon: IconEmailOutline,
-      iconProps: {
-        color: 'white',
-        height : isDesktop? '50px' : '40px',
-        width: '100px',
-        className: 'text-black-200'
-      }
+      url: '',
+
     }
     ,
     {
       id: 3,
       icon: IconSquareGithub,
-      iconProps: {
-        color: 'white',
-        height : isDesktop? '50px' : '40px',
-        width: '100px',
-        className: 'text-black-200'
-      }
+      url: 'https://github.com/Sovietroll',
+
     }
   ];
   
@@ -87,7 +75,7 @@ const useMediaQuery = (query) => {
           <IconLink
             key={link.id}
             icon={link.icon}
-            iconProps={link.iconProps}
+            url={link.url}
           />
           ))}
           

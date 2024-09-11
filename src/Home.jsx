@@ -1,4 +1,4 @@
-import {color, motion, useAnimationControls,useSpring } from "framer-motion";
+import {AnimatePresence, color, motion, useAnimationControls,useSpring } from "framer-motion";
 import TransitionText from "./TransitionText";
 import MotionFlip from "./MotionFlip";
 import {useEffect, useState, useRef, useCallback} from 'react';
@@ -61,9 +61,17 @@ const animationDuration = () =>{
 
   const TitleStart  = () => {
     return (
-      <MotionFlip>
-        {titles[titleIndex]}
-      </MotionFlip>
+      <AnimatePresence mode='wait'>
+        <motion.div
+          key={titleIndex}
+          initial={{y:-10, opacity: 0}}
+          animate={{y:0, opacity: 1}}
+          exit={{x: -10, opacity: 0, transition: 'ease', duration: .1}}
+          className="titleIndex"
+        >
+         {titles[titleIndex]}
+        </motion.div>
+      </AnimatePresence>
     )
   }
 
@@ -93,7 +101,6 @@ const IconsTitle = ({icon: IconComponents}) => {
 
 return ( 
 <Container  className={`about-me`}>
-
   <IntroHome {...{ TransitionText, TitleStart, myPic }} />
                   
   <Text/>
@@ -104,7 +111,7 @@ return (
   
     <hr className="line border-1 rounded"></hr>
   
-  <Experiences windowWidth={windowWidth} IconsTitle={IconsTitle}/>
+  <Experiences /* windowWidth={windowWidth} IconsTitle={IconsTitle} */ {...{windowWidth,IconsTitle}}/>
   
     <hr className="line border-1 rounded"></hr>
 

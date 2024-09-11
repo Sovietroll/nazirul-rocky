@@ -10,12 +10,12 @@ const IntroHome = ({TransitionText,TitleStart,myPic}) => {
         <Col className="col-12">
           <Col className="">
             <TransitionText delay = {.5}>
-                <h1 className="fs-4 "><span>Hi, I'm </span>Nazirul Syafiq</h1> {/* NAME */}
+                <h1 className="fs-4 "><span>Hi, I'm </span>Nazirul Syafiq</h1>
             </TransitionText> 
           </Col>
 
           <Col className="">
-            <TitleStart  className="about-me-one-desc-selftaught fs-1"/>
+            <TitleStart/>
           </Col>
         </Col>
 

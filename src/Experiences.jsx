@@ -25,12 +25,14 @@ const Experiences = ({windowWidth,IconsTitle}) => {
     <Container fluid className="experiences overflow-hidden">
 
           <Row className='experiences-tab'>
-          <h1 className=''>Experiences</h1>
-          <IconsTitle icon={IconPaperPlane}/>
+          <Col className='mt-1 mb-1'>
+            <h1 className=''>Experiences</h1>
+            <IconsTitle icon={IconPaperPlane}/>
+          </Col>
 
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 
-          <Col className='navbar-tab col-12 d-flex p-1'>
+          <Col className='navbar-tab col-12 d-flex p-1 mt-2'>
           {tabs.map((item) => (
             <Col 
               key={item.label}

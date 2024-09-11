@@ -89,7 +89,7 @@ a{
   }
   
 .experiences{
-  height: 15rem;
+  height: 18rem;
 }
 .testimonials{
   height: 25rem;
@@ -201,7 +201,9 @@ hr,.vr{
 
 //! --------------------ABOUT ME-------------------
 .about-me{
-
+.titleIndex{
+  color: $logoColor;
+}
   &-one{
     // @include flex-center;
     // background-color: rgb(168, 115, 10);
