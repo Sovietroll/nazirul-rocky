@@ -5,7 +5,7 @@ import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdo
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scroll';
-import {MyLogo} from './Icons';
+import {MyLogo,IconDarkMode} from './Icons';
 
 
 const NavBar = ({logo}) => {
@@ -57,14 +57,13 @@ return (
 
 
 
-        <Col className='col-10 col-sm-10 col-md-6 d-flex' style={{paddingLeft: '10px'}}> {/*LOGO*/}
+        <Col className='col-3 col-md-3 d-flex justify-content-center' style={{paddingLeft: '10px'}}>
             
             <MyLogo width='35px'/>
             
         </Col>
-
         
-        <Col className='d-md-flex d-none justify-content-center align-items-center'>
+        <Col className='col-md-6 d-md-flex d-none justify-content-center align-items-center'>
         
         {bar.map((bars, index) => (
            <Col key={index}>
@@ -78,9 +77,12 @@ return (
         ))}
         </Col>
 
+        <Col className='col-7 col-md-3 justify-content-end align-items-center d-flex '>
+            <IconDarkMode height='35px' width='25px'/>
+        </Col>
 {/* ---------------------HAMBURGER------------------------------ */}
 
-        <Col className="col-2 col-sm-2 col-md-2 d-md-none flex-shrink-1 "> {/* Hamburger */}
+        <Col className="col-2 d-md-none justify-content-end d-flex"> {/* Hamburger */}
 
         <div className='div-burger'>
             {begeIcon} {/* HAMBURGER ICON */}

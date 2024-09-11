@@ -59,16 +59,11 @@ const useMediaQuery = (query) => {
   return ( 
     <Container fluid className="footer p-2" id="footer">
 
-
-   
-
-       
-        <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by 
+       <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by 
         <br/>
           <span className='footer-name'>Nazirul Rocky</span> <MyLogo width='25px'/>
         </Col>
      
-
         <Col className='col-12 d-flex mt-4 mb-4'>
           
         {links.map((link) => (
