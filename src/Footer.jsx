@@ -1,8 +1,9 @@
 import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import {IconLinkedin, IconEmailOutline, IconSquareGithub } from './Icons';
+import {MyLogo} from './Icons';
 
-const Footer = ({logo}) => {
+const Footer = ({}) => {
 
 const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(false);
@@ -68,7 +69,7 @@ const useMediaQuery = (query) => {
   ];
   
   return ( 
-    <Container fluid className="footer mt-5 p-2" id="footer">
+    <Container fluid className="footer p-2" id="footer">
 
 
    
@@ -76,11 +77,9 @@ const useMediaQuery = (query) => {
        
         <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by 
         <br/>
-          <span className='footer-name'>Nazirul Rocky</span>        
+          <span className='footer-name'>Nazirul Rocky</span> <MyLogo width='25px'/>
         </Col>
-        <Col>
-        {logo}
-        </Col>
+     
 
         <Col className='col-12 d-flex mt-4 mb-4'>
           

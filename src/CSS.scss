@@ -88,7 +88,12 @@ a{
     width: 30%;
   }
   
-
+.experiences,{
+  height: 14rem;
+}
+.testimonials{
+  height: 24rem;
+}
 }
 
 //! MD SIZE
@@ -420,7 +425,7 @@ hr,.vr{
   .carousel-indicators{
     font-style: normal;
     position: absolute;
-    bottom: -2%;
+    bottom: -1%;
     margin: 0px;
     padding: 10px;
     button{

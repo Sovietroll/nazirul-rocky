@@ -13,7 +13,7 @@ const CarouselBootstrap = () => {
 
 
   return ( 
-<Container fluid className='testimonials p-2' >
+<Container fluid className='testimonials p-2 overflow-hidden' >
   
   <IconChatLeftQuoteFill className="text-black-200 quotes-icon" width='100px' height='60px'/>
 
@@ -29,21 +29,21 @@ const CarouselBootstrap = () => {
       
       <Carousel.Item>
         <CarouselContent
-          imgSrc={'src/images/pp.webp'}
+          imgSrc={'src/images/megat.jpeg'}
           caption = 
-            {'"Saya suka bini orang."'}
-          nameCaption={'Megat'}
-          locationCaption={'Bank Negara Malaysia Officer'}
+            {'"He was a pleasure to work with. His friendly approach and clear communication made collaboration easy."'}
+          nameCaption={'Megat Zharif'}
+          locationCaption={'Executive Bank Negara Malaysia'}
         />
       </Carousel.Item>
 
       <Carousel.Item>
         <CarouselContent
-          imgSrc={'src/images/pp.webp'}
+          imgSrc={'src/images/eyra.jpg'}
           caption = 
-            {'"Saya kaki lipaq tapi Nazirul hensem."'}
-          nameCaption={'Fariq'}
-          locationCaption={'7e Staff'}
+            {'"Amazing job on our website. Creativity and technical expertise made the site both beautiful and easy to use."'}
+          nameCaption={'Syaheera'}
+          locationCaption={'W&G CEO'}
         />
       </Carousel.Item>
 

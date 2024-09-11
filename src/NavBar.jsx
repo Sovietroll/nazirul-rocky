@@ -1,10 +1,12 @@
 import './CSS.scss';
 import { useState, useEffect } from 'react';
 import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdown} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scroll';
+import {MyLogo} from './Icons';
+
 
 const NavBar = ({logo}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
@@ -57,7 +59,7 @@ return (
 
         <Col className='col-10 col-sm-10 col-md-6 d-flex' style={{paddingLeft: '10px'}}> {/*LOGO*/}
             
-            {logo}
+            <MyLogo width='35px'/>
             
         </Col>
 
