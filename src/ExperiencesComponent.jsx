@@ -7,7 +7,7 @@ export const allIngredients = [
       id: 1, 
       icon: '🍅', 
       label: 'Now', 
-      labelSelected: '2024',
+      labelSelected: '2023',
       description: 'Self-taught Web Developer.',
     },
 

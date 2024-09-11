@@ -2,8 +2,9 @@ import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import { initialTabs as tabs, lists } from './ExperiencesComponent';
 import { useState } from 'react';
+import {IconPaperPlane} from './Icons';
 
-const Experiences = ({windowWidth}) => {
+const Experiences = ({windowWidth,IconsTitle}) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   const controls = useAnimationControls();
@@ -25,6 +26,7 @@ const Experiences = ({windowWidth}) => {
 
           <Row className='experiences-tab'>
           <h1 className=''>Experiences</h1>
+          <IconsTitle icon={IconPaperPlane}/>
 
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 

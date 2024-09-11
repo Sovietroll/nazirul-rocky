@@ -88,11 +88,11 @@ a{
     width: 30%;
   }
   
-.experiences,{
-  height: 14rem;
+.experiences{
+  height: 15rem;
 }
 .testimonials{
-  height: 24rem;
+  height: 25rem;
 }
 }
 
@@ -170,7 +170,7 @@ a{
 //!  ---------------------- LINES ---------------------
 // * LINES COLOR
 hr,.vr{
-  color: #131317;
+  color: #ffffff;
 }
 
 
@@ -449,8 +449,8 @@ hr,.vr{
   .carousel-control-prev-icon{
     display: none;
   }
-  .quotes-icon{
-    color: $logoColor;
+  .quotes-icon, .paper-icon{
+    // color: $logoColor;
   }
   .carousel-name{
     color: $boldTextColor;

@@ -5,7 +5,7 @@ import CarouselContent from './CarouselContent';
 import {IconChatLeftQuoteFill} from './Icons';
 
 
-const CarouselBootstrap = () => {
+const CarouselBootstrap = ({IconsTitle}) => {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex) => {
     setIndex (selectedIndex);
@@ -15,7 +15,8 @@ const CarouselBootstrap = () => {
   return ( 
 <Container fluid className='testimonials p-2 overflow-hidden' >
   
-  <IconChatLeftQuoteFill className="text-black-200 quotes-icon" width='100px' height='60px'/>
+  <h1>Testimonials</h1>
+  <IconsTitle icon={IconChatLeftQuoteFill}/>
 
 
     <Carousel activeIndex={index} 
@@ -31,7 +32,7 @@ const CarouselBootstrap = () => {
         <CarouselContent
           imgSrc={'src/images/megat.jpeg'}
           caption = 
-            {'"He was a pleasure to work with. His friendly approach and clear communication made collaboration easy."'}
+            {'"Nazirul was a pleasure to work with. His friendly approach and clear communication made collaboration easy."'}
           nameCaption={'Megat Zharif'}
           locationCaption={'Executive Bank Negara Malaysia'}
         />

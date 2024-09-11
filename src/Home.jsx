@@ -11,6 +11,7 @@ import Experiences from './Experiences'
 import IntroHome from './IntroHome';
 import Footer from "./Footer";
 import Text from './Text';
+import CarouselBootstrap from "./CarouselBootstrap";
 
 const AboutMe = () => {
 
@@ -79,6 +80,15 @@ const myPic =
   </motion.div>
 
 
+
+const IconsTitle = ({icon: IconComponents}) => {
+ return (
+  <>
+  <IconComponents width='40px' height='40px' fill='orange'/>
+  </>
+ )
+}
+ 
 //!-----------RETURN---------------
 
 return ( 
@@ -88,17 +98,17 @@ return (
                   
   <Text/>
 
-    <hr className="border-3 border-danger rounded"></hr>
+    <hr className="line border-1 rounded"></hr>
 
   <Skills windowWidth={windowWidth}/>
   
-    <hr className="border-3 border-danger rounded"></hr>
+    <hr className="line border-1 rounded"></hr>
   
-  <Experiences windowWidth={windowWidth}/>
+  <Experiences windowWidth={windowWidth} IconsTitle={IconsTitle}/>
   
-    <hr className="border-3 border-danger rounded"></hr>
+    <hr className="line border-1 rounded"></hr>
 
-  <Contact/>
+  <CarouselBootstrap IconsTitle={IconsTitle}/>
 
 </Container>
    );

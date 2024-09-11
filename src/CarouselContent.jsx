@@ -4,8 +4,8 @@ const CarouselContent = ({imgSrc, caption, nameCaption, locationCaption}) => {
   return ( 
 
     <Col className='carousel-container fw-normal'>
-    <div className='mb-3 mt-3'>
-      <img src={imgSrc} className='img-carousel rounded-circle m-2 '/>
+    <div className='mb-3 mt-3 '>
+      <img src={imgSrc} className='img-carousel rounded-circle'/>
     </div>
 
       <p className='fs-6 mb-4 fw-light'>
