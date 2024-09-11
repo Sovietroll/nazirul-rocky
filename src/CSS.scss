@@ -170,7 +170,7 @@ a{
 //!  ---------------------- LINES ---------------------
 // * LINES COLOR
 hr,.vr{
-  color: #ffffff;
+  color: #787878;
 }
 
 
@@ -308,8 +308,37 @@ hr,.vr{
   .skills-title-do{
     color: $boldTextColor;
   }
+  .skills-ul{
+    li{
+      padding: 2px;
+    }
+    li:hover{
+      background-color: $logoColor;
+    }
+  }
 }
+.tooltip.show{
+  // padding: 10px;
+  // margin: 0px !important;
+  // transition: .1s ease-in-out;
+  background-color: black;
+  border-radius: 10px;
+}
+.tooltip-inner {
+  background-color: rgb(2, 2, 2) !important; 
+  font-weight: bold;
+
+}
+.bs-tooltip-auto .tooltip-arrow::before, .bs-tooltip-top .tooltip-arrow::before{
+  border-top-color: rgb(0, 0, 0) !important;
+
+}
+// .tooltip-two{
+//   background-color: orange;
+//   @include nopadmarg;
+// }
 //! -------------------EXPERIENCES--------------------------------
+
 .experiences{
   //* TAB NAVBAR CONTENT
   &-tab{

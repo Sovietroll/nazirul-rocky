@@ -46,15 +46,15 @@ const animationDuration = () =>{
 
   //! USEFFECT
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
-    },3500);
+    // const interval = setInterval(() => {
+    //   setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
+    // },3500);
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
     
   
     return() => {
-      clearInterval(interval),
+      // clearInterval(interval),
       window.removeEventListener('resize', handleWindowResize)
     }
   },[handleWindowResize]);
@@ -105,11 +105,11 @@ return (
                   
   <Text/>
 
-    <hr className="line border-1 rounded"></hr>
+    {/* <hr className="line border-1 rounded"></hr> */}
 
   <Skills windowWidth={windowWidth}/>
   
-    <hr className="line border-1 rounded"></hr>
+    {/* <hr className="line border-1 rounded"></hr> */}
   
   <Experiences /* windowWidth={windowWidth} IconsTitle={IconsTitle} */ {...{windowWidth,IconsTitle}}/>
   

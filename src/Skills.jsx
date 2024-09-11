@@ -1,9 +1,10 @@
-import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
+import {Row, Col, Container,Button,Overlay} from 'react-bootstrap';
 import SkillRowContent from './SkillsRowContent';
+import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact} from './Icons';
+import { useState, useRef } from 'react';
+
 
 const Skills = ({windowWidth}) => {
-
-
   const Lines = () => {
     const verticalLine =  <div className="vr p-0"></div>;
     const horizontalLine = <hr></hr>;
@@ -12,6 +13,7 @@ const Skills = ({windowWidth}) => {
   }
 
   const iconSizeDesktop = windowWidth > 768;
+
 
 
 return (
@@ -27,10 +29,12 @@ return (
         titleWhatIDo={'Languages I speak:'}
         iDo={'HTML, CSS, Javascript, JSX, SASS, Git'}
         tools={'Dev Tools:'}
-        toolsList1={'Bootstrap'}
-        toolsList2={'Github'}
-        toolsList3={'VS Code'}
-        toolsList4={'Framer Motion'}
+        toolsList1={
+        <IconBootstrapFill/> }
+        toolsList2={<IconSquareGithub/>}
+        toolsList3={<IconVsCode/>}
+        toolsList4={<IconFramer/>}
+        toolsList5={<IconReact/>}
         iconSizeDesktop = {iconSizeDesktop}
       />
 

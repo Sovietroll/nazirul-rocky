@@ -7,14 +7,6 @@ import {IconPaperPlane} from './Icons';
 const Experiences = ({windowWidth,IconsTitle}) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
-  const controls = useAnimationControls();
-  const thisYear = new Date().getFullYear();
-
-  const YearTotal = ({yearThen, yearAfter}) => {
-    const total = yearThen - yearAfter;  
-    const sum = Math.abs(total);
-    return(sum)
-  }
 
   const centerText = 'justify-content-center align-items-center d-flex';
   const iconSizeDesktop = windowWidth > 768;
@@ -38,11 +30,11 @@ const Experiences = ({windowWidth,IconsTitle}) => {
               key={item.label}
               className={item === selectedTab ? `selected ${centerText}`  : `non-selected ${centerText}`}
               onClick={() => setSelectedTab(item)}
-              // onPan={handlePan}
             >
 
             <span className='' style={{fontSize: '65%', transition: 'ease-in-out'}}>
-              {`${item.label}`}  {item === selectedTab ?
+              {`${item.label}`} 
+               {item === selectedTab ?
               (<>- {item.labelSelected}</>):null}
             </span>
 

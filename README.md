@@ -14,13 +14,14 @@ Welcome to my personal blog, where I showcase my work, projects, and skills as a
 - **react-bootstrap**
 - **Bootstrap**
 - **Framer Motion**
-- **FontAwesome**
 - **Github**
 - **VSCode**
 - **hamburger-react by Luuk**
-- **React library by Tuan Anh Phung @phung_cz**
 - **react-scroll**
 - **reactsvgicons**
+- **svgrepo**
+- **Adobe Ilustrator**
+- **Adobe Photoshop**
 
 ## 🙌 Blog inspired by: 
 - **Matt Farley**

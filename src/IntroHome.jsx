@@ -15,7 +15,7 @@ const IntroHome = ({TransitionText,TitleStart,myPic}) => {
           </Col>
 
           <Col className="">
-            <TitleStart/>
+            {/* <TitleStart/> */}
           </Col>
         </Col>
 
