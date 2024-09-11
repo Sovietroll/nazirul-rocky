@@ -44,7 +44,7 @@ const useMediaQuery = (query) => {
     {
       id: 2,
       icon: IconEmailOutline,
-      url: '',
+      url:'mailto:nazirulrocky@gmail.com',
 
     }
     ,
