@@ -29,9 +29,6 @@ $breakpoints: (
 );
 
 // * LINES COLOR
-.progressBar{
-  background-color: transparent;
-}
 
 body{
   background: $body-color;
@@ -317,26 +314,31 @@ hr,.vr{
     }
   }
 }
-.tooltip.show{
-  // padding: 10px;
-  // margin: 0px !important;
-  // transition: .1s ease-in-out;
-  background-color: black;
-  border-radius: 10px;
+// * HOVER ICON 
+.svg:hover{
+  background-color: rgb(255, 0, 0);
+  transition: .1s ease-in-out;
 }
-.tooltip-inner {
-  background-color: rgb(2, 2, 2) !important; 
-  font-weight: bold;
-
+.icons-map{
+  &-div{
+    position: relative;
+  }
+  .popUp-label{
+    background-color: rgb(0, 0, 0);
+    padding: 2px;
+    width: 350%;
+    border-radius: 10px;
+    overflow:hidden;
+    position: absolute;
+    top: -80%;
+    left: -110%;
+    right: 0%;
+    font-size: 75%;
+    font-weight: $bold;
+    white-space: nowrap;
+    z-index: 10;
+  }
 }
-.bs-tooltip-auto .tooltip-arrow::before, .bs-tooltip-top .tooltip-arrow::before{
-  border-top-color: rgb(0, 0, 0) !important;
-
-}
-// .tooltip-two{
-//   background-color: orange;
-//   @include nopadmarg;
-// }
 //! -------------------EXPERIENCES--------------------------------
 
 .experiences{

@@ -1,10 +1,11 @@
 import {Row, Col, Container,Button,Overlay} from 'react-bootstrap';
 import SkillRowContent from './SkillsRowContent';
+import SkillRowContentTwo from './SkillsRowContentTwo';
 import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact} from './Icons';
 import { useState, useRef } from 'react';
 
 
-const Skills = ({windowWidth}) => {
+const Skills = ({windowWidth,isClicked,setIsClicked,buttonRef}) => {
   const Lines = () => {
     const verticalLine =  <div className="vr p-0"></div>;
     const horizontalLine = <hr></hr>;
@@ -14,7 +15,37 @@ const Skills = ({windowWidth}) => {
 
   const iconSizeDesktop = windowWidth > 768;
 
+  const Icons = [
+    {
+      id: 1,
+      label: 'Bootstrap',
+      seticon: <IconBootstrapFill/>
+    }
+    ,
+    {
+      id: 2,
+      label: 'Github',
+      seticon: <IconSquareGithub/>
+    }
+  ]
+  const [selected, setSelected] = useState(Icons[0]);
 
+  const renderIcons = 
+    <>
+    {Icons.map((icon) => (
+  <div 
+    key={icon.id} 
+    className={icon.id === selected.id ? 'test' : ''}
+    onClick={() => setSelected(icon)}
+  >
+    {icon.seticon}
+    {/* {icon.id === selected.id && <p>{icon.label}</p>} */}
+    </div>
+    ))}
+
+    {selected && (<div>{selected.label}</div>)}
+
+    </>
 
 return (
 
@@ -36,11 +67,12 @@ return (
         toolsList4={<IconFramer/>}
         toolsList5={<IconReact/>}
         iconSizeDesktop = {iconSizeDesktop}
+        {...{isClicked,setIsClicked,buttonRef}}
       />
 
   <Lines/>
 
-      <SkillRowContent
+      <SkillRowContentTwo
         imgSrc={'src/images/designer-01.svg'}
         title={'Designer'}
         description=
@@ -53,7 +85,7 @@ return (
         toolsList3={'Illustrator'}
         toolsList4={'Premiere'}
         toolsList5={'Lightroom'}
-        // iconSizeDesktop = {iconSizeDesktop}
+        iconSizeDesktop = {iconSizeDesktop}
       />
 
   

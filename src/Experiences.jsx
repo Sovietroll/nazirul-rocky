@@ -32,7 +32,7 @@ const Experiences = ({windowWidth,IconsTitle}) => {
               onClick={() => setSelectedTab(item)}
             >
 
-            <span className='' style={{fontSize: '65%', transition: 'ease-in-out'}}>
+            <span style={{fontSize: '65%', transition:'ease-in-out'}}>
               {`${item.label}`} 
                {item === selectedTab ?
               (<>- {item.labelSelected}</>):null}
@@ -41,7 +41,6 @@ const Experiences = ({windowWidth,IconsTitle}) => {
            
 
             <br/>
-              {/* {`${item.description}`} */}
               {item === selectedTab ? (
                 <motion.div layoutId="underline" className='underline'/>
               ): null}

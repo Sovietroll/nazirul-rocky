@@ -19,8 +19,10 @@ const AboutMe = () => {
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
   const [windowWidth, setWindowWidth] = useState(0);
-    const [matches, setMatches] = useState(false);
+  const [matches, setMatches] = useState(false);
 
+  const buttonRef = useRef(null);
+  const [isClicked, setIsClicked] = useState(false);
 
   const windowScrollTo = () => {
     window.scrollTo(0,0);
@@ -46,18 +48,18 @@ const animationDuration = () =>{
 
   //! USEFFECT
   useEffect(() => {
-    // const interval = setInterval(() => {
-    //   setTitleIndex((prevIndex => (prevIndex + 1) % titles.length))
-    // },3500);
     handleWindowResize();
     window.addEventListener('resize', handleWindowResize);
-    
+    const handleClickOutside = (event) => {
+      setIsClicked(false);
+    }
+    document.addEventListener('mousedown', handleClickOutside);
   
     return() => {
-      // clearInterval(interval),
       window.removeEventListener('resize', handleWindowResize)
+      document.removeEventListener('mousedown', handleClickOutside)
     }
-  },[handleWindowResize]);
+  },[handleWindowResize][buttonRef]);
 
   const TitleStart  = () => {
     return (
@@ -107,15 +109,15 @@ return (
 
     {/* <hr className="line border-1 rounded"></hr> */}
 
-  <Skills windowWidth={windowWidth}/>
+  <Skills {...{windowWidth, isClicked, setIsClicked,buttonRef}}/>
   
     {/* <hr className="line border-1 rounded"></hr> */}
   
-  <Experiences /* windowWidth={windowWidth} IconsTitle={IconsTitle} */ {...{windowWidth,IconsTitle}}/>
+  <Experiences  {...{windowWidth,IconsTitle}}/>
   
     <hr className="line border-1 rounded"></hr>
 
-  <CarouselBootstrap IconsTitle={IconsTitle}/>
+  <CarouselBootstrap IconsTitle={IconsTitle} />
 
 </Container>
    );

@@ -15,6 +15,7 @@ const SvgRepo = ({ path }) => {
       height='35px'
       fill = 'white'
       style={{borderRadius: '10px'}}
+      className="svg"
     >
       {path}
     </svg>

@@ -8,7 +8,7 @@ export const allIngredients = [
       icon: '🍅', 
       label: 'Now', 
       labelSelected: '2023',
-      description: 'Self-taught Web Developer.',
+      description: 'Web Developer.',
     },
 
     {
