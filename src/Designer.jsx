@@ -1,47 +1,47 @@
 import {Row, Col, Container,Button, Popover,OverlayTrigger,Tooltip ,Overlay  } from 'react-bootstrap';
 import { useState, useRef } from 'react';
-import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact} from './Icons';
+import {IconAfterEffect,IconPhotoshop ,IconIllustrator ,IconPremierePro ,IconLightroom} from './Icons';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 
 
 const SkillRowContent = 
-  ({buttonRef,setIsClicked,isClicked,imgSrc, title, description, titleWhatIDo, iDo, tools, toolsList1, toolsList2, toolsList3, toolsList4,toolsList5,iconSizeDesktop}) => {
+  ({buttonRef,setIsClickedTwo,isClickedTwo,imgSrc, title, description, titleWhatIDo, iDo, tools,iconSizeDesktop}) => {
   
   //  const [isClicked, setIsClicked] = useState(false);
 
 
-  const Icons = [
+  const IconsAdobe = [
     {
       id: 1,
-      label: 'Bootstrap',
-      seticon: <IconBootstrapFill/>
+      label: 'After Effect',
+      seticon: <IconAfterEffect/>
     }
     ,
     {
       id: 2,
-      label: 'Github',
-      seticon: <IconSquareGithub/>
+      label: 'Photoshop',
+      seticon: <IconPhotoshop/>
     }
     ,
     {
       id: 3,
-      label: 'VS Code',
-      seticon: <IconVsCode/>
+      label: 'Illustrator',
+      seticon: <IconIllustrator/>
     }
     ,
     {
       id: 4,
-      label: 'Framer Motion',
-      seticon: <IconFramer/>
+      label: 'Premiere Pro',
+      seticon: <IconPremierePro/>
     }
     ,   {
       id: 5,
-      label: 'React',
-      seticon: <IconReact/>
+      label: 'Lightroom',
+      seticon: <IconLightroom/>
     }
     ,
   ]
-  const [selected, setSelected] = useState(Icons[0]);
+  const [selected, setSelected] = useState(IconsAdobe[0]);
 
   return ( //! -------------RETURN------------
     <Col className="skills-col" >
@@ -72,23 +72,23 @@ const SkillRowContent =
       <ul 
       style={{listStyle: "none"}}
       className='d-flex justify-content-center p-0'>
-        
-      {Icons.map((icon) => (
+{/* ----------------------------------------------------------- */}
+      {IconsAdobe.map((adobe) => (
       <div 
-      key={icon.id} 
+      key={adobe.id} 
       className='icons-map'
-      onClick={() => setSelected(icon)}
+      onClick={() => setSelected(adobe)}
     >
       <div 
       className='icons-map-div'
       style={{margin: '3px'}}
-      onClick={() => setIsClicked(true)}
+      onClick={() => setIsClickedTwo(true)}
       ref={buttonRef}
       >
-       {icon.seticon}
+       {adobe.seticon}
 
        <AnimatePresence mode='wait'>
-       {icon.label === selected.label && isClicked? 
+       {adobe.label === selected.label && isClickedTwo? 
         (
           <motion.div
             key={selected.id}
@@ -98,7 +98,7 @@ const SkillRowContent =
             exit={{y: 20, opacity: 0, scale: 0}}
             transition={{linear: 'easeInOut', duration: .3}}
           >
-          {icon.label}
+          {adobe.label}
           </motion.div>
         ) : ''
       }
@@ -109,13 +109,9 @@ const SkillRowContent =
         
       </div>
       ))}
+{/* ----------------------------------------------------------- */}
 
-      
-         {/* <li>{toolsList1}</li>
-         <li>{toolsList2}</li>
-         <li>{toolsList3}</li>
-         <li>{toolsList4}</li>
-         <li>{toolsList5}</li> */}
+
     </ul>
   </Col>
   </Col>

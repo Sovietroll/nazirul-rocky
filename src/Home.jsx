@@ -23,6 +23,8 @@ const AboutMe = () => {
 
   const buttonRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
+  const [isClickedTwo, setIsClickedTwo] = useState(false);
+  
 
   const windowScrollTo = () => {
     window.scrollTo(0,0);
@@ -52,6 +54,8 @@ const animationDuration = () =>{
     window.addEventListener('resize', handleWindowResize);
     const handleClickOutside = (event) => {
       setIsClicked(false);
+      setIsClickedTwo(false);
+      console.log('click outside')
     }
     document.addEventListener('mousedown', handleClickOutside);
   
@@ -109,7 +113,7 @@ return (
 
     {/* <hr className="line border-1 rounded"></hr> */}
 
-  <Skills {...{windowWidth, isClicked, setIsClicked,buttonRef}}/>
+  <Skills {...{windowWidth, buttonRef, isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}/>
   
     {/* <hr className="line border-1 rounded"></hr> */}
   

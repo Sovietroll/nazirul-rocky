@@ -5,7 +5,7 @@ import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 
 
 const SkillRowContent = 
-  ({buttonRef,setIsClicked,isClicked,imgSrc, title, description, titleWhatIDo, iDo, tools, toolsList1, toolsList2, toolsList3, toolsList4,toolsList5,iconSizeDesktop}) => {
+  ({buttonRef,isClicked,setIsClicked,imgSrc, title, description, titleWhatIDo, iDo, tools,iconSizeDesktop}) => {
   
   //  const [isClicked, setIsClicked] = useState(false);
 
@@ -86,7 +86,6 @@ const SkillRowContent =
       ref={buttonRef}
       >
        {icon.seticon}
-
        <AnimatePresence mode='wait'>
        {icon.label === selected.label && isClicked? 
         (
@@ -103,19 +102,11 @@ const SkillRowContent =
         ) : ''
       }
       </AnimatePresence> 
-
       </div>
-      
-        
       </div>
-      ))}
+      ))} 
 
       
-         {/* <li>{toolsList1}</li>
-         <li>{toolsList2}</li>
-         <li>{toolsList3}</li>
-         <li>{toolsList4}</li>
-         <li>{toolsList5}</li> */}
     </ul>
   </Col>
   </Col>
