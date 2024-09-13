@@ -1,6 +1,6 @@
 import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
-import {IconLinkedin, IconEmailOutline, IconSquareGithub } from './Icons';
+import {IconLinkedin, IconEmailOutline, IconGithub } from './Icons';
 import {MyLogo} from './Icons';
 
 const Footer = ({}) => {
@@ -50,7 +50,7 @@ const useMediaQuery = (query) => {
     ,
     {
       id: 3,
-      icon: IconSquareGithub,
+      icon: IconGithub,
       url: 'https://github.com/Sovietroll',
 
     }
