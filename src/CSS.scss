@@ -50,11 +50,7 @@ a{
   font-weight: bold;
   text-decoration: none;
 }
-.hor-line{
-  // height: 10px;
-  // border-color: white;
 
-}
 
 //! XS SIZE
 @media (min-width:map-get($breakpoints,xs)){
@@ -348,18 +344,12 @@ hr,.vr{
 .experiences{
   //* TAB NAVBAR CONTENT
   &-tab{
-    // background-color: $gridColor;
-    // border-radius:10px 10px 10px 10px;
     cursor: pointer;
 
     //* TAB MAIN CONTENT
     .tab-content{
-      // background-color: $gridColor;
-      // border-radius: 0px 0px 10px 10px;
       padding: 10px;
-      div{
-        // font-size: 20px;
-      }
+
     }
     .navbar-tab{
       background-color: $gridColor;
@@ -394,9 +384,6 @@ hr,.vr{
       }
       .selected, .non-selected{
         @include transition;
-        // border-radius:10px 10px 0px 0px;
-        // padding: 5px;
-        // outline: solid;
       }
       .mainDesc{
         list-style-type:none;
@@ -414,30 +401,21 @@ hr,.vr{
           color: white;
         }
       }
- 
-
   }
 }
-// .main-nav{
-//   background-color: grey;
-// }
+
 
 //! ----------------FOOTER--------------------------
 .footer{
-  //! THIS MIGHT BE THE PADDING PROBLEM 
-  // @include flex-center;
-  // @include nopadmarg;
   background-color: $gridColor;
   border-radius: 10px 10px 0 0;
   &-name{
     font-weight: bold;
-    // color: $boldTextColor;
   }
 }
 
 //! ----------------CAROUSEL--------------------------
 .testimonials{
-  // background-color: #019457;
   margin: 0;
   h1{
     @include nopadmarg

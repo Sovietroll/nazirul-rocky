@@ -4,24 +4,22 @@ import MotionFlip from "./MotionFlip";
 import {useEffect, useState, useRef, useCallback} from 'react';
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import './CSS.scss';
-import { Link } from 'react-router-dom';
-import Contact from './Contact';
 import Skills from './Skills';
 import Experiences from './Experiences'
 import IntroHome from './IntroHome';
-import Footer from "./Footer";
 import Text from './Text';
 import CarouselBootstrap from "./CarouselBootstrap";
 
-const AboutMe = () => {
+
+const Home = ({windowWidth,buttonRef}) => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
   const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
-  const [windowWidth, setWindowWidth] = useState(0);
+  // const [windowWidth, setWindowWidth] = useState(0);
   const [matches, setMatches] = useState(false);
 
-  const buttonRef = useRef(null);
+  // const buttonRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const [isClickedTwo, setIsClickedTwo] = useState(false);
   
@@ -44,26 +42,30 @@ const animationDuration = () =>{
   
   }
 
-  const handleWindowResize = useCallback(event => {
-    setWindowWidth(window.innerWidth);
-  })
+  // const handleWindowResize = useCallback(event => {
+  //   setWindowWidth(window.innerWidth);
+  // })
 
+  const darkModeToggle = ({color}) => {
+    document.body.style.backgroundColor = {color};
+  }
   //! USEFFECT
-  useEffect(() => {
-    handleWindowResize();
-    window.addEventListener('resize', handleWindowResize);
-    const handleClickOutside = (event) => {
-      setIsClicked(false);
-      setIsClickedTwo(false);
-      console.log('click outside')
-    }
-    document.addEventListener('mousedown', handleClickOutside);
+  // useEffect(() => {
+  //   handleWindowResize();
+  //   window.addEventListener('resize', handleWindowResize);
+  //   const handleClickOutside = (event) => {
+  //     setIsClicked(false);
+  //     setIsClickedTwo(false);
+  //   }
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   // document.body.style.backgroundColor = 'white';
+
   
-    return() => {
-      window.removeEventListener('resize', handleWindowResize)
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  },[handleWindowResize][buttonRef]);
+  //   return() => {
+  //     window.removeEventListener('resize', handleWindowResize)
+  //     document.removeEventListener('mousedown', handleClickOutside)
+  //   }
+  // },[handleWindowResize][buttonRef]);
 
   const TitleStart  = () => {
     return (
@@ -107,13 +109,14 @@ const IconsTitle = ({icon: IconComponents}) => {
 
 return ( 
 <Container  className={`about-me`}>
+
   <IntroHome {...{ TransitionText, TitleStart, myPic }} />
                   
   <Text/>
 
     {/* <hr className="line border-1 rounded"></hr> */}
 
-  <Skills {...{windowWidth, buttonRef, isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}/>
+  <Skills {...{ isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}/>
   
     {/* <hr className="line border-1 rounded"></hr> */}
   
@@ -127,4 +130,4 @@ return (
    );
 }
  
-export default AboutMe;
+export default Home;

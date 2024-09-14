@@ -8,12 +8,12 @@ import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scro
 import {MyLogo,IconDarkMode} from './Icons';
 
 
-const NavBar = ({logo}) => {
+const NavBar = ({toggleDarkMode, setDarkMode, darkMode}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
 
-    // const ScrollLink = Scroll.ScrollLink;
+    const ScrollLink = Scroll.ScrollLink;
 
     const [scroll, setScroll] = useState(false);
     const disableScroll = () => document.body.style.overflow = "hidden";
@@ -48,6 +48,9 @@ const NavBar = ({logo}) => {
         onClick={clicky} >
             <Hamburger toggled={isOpen} toggle={setOpen}/>
     </div>
+        console.log(darkMode);
+
+
 // !--------------------RETURN------------------------
 return (
         
@@ -71,7 +74,10 @@ return (
         ))}
         </Col>
         <Col className='col-7 col-md-3 justify-content-end align-items-center d-flex '>
-            <IconDarkMode height='35px' width='25px'/>
+        {/* DARK MODE ICON */}
+            <IconDarkMode height='35px' width='25px' onClick={() => toggleDarkMode() }/>
+        {/* DARK MODE ICON */}
+
         </Col>
 {/* ---------------------HAMBURGER------------------------------ */}
 
