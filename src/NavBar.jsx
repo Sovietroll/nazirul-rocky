@@ -61,7 +61,7 @@ return (
         <Col className='col-md-6 d-md-flex d-none justify-content-center align-items-center'>   
         {bar.map((bars, index) => (
            <Col key={index}>
-                   <ScrollTo to={bars.className} spy={true} smooth={true} offset={-150} duration={10}>
+                   <ScrollTo to={bars.className} spy={true} smooth={true} offset={-50} duration={10}>
                     <Col>
                     {bars.title}
                     
@@ -94,7 +94,7 @@ return (
                         <ul>
                             {bar.map((bars, index) => (
                             <li xs={3} key={index} className='hamburger-center'>
-                                <ScrollTo to={bars.className} spy={true} smooth={true} offset={-150} duration={10} onClick={clicky}>{bars.title}</ScrollTo>
+                                <ScrollTo to={bars.className} spy={true} smooth={true} offset={-50} duration={10} onClick={clicky}>{bars.title}</ScrollTo>
                             </li>
                             ))
                             }

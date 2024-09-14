@@ -17,12 +17,6 @@ function App() {
   onClick = {() => {window.scrollTo(0,0);}}
   />
 
-//  const MyLogo = ({width}) => {
-//   <img className="lg" 
-//   src='src/images/newLogo.svg' alt="logo" width={width} fill={'white'}
-//   onClick = {() => {window.scrollTo(0,0);}}
-//   />
-//  }
 
 
   return (

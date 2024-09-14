@@ -38,7 +38,6 @@ body{
 }
 body > :not(strong, .footer,.progressBar,.navbar-main){
   padding: 20px;
-  // background-color: black;
 }
 a{
   color: $logoColor;
@@ -65,23 +64,13 @@ a{
     background-color: #53feb7;
   }
   .experience-rows{
-    // background-color: rgb(255, 19, 19);
     font-size: 15px;
   }
   .icon-skills{
-    // background-color: rgb(255, 182, 182);
     width: 20%;
     height: auto;
   }
 
-  // .imgexp{
-  //   position:absolute;
-  //   top: 0%;
-  //   left: -15%;
-  //   width: 35%;
-  //   z-index:1;
-  //   filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
-  // };
   .img-carousel{
     width: 30%;
   }
@@ -108,14 +97,6 @@ a{
     width: 14%;
     height: auto;
   }
-  // .imgexp{
-  //   position:absolute;
-  //   top: 3%;
-  //   left: -10%;
-  //   width: 20%;
-  //   z-index: 1;
-  //   filter: drop-shadow(2mm 3mm 3mm rgb(0, 0, 0, .5));
-  // };
   .img-carousel{
     width: 10%;
   }
@@ -129,18 +110,16 @@ a{
     z-index: 1000;
   }
   .div-burger-inside{
-    // @include flex-center;
     position: fixed;
     top: 0%;
     right: 10%;
-    // background-color: blue
   }
   
   .hamburgerListDown{
     position: fixed;
-    background:$navBarColor;
+    background:$body-color;
     top: auto;
-    bottom: -58px;
+    bottom: -55px;
     right: 0%;
     left: 0%;
     width: 100%;
@@ -155,12 +134,13 @@ a{
       padding: 20px;
     }
     .hamburger-center{
-      // background-color: pink;
       border-bottom: solid;
       border-width: .5px;
       border-width: 20%;
-      border-color: #202020;
+      border-color: #616161;
       padding: 10%;
+      font-weight: $bold;
+      font-size: 2rem;
     }
   }
   @keyframes blur-in {
