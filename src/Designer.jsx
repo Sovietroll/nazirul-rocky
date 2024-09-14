@@ -97,6 +97,7 @@ const Designer  =
             className='popUp-label'
             initial={{y: 10, opacity: 0}}
             animate={{y: 0, opacity: 1,scale: 1}}
+            whileTap={{scale:2}}
             exit={{y: 20, opacity: 0, scale: 0}}
             transition={{linear: 'easeInOut', duration: .3}}
           >

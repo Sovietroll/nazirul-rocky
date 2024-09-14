@@ -24,9 +24,9 @@ const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setI
   }
 return (
 
-  <Container className="skills" >
-
-    <Row className="g-1" >
+<Container className="skills" >
+  <Row className="g-1" >
+    <Col>
       <Developer
         title={'Developer'}
         description=
@@ -38,23 +38,25 @@ return (
         <IconBootstrapFill/> }
         {...{isClicked,setIsClicked,buttonRef,IconSkills,iconSizeDesktop}}
       />
+    </Col>
 
   <Lines/>
 
-
-      <Designer
+  <Col>
+    <Designer
         imgSrc={'src/images/designer-01.svg'}
         title={'Designer'}
         description=
-        {' I prioritize straightforward content organization, elegant design principles, and user experiences.'}
+        {' I prioritize straightforward content organization, minimalism, elegant design principles, and user experiences.'}
         titleWhatIDo={'I can design:'}
         iDo={'Poster, logo, photo manipulation, vector, video ads'}
         tools={'Tools:'}
         {...{isClickedTwo,setIsClickedTwo,buttonRef,IconSkills,iconSizeDesktop,}}
-
       />
+  </Col>
 
-  
+
+
     </Row>
   </Container>
 

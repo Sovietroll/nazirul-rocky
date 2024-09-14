@@ -6,7 +6,6 @@ import Footer from './Footer.jsx'
 import './CSS.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
-import {MyLogo} from './Icons';
 import { useState,useEffect,useCallback,useRef } from 'react';
 
 function App() {
@@ -30,12 +29,8 @@ function App() {
 
   const toggleLightMode = () => {
     setLightMode(!lightMode);
+    {lightMode? console.log('DARK') : console.log('LIGHT')};
   }
-
-const colorlightMode = 
-document.body.style.backgroundColor = ''
-
-
 
 useEffect(() => {
     
@@ -46,7 +41,6 @@ useEffect(() => {
     setIsClickedTwo(false);
   }
   document.addEventListener('mousedown', handleClickOutside);
-  // {lightMode? console.log('DARK') : console.log('LIGHT')};
 
   return() => {
     window.removeEventListener('resize', handleWindowResize)
@@ -54,25 +48,15 @@ useEffect(() => {
   }
 },[handleWindowResize][buttonRef]);
 
-const lightTheme = createTheme({
-  palette: {
-    mode: toggleLightMode ? 'light' : 'dark',
-    primary: {
-      main: '#95d5b2',
-    },
-    secondary: {
-      main: '#95d5b2',
-    },
-  },
-})
+
 
 // !   ----------RETURN--------------------------------------
   return (
     <BrowserRouter>
 
-    <ThemeProvider breakpoints={['xl']} minBreakpoint='sm' theme={lightTheme}>
+    <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
       
-      <NavBar {...{toggleDarkMode, setDarkMode, darkMode}} />
+      <NavBar {...{toggleLightMode, lightMode}} />
       <Routes>
         <Route path="/" element = 
         {<Home 

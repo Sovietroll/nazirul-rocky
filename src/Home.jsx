@@ -92,7 +92,7 @@ return (
 
     {/* <hr className="line border-1 rounded"></hr> */}
 
-  <Skills {...{ isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}/>
+  <Skills {...{ windowWidth,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}/>
   
     {/* <hr className="line border-1 rounded"></hr> */}
   
