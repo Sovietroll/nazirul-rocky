@@ -12,7 +12,7 @@ const CarouselContent = ({imgSrc, caption, nameCaption, locationCaption}) => {
         {caption}
       </p>
 
-    <h5 className='fs-4 fw-bold carousel-name'>
+    <h5 className='fs-5 fw-bold carousel-name'>
        {nameCaption}
     </h5>
   

@@ -1,14 +1,13 @@
 import {Row, Col, Container,Button, Popover,OverlayTrigger,Tooltip ,Overlay  } from 'react-bootstrap';
 import { useState, useRef } from 'react';
-import {IconAfterEffect,IconPhotoshop ,IconIllustrator ,IconPremierePro ,IconLightroom} from './Icons';
+import {IconAfterEffect,IconPhotoshop ,IconIllustrator ,IconPremierePro ,IconLightroom,IconDesigner} from './Icons';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 
 
-const SkillRowContent = 
-  ({buttonRef,setIsClickedTwo,isClickedTwo,imgSrc, title, description, titleWhatIDo, iDo, tools,iconSizeDesktop}) => {
+const Designer  = 
+  ({buttonRef,setIsClickedTwo,isClickedTwo,imgSrc, title, description, titleWhatIDo, iDo, tools,IconSkills,iconSizeDesktop}) => {
   
   //  const [isClicked, setIsClicked] = useState(false);
-
 
   const IconsAdobe = [
     {
@@ -43,14 +42,17 @@ const SkillRowContent =
   ]
   const [selected, setSelected] = useState(IconsAdobe[0]);
 
+ 
+
   return ( //! -------------RETURN------------
     <Col className="skills-col" >
 
   <Col className='col-12'>
-   <img src={imgSrc} className='icon-skills'/>
+   {/* <IconDesigner width={'100px'} fill={'white'} className='icon-skills' /> */} 
+   <IconSkills icon = {IconDesigner}/>
   </Col >
 
-  <Col className="skills-col-1 fs-2 fw-bold col-12">
+  <Col className="skills-col-1 fs-4 fw-bold col-12">
     {title}
   </Col >
 
@@ -122,4 +124,4 @@ const SkillRowContent =
    );
 }
  
-export default SkillRowContent;
+export default Designer ;

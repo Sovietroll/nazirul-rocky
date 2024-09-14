@@ -15,7 +15,7 @@ const CarouselBootstrap = ({IconsTitle}) => {
   return ( 
 <Container fluid className='testimonials p-2 overflow-hidden' >
   <Col className='mt-1 mb-1'>
-    <h1>Testimonials</h1>
+    <h1 className='fs-1'>Testimonials</h1>
     <IconsTitle icon={IconChatLeftQuoteFill}/>
   </Col>
 

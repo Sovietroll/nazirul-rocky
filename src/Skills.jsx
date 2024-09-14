@@ -1,7 +1,7 @@
 import {Row, Col, Container,Button,Overlay} from 'react-bootstrap';
 import Developer from './Developer';
 import Designer from './Designer';
-import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact} from './Icons';
+import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact,IconDesigner} from './Icons';
 import { useState, useRef } from 'react';
 
 
@@ -15,14 +15,19 @@ const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setI
 
   const iconSizeDesktop = windowWidth > 768;
 
-
+  const IconSkills = ({icon:IconComponents}) => {
+    return (
+    <>
+    <IconComponents widthHeight = {iconSizeDesktop? '100px' : '80px'}/>
+    </>
+    )
+  }
 return (
 
   <Container className="skills" >
 
     <Row className="g-1" >
       <Developer
-        imgSrc={'src/images/code-01.svg'}
         title={'Developer'}
         description=
         {'I enjoy building projects from the ground up and love transforming concepts into reality in the browser.'}
@@ -31,11 +36,11 @@ return (
         tools={'Tools:'}
         toolsList1={
         <IconBootstrapFill/> }
-        iconSizeDesktop = {iconSizeDesktop}
-        {...{isClicked,setIsClicked,buttonRef}}
+        {...{isClicked,setIsClicked,buttonRef,IconSkills,iconSizeDesktop}}
       />
 
   <Lines/>
+
 
       <Designer
         imgSrc={'src/images/designer-01.svg'}
@@ -45,8 +50,7 @@ return (
         titleWhatIDo={'I can design:'}
         iDo={'Poster, logo, photo manipulation, vector, video ads'}
         tools={'Tools:'}
-        iconSizeDesktop = {iconSizeDesktop}
-        {...{isClickedTwo,setIsClickedTwo,buttonRef}}
+        {...{isClickedTwo,setIsClickedTwo,buttonRef,IconSkills,iconSizeDesktop,}}
 
       />
 

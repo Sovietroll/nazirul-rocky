@@ -51,20 +51,14 @@ const NavBar = ({logo}) => {
 // !--------------------RETURN------------------------
 return (
         
-    <Container fluid className='navbar-main'>
+    <Container fluid className={hamburgerOpen? 'navbar-main-open' : 'navbar-main-closed'} >
 
-        <Row className='d-flex p-1' >
-
-
-
-        <Col className='col-3 col-md-3 d-flex justify-content-center' style={{paddingLeft: '10px'}}>
-            
-            <MyLogo width='35px'/>
-            
+        <Row className='d-flex p-1 row-navbar' >
+        <Col 
+        className='col-3 col-md-3 d-flex justify-content-center fw-bold' >          
+            <MyLogo width='35px'/>      
         </Col>
-        
-        <Col className='col-md-6 d-md-flex d-none justify-content-center align-items-center'>
-        
+        <Col className='col-md-6 d-md-flex d-none justify-content-center align-items-center'>   
         {bar.map((bars, index) => (
            <Col key={index}>
                    <ScrollTo to={bars.className} spy={true} smooth={true} offset={-150} duration={10}>
@@ -76,7 +70,6 @@ return (
            </Col>
         ))}
         </Col>
-
         <Col className='col-7 col-md-3 justify-content-end align-items-center d-flex '>
             <IconDarkMode height='35px' width='25px'/>
         </Col>
@@ -100,7 +93,7 @@ return (
                     <div className= 'hamburgerListDown '>
                         <ul>
                             {bar.map((bars, index) => (
-                            <li xs={3} key={index} className='navbar-center'>
+                            <li xs={3} key={index} className='hamburger-center'>
                                 <ScrollTo to={bars.className} spy={true} smooth={true} offset={-150} duration={10} onClick={clicky}>{bars.title}</ScrollTo>
                             </li>
                             ))

@@ -1,11 +1,11 @@
 import {Row, Col, Container,Button, Popover,OverlayTrigger,Tooltip ,Overlay  } from 'react-bootstrap';
 import { useState, useRef } from 'react';
-import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact} from './Icons';
+import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact,IconDeveloper} from './Icons';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 
 
-const SkillRowContent = 
-  ({buttonRef,isClicked,setIsClicked,imgSrc, title, description, titleWhatIDo, iDo, tools,iconSizeDesktop}) => {
+const Developer = 
+  ({buttonRef,isClicked,setIsClicked,imgSrc, title, description, titleWhatIDo, iDo, tools,IconSkills,}) => {
   
   //  const [isClicked, setIsClicked] = useState(false);
 
@@ -47,10 +47,10 @@ const SkillRowContent =
     <Col className="skills-col" >
 
   <Col className='col-12'>
-   <img src={imgSrc} className='icon-skills'/>
+   <IconSkills icon={IconDeveloper}/>
   </Col >
 
-  <Col className="skills-col-1 fs-2 fw-bold col-12">
+  <Col className="skills-col-1 fs-4 fw-bold col-12">
     {title}
   </Col >
 
@@ -117,4 +117,4 @@ const SkillRowContent =
    );
 }
  
-export default SkillRowContent;
+export default Developer;

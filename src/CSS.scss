@@ -13,6 +13,7 @@ $body-color: #1c2824;
 $logoColor: #95d5b2;
 $boldTextColor: #52b788;
 $gridColor: #081c15;
+$navBarColor: #013e37;
 $spacing: 2rem;
 $bold: bold;
 $extraBold: 700;
@@ -96,7 +97,7 @@ a{
 //! MD SIZE
 @media (min-width: map-get($breakpoints, md)){
   .img-me {
-    width: 60%;
+    width: 40%;
     height: auto;
 
   }
@@ -137,9 +138,9 @@ a{
   
   .hamburgerListDown{
     position: fixed;
-    background: rgba(0, 0, 0, 0.85);
-    top: 0%;
-    bottom: 0;
+    background:$navBarColor;
+    top: auto;
+    bottom: -58px;
     right: 0%;
     left: 0%;
     width: 100%;
@@ -152,6 +153,14 @@ a{
     li{
       list-style-type: none;
       padding: 20px;
+    }
+    .hamburger-center{
+      // background-color: pink;
+      border-bottom: solid;
+      border-width: .5px;
+      border-width: 20%;
+      border-color: #202020;
+      padding: 10%;
     }
   }
   @keyframes blur-in {
@@ -169,29 +178,44 @@ a{
 hr,.vr{
   color: #787878;
 }
-
-
 //! ----------------------NAVBAR---------------------------------
 
 .navbar-main {
-  cursor: pointer;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-radius: 0 0 10px 10px;
-  background-color: $gridColor;
-  // background-color: rgba(255, 2, 102, 0.5);
-  // backdrop-filter: blur(10px);
-  // -webkit-backdrop-filter: blur(10px);
+  @include navSticky;
   .lg-container{
-
     &:hover{
       opacity: .5;
       @include transition;
     }
+  }
+
+  &-closed {
+    @include navSticky;
+
+
+    border-radius: 0px 0px 10px 10px;
+    background-color: $navBarColor;
+    -webkit-box-shadow: 0px 18px 32px -22px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 18px 32px -22px rgba(0,0,0,0.32);
+    box-shadow: 0px 18px 32px -22px rgba(0,0,0,0.32);
+    .lg-container{
+      &:hover{
+        opacity: .5;
+        @include transition;
+      }
     }
-}
+  }
   
+  &-open{
+  @include navSticky;
+
+    border-radius: 0px 0px 0px 0px;
+    background-color: $navBarColor;
+    // filter: drop-shadow(0px 10px 34px);
+    // border-style: solid;
+  }
+}
+
  
 
 
@@ -331,7 +355,7 @@ hr,.vr{
     overflow:hidden;
     position: absolute;
     top: -80%;
-    left: -110%;
+    left: -130%;
     right: 0%;
     font-size: 75%;
     font-weight: $bold;
