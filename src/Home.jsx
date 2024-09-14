@@ -11,17 +11,12 @@ import Text from './Text';
 import CarouselBootstrap from "./CarouselBootstrap";
 
 
-const Home = ({windowWidth,buttonRef}) => {
+const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}) => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
-  const titles = ["Self Learn Dev","Graphic Designer", "Video Editor", "Motion Graphic"];
-  // const [windowWidth, setWindowWidth] = useState(0);
   const [matches, setMatches] = useState(false);
 
-  // const buttonRef = useRef(null);
-  const [isClicked, setIsClicked] = useState(false);
-  const [isClickedTwo, setIsClickedTwo] = useState(false);
   
 
   const windowScrollTo = () => {
@@ -42,30 +37,11 @@ const animationDuration = () =>{
   
   }
 
-  // const handleWindowResize = useCallback(event => {
-  //   setWindowWidth(window.innerWidth);
-  // })
 
-  const darkModeToggle = ({color}) => {
+  const lightModeToggle = ({color}) => {
     document.body.style.backgroundColor = {color};
   }
-  //! USEFFECT
-  // useEffect(() => {
-  //   handleWindowResize();
-  //   window.addEventListener('resize', handleWindowResize);
-  //   const handleClickOutside = (event) => {
-  //     setIsClicked(false);
-  //     setIsClickedTwo(false);
-  //   }
-  //   document.addEventListener('mousedown', handleClickOutside);
-  //   // document.body.style.backgroundColor = 'white';
 
-  
-  //   return() => {
-  //     window.removeEventListener('resize', handleWindowResize)
-  //     document.removeEventListener('mousedown', handleClickOutside)
-  //   }
-  // },[handleWindowResize][buttonRef]);
 
   const TitleStart  = () => {
     return (

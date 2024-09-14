@@ -8,7 +8,7 @@ import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scro
 import {MyLogo,IconDarkMode} from './Icons';
 
 
-const NavBar = ({toggleDarkMode, setDarkMode, darkMode}) => {
+const NavBar = ({toggleLightMode, setLightMode, lightMode}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
@@ -48,7 +48,6 @@ const NavBar = ({toggleDarkMode, setDarkMode, darkMode}) => {
         onClick={clicky} >
             <Hamburger toggled={isOpen} toggle={setOpen}/>
     </div>
-        console.log(darkMode);
 
 
 // !--------------------RETURN------------------------
@@ -75,7 +74,7 @@ return (
         </Col>
         <Col className='col-7 col-md-3 justify-content-end align-items-center d-flex '>
         {/* DARK MODE ICON */}
-            <IconDarkMode height='35px' width='25px' onClick={() => toggleDarkMode() }/>
+            <IconDarkMode height='35px' width='25px' onClick={() => toggleLightMode() }/>
         {/* DARK MODE ICON */}
 
         </Col>

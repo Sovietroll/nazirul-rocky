@@ -11,16 +11,11 @@ import { useState,useEffect,useCallback,useRef } from 'react';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
-  const [darkMode,setDarkMode] = useState(false);
   const buttonRef = useRef(null);
+  const [isClicked, setIsClicked] = useState(false);
+  const [isClickedTwo, setIsClickedTwo] = useState(false);
+  const [lightMode,setLightMode] = useState(false);
 
-
-  
-  const handleWindowResize = useCallback(event => {
-    setWindowWidth(window.innerWidth);
-  })
-
-  
   document.title= "NZ blog";
 
   const logo =
@@ -29,10 +24,18 @@ function App() {
   onClick = {() => {window.scrollTo(0,0);}}
   />
 
-  const toggleDarkMode = () => {
-    // const [darkMode,setDarkMode] = useState(false);
-    setDarkMode(!darkMode);
-}
+  const handleWindowResize = useCallback(event => {
+    setWindowWidth(window.innerWidth);
+  })
+
+  const toggleLightMode = () => {
+    setLightMode(!lightMode);
+  }
+
+const colorlightMode = 
+document.body.style.backgroundColor = ''
+
+
 
 useEffect(() => {
     
@@ -43,23 +46,38 @@ useEffect(() => {
     setIsClickedTwo(false);
   }
   document.addEventListener('mousedown', handleClickOutside);
-  // document.body.style.backgroundColor = 'white';
-
+  // {lightMode? console.log('DARK') : console.log('LIGHT')};
 
   return() => {
     window.removeEventListener('resize', handleWindowResize)
     document.removeEventListener('mousedown', handleClickOutside)
   }
 },[handleWindowResize][buttonRef]);
+
+const lightTheme = createTheme({
+  palette: {
+    mode: toggleLightMode ? 'light' : 'dark',
+    primary: {
+      main: '#95d5b2',
+    },
+    secondary: {
+      main: '#95d5b2',
+    },
+  },
+})
+
+// !   ----------RETURN--------------------------------------
   return (
     <BrowserRouter>
 
-    <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
+    <ThemeProvider breakpoints={['xl']} minBreakpoint='sm' theme={lightTheme}>
       
       <NavBar {...{toggleDarkMode, setDarkMode, darkMode}} />
       <Routes>
         <Route path="/" element = 
-        {<Home {...{windowWidth,buttonRef}}/>} 
+        {<Home 
+          {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}
+          />} 
         /> 
         <Route exact path="contact" element = {<Contact />} />
       </Routes>
