@@ -41,12 +41,13 @@ useEffect(() => {
     setIsClickedTwo(false);
   }
   document.addEventListener('mousedown', handleClickOutside);
+  document.body.className = lightMode? 'light-mode' : 'dark-mode';
 
   return() => {
     window.removeEventListener('resize', handleWindowResize)
     document.removeEventListener('mousedown', handleClickOutside)
   }
-},[handleWindowResize][buttonRef]);
+},[handleWindowResize],[buttonRef],[lightMode]);
 
 
 
@@ -60,7 +61,7 @@ useEffect(() => {
       <Routes>
         <Route path="/" element = 
         {<Home 
-          {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}
+          {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleLightMode, lightMode}}
           />} 
         /> 
         <Route exact path="contact" element = {<Contact />} />

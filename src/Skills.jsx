@@ -5,7 +5,7 @@ import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact,Ico
 import { useState, useRef } from 'react';
 
 
-const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}) => {
+const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleLightMode, lightMode}) => {
   const Lines = () => {
     const verticalLine =  <div className="vr p-0"></div>;
     const horizontalLine = <hr></hr>;
@@ -18,7 +18,7 @@ const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setI
   const IconSkills = ({icon:IconComponents}) => {
     return (
     <>
-    <IconComponents widthHeight = {iconSizeDesktop? '100px' : '80px'}/>
+    <IconComponents widthHeight = {iconSizeDesktop? '100px' : '80px'} fill={lightMode? '#007567' : 'white'}/>
     </>
     )
   }

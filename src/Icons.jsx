@@ -22,7 +22,7 @@ const SvgRepo = ({ path }) => {
   );
 };
 
-const IconDesignerDeveloper = ({path, widthHeight}) => {
+const IconDesignerDeveloper = ({path, widthHeight,fill}) => {
   const style = {
     borderRadius: '20px',
   }
@@ -38,7 +38,7 @@ const IconDesignerDeveloper = ({path, widthHeight}) => {
     xmlSpace="preserve"
     width={widthHeight} 
     height={widthHeight} 
-    fill='white' 
+    fill={fill} 
     style={style}
     >
     {path}
@@ -46,9 +46,10 @@ const IconDesignerDeveloper = ({path, widthHeight}) => {
   )
 }
 
-export const IconDeveloper = ({path,widthHeight}) => {
+export const IconDeveloper = ({path,widthHeight,fill}) => {
   return <IconDesignerDeveloper
     widthHeight={widthHeight}
+    fill={fill}
     path={
       <path d="M0,0v1080h1080V0H0z M804.25,562.8c-31.54,31.81-63.24,63.46-95.03,95.02c-13.3,13.2-32,13.55-44.23,1.32
       c-12.29-12.27-11.96-30.96,1.13-44.22c24.33-24.64,48.83-49.1,73.25-73.65c0.21-0.2,0.27-0.54,0.97-2.02
@@ -64,10 +65,11 @@ export const IconDeveloper = ({path,widthHeight}) => {
     }/>
 }
 
-export const IconDesigner = ({path,widthHeight}) => {
+export const IconDesigner = ({path,widthHeight,fill}) => {
   return (
     <IconDesignerDeveloper
       widthHeight={widthHeight}
+      fill={fill}
       path = {
         <path d="M0,0v1080h1080V0H0z M454.48,787.06c-36.14,21.49-75.69,28.37-117.06,25.53c-31.96-2.19-62.42-10.31-90.22-26.81
         c-19.34-11.47-34.96-26.41-43.82-48.45c9.62-3.18,18.69-5.98,27.62-9.16c33.83-12.05,60.08-33.29,78.59-64.28

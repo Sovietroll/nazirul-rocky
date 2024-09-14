@@ -29,7 +29,55 @@ $breakpoints: (
   xxl: 1400px
 );
 
-// * LINES COLOR
+body.light-mode{
+  background-color: #cae3db;
+  color: black;
+  @include transition;
+  .navbar-main-closed{
+    background-color: #009785;
+  }
+  .popUp-label{
+    color: black;
+    background-color: #009785;
+  }
+  .svg:hover{
+    fill: #016156;
+  }
+  hr,.vr{
+    color: #000000;
+  }
+  .skills-title-do{
+    color: #007567;
+  }
+  .skills-title{
+    color: #007567;
+  }
+  .navbar-tab{
+    background-color: #007567;
+  }
+  .selected{
+    color: white;
+  }
+  .non-selected{
+    color: rgb(255, 255, 255);
+  }
+  .carousel-name{
+    color: #007567;
+  }
+  .carousel-indicators{
+    button{
+      background-color: #007567;
+    }
+  }
+  .footer{
+    background-color: #007567;
+  }
+
+}
+body.dark-mode{
+  background: $body-color;
+  color: white;
+}
 
 body{
   background: $body-color;
@@ -186,8 +234,7 @@ hr,.vr{
   @include navSticky;
 
     border-radius: 0px 0px 0px 0px;
-    background-color: $navBarColor;
-    // filter: drop-shadow(0px 10px 34px);
+    // background-color: $navBarColor;
     // border-style: solid;
   }
 }

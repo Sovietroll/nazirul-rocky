@@ -48,11 +48,10 @@ const Designer  =
     <Col className="skills-col" >
 
   <Col className='col-12'>
-   {/* <IconDesigner width={'100px'} fill={'white'} className='icon-skills' /> */} 
    <IconSkills icon = {IconDesigner}/>
   </Col >
 
-  <Col className="skills-col-1 fs-4 fw-bold col-12">
+  <Col className="skills-col-1 fs-4 fw-bold col-12 skills-title">
     {title}
   </Col >
 

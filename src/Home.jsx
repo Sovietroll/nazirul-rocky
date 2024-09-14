@@ -11,7 +11,7 @@ import Text from './Text';
 import CarouselBootstrap from "./CarouselBootstrap";
 
 
-const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}) => {
+const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleLightMode, lightMode}) => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
@@ -35,11 +35,6 @@ const animationDuration = () =>{
     clearInterval(animation);
   },500)
   
-  }
-
-
-  const lightModeToggle = ({color}) => {
-    document.body.style.backgroundColor = {color};
   }
 
 
@@ -81,7 +76,6 @@ const IconsTitle = ({icon: IconComponents}) => {
  )
 }
  
-//!-----------RETURN---------------
 
 return ( 
 <Container  className={`about-me`}>
@@ -90,11 +84,14 @@ return (
                   
   <Text/>
 
-    {/* <hr className="line border-1 rounded"></hr> */}
 
-  <Skills {...{ windowWidth,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo}}/>
+  <Skills {...{ 
+    windowWidth,isClicked, 
+    setIsClicked,isClickedTwo,
+    setIsClickedTwo,toggleLightMode, 
+    lightMode
+    }}/>
   
-    {/* <hr className="line border-1 rounded"></hr> */}
   
   <Experiences  {...{windowWidth,IconsTitle}}/>
   
