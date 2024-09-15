@@ -33,9 +33,13 @@ body.light-mode{
   // background-color: #ffffff;
   background-color: #f2f8f6;
   color: black;
+  font-family: $font-family-sans-serif; 
   @include transition;
   .navbar-main-closed{
     background-color: #009785;
+  }
+  .hamburgerListDown{
+    background-color: #f2f8f6;
   }
   .popUp-label{
     color: black;
@@ -79,12 +83,9 @@ body.light-mode{
   }
 
 }
-body.dark-mode{
-  background: $body-color;
-  color: white;
-}
 
 body{
+  @include transition;
   background: $body-color;
   color: white;
   font-family: $font-family-sans-serif; 
@@ -93,7 +94,7 @@ body > :not(strong, .footer,.progressBar,.navbar-main){
   padding: 20px;
 }
 a{
-  color: $logoColor;
+  color: inherit;
   @include transition;
   font-weight: normal;
   text-decoration: none;
