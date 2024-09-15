@@ -69,6 +69,9 @@ body.light-mode{
       background-color: #007567;
     }
   }
+  .icon-testimonials-experience{
+    fill: #007567;
+  }
   .footer{
     background-color: #007567;
   }
@@ -232,10 +235,8 @@ hr,.vr{
   
   &-open{
   @include navSticky;
-
-    border-radius: 0px 0px 0px 0px;
-    // background-color: $navBarColor;
-    // border-style: solid;
+  background-color: $navBarColor;
+  border-radius: 0px 0px 0px 0px;
   }
 }
 

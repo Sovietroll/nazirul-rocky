@@ -71,7 +71,7 @@ const myPic =
 const IconsTitle = ({icon: IconComponents}) => {
  return (
   <>
-  <IconComponents width='40px' height='40px' fill='orange'/>
+  <IconComponents width='40px' height='40px' className='icon-testimonials-experience'/>
   </>
  )
 }
