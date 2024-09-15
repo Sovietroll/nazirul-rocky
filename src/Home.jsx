@@ -11,7 +11,7 @@ import Text from './Text';
 import CarouselBootstrap from "./CarouselBootstrap";
 
 
-const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleLightMode, lightMode}) => {
+const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}) => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
@@ -88,8 +88,8 @@ return (
   <Skills {...{ 
     windowWidth,isClicked, 
     setIsClicked,isClickedTwo,
-    setIsClickedTwo,toggleLightMode, 
-    lightMode
+    setIsClickedTwo,toggleDarkMode, 
+    isDarkMode
     }}/>
   
   

@@ -30,7 +30,8 @@ $breakpoints: (
 );
 
 body.light-mode{
-  background-color: #cae3db;
+  // background-color: #ffffff;
+  background-color: #f2f8f6;
   color: black;
   @include transition;
   .navbar-main-closed{
@@ -41,7 +42,7 @@ body.light-mode{
     background-color: #009785;
   }
   .svg:hover{
-    fill: #016156;
+    fill: #000000;
   }
   hr,.vr{
     color: #000000;
@@ -74,6 +75,7 @@ body.light-mode{
   }
   .footer{
     background-color: #007567;
+    color: white;
   }
 
 }
@@ -161,7 +163,6 @@ a{
     top: 0%;
     right: 10%;
   }
-  
   .hamburgerListDown{
     position: fixed;
     background:$body-color;
@@ -455,7 +456,7 @@ hr,.vr{
 
 //! ----------------FOOTER--------------------------
 .footer{
-  background-color: $gridColor;
+  background-color: $navBarColor;
   border-radius: 10px 10px 0 0;
   &-name{
     font-weight: bold;

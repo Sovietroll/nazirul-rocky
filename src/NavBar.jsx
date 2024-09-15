@@ -6,9 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from 'hamburger-react';
 import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scroll';
 import {MyLogo,IconDarkMode} from './Icons';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import LightModeSwitch from './LightModeSwitch';
 
-
-const NavBar = ({toggleLightMode, setLightMode, lightMode}) => {
+const NavBar = ({toggleDarkMode, setDarkMode, isDarkMode}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
@@ -44,9 +45,9 @@ const NavBar = ({toggleLightMode, setLightMode, lightMode}) => {
         }
     ]
     const begeIcon = 
-    <div className='div-burger-icon' 
-        onClick={clicky} >
-            <Hamburger toggled={isOpen} toggle={setOpen}/>
+    <div onClick={clicky}>
+            <Hamburger toggled={isOpen} toggle={setOpen} 
+            color='white'/>
     </div>
 
 
@@ -74,7 +75,14 @@ return (
         </Col>
         <Col className='col-7 col-md-3 justify-content-end align-items-center d-flex '>
         {/* DARK MODE ICON */}
-            <IconDarkMode height='35px' width='25px' onClick={() => toggleLightMode() }/>
+
+            <LightModeSwitch {...{toggleDarkMode, isDarkMode, setDarkMode}} onClick={() => toggleDarkMode()}/>
+{/* 
+            <DarkModeSwitch
+                style={{ marginBottom: '2rem'}}
+                // onClick={() => toggleDarkMode()}
+                size={120}
+            /> */}
         {/* DARK MODE ICON */}
 
         </Col>

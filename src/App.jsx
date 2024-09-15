@@ -13,7 +13,7 @@ function App() {
   const buttonRef = useRef(null);
   const [isClicked, setIsClicked] = useState(false);
   const [isClickedTwo, setIsClickedTwo] = useState(false);
-  const [lightMode,setLightMode] = useState(false);
+  const [isDarkMode,setDarkMode] = useState(true);
 
   document.title= "NZ blog";
 
@@ -27,9 +27,10 @@ function App() {
     setWindowWidth(window.innerWidth);
   })
 
-  const toggleLightMode = () => {
-    setLightMode(!lightMode);
-    {lightMode? console.log('DARK') : console.log('LIGHT')};
+  //* DEFAULT IS DARK MODE - FALSE 
+  const toggleDarkMode = () => {
+    setDarkMode(!isDarkMode);
+    {isDarkMode? console.log('DARK') : console.log('LIGHT')};
   }
 
 useEffect(() => {
@@ -41,13 +42,13 @@ useEffect(() => {
     setIsClickedTwo(false);
   }
   document.addEventListener('mousedown', handleClickOutside);
-  document.body.className = lightMode? 'light-mode' : 'dark-mode';
+  document.body.className = isDarkMode? '' : 'light-mode' ;
 
   return() => {
     window.removeEventListener('resize', handleWindowResize)
     document.removeEventListener('mousedown', handleClickOutside)
   }
-},[handleWindowResize],[buttonRef],[lightMode]);
+},[handleWindowResize],[buttonRef],[isDarkMode]);
 
 
 
@@ -57,11 +58,11 @@ useEffect(() => {
 
     <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
       
-      <NavBar {...{toggleLightMode, lightMode}} />
+      <NavBar {...{toggleDarkMode, isDarkMode}} />
       <Routes>
         <Route path="/" element = 
         {<Home 
-          {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleLightMode, lightMode}}
+          {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}}
           />} 
         /> 
         <Route exact path="contact" element = {<Contact />} />
