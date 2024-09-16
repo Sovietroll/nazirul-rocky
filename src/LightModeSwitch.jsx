@@ -13,8 +13,9 @@ const LightModeSwitch = ({toggleDarkMode, isDarkMode, setDarkMode}) => {
       // style={{ marginBottom: '2rem' }}
       checked={isDarkMode}
       onChange={toggleDarkMode}
-      size={30}
-      sunColor='white'
+      size={25}
+      sunColor='#e5de44'
+      moonColor='#151633'
     />
   );
 };
