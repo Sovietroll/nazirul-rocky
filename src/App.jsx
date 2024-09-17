@@ -16,7 +16,7 @@ function App() {
   const [isClickedTwo, setIsClickedTwo] = useState(false);
   const [isDarkMode,setDarkMode] = useState(true);
 
-  document.title= "nazirul rocky";
+  // document.title= "nazirul rocky";
 
   const logo =
   <img className="lg" 
