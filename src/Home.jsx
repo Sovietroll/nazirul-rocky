@@ -71,7 +71,7 @@ const myPic =
 const IconsTitle = ({icon: IconComponents}) => {
  return (
   <>
-  <IconComponents width='40px' height='40px' className='icon-testimonials-experience'/>
+  <IconComponents widthHeight={windowWidth > 768? '50px' : '35px'} fill={isDarkMode? 'white' : '#007567'}/>
   </>
  )
 }
@@ -84,18 +84,22 @@ return (
                   
   <Text/>
 
+  <hr className="line border-1 rounded my-4"></hr>
+
 
   <Skills {...{ 
     windowWidth,isClicked, 
     setIsClicked,isClickedTwo,
     setIsClickedTwo,toggleDarkMode, 
-    isDarkMode
+    isDarkMode,IconsTitle
     }}/>
   
+  {windowWidth < 768? <hr className="line border-1 rounded my-4"></hr> : ''}
+
   
   <Experiences  {...{windowWidth,IconsTitle}}/>
   
-    <hr className="line border-1 rounded"></hr>
+    <hr className="line border-1 rounded my-4"></hr>
 
   <CarouselBootstrap IconsTitle={IconsTitle} />
 

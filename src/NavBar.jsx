@@ -29,17 +29,17 @@ const NavBar = ({toggleDarkMode, setDarkMode, isDarkMode}) => {
 
     const bar = [
         {
-            title: 'Skills',
+            title: 'Expertises',
             className: 'skills'
         }
         ,
         {
-            title: 'Experience',
+            title: 'My Journey',
             className: 'experiences'
         }
         ,
         {
-            title: 'Testimonials',
+            title: 'Feedback',
             className: 'testimonials'
         }
     ]
@@ -56,28 +56,25 @@ return (
 
         <Row className='d-flex p-1 row-navbar' >
 
-        <Col className='col-md-3 col-5 d-flex justify-content-center fw-bold' > 
+        <Col className='col-md-3 col-5 d-flex justify-content-center fw-bold logo-name'> 
 
-        <IconFontLogo fill='white' width='150px' height=''/>
-        {/* nazirul rocky */}
+        <IconFontLogo fill='white' width='120px' height=''/>
 
         <motion.div
-            initial={{ scale: 0 }}
-            animate={{ rotate: 180, scale: 1 }}
-                transition={{
+            animate={{ 
+                rotate: [180,270,0], 
+                scale: [0,2,1]}}
+            transition={{
+                delay: .5,  
                 type: "spring",
-                stiffness: 150,
-                damping: 30,
-                }}
-                whileHover={{ scale: 1.2, rotate: 90 }}
-                whileTap={{
-                  scale: 0.8,
-                  rotate: -90,
-                  borderRadius: "100%"
-                }}
-            className='d-flex justify-content-center p-1'
+                stiffness: 150 
+            }}
+            whileTap= {{
+                rotate: 2
+            }}
+            className='d-flex justify-content-center m-1'
         >
-            <MyLogo width='25px'/> 
+            <MyLogo width='20px'/> 
         </motion.div> 
 
         </Col>
@@ -104,7 +101,7 @@ return (
         </Col> */}
 {/* ---------------------HAMBURGER------------------------------ */}
 
-        <Col className="col-2 d-md-none justify-content-end d-flex"> {/* Hamburger */}
+        <Col className="col-2 d-md-none justify-content-center d-flex"> {/* Hamburger */}
 
         <div className='div-burger'>
             {begeIcon} {/* HAMBURGER ICON */}

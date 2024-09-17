@@ -1,11 +1,11 @@
 import {Row, Col, Container,Button,Overlay} from 'react-bootstrap';
 import Developer from './Developer';
 import Designer from './Designer';
-import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact,IconDesigner} from './Icons';
+import {IconBootstrapFill,IconExpertise} from './Icons';
 import { useState, useRef } from 'react';
 
 
-const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}) => {
+const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,IconsTitle, isDarkMode}) => {
   const Lines = () => {
     const verticalLine =  <div className="vr p-0"></div>;
     const horizontalLine = <hr></hr>;
@@ -26,6 +26,11 @@ return (
 
 <Container className="skills" >
   <Row className="g-1" >
+    <Col className='col-12 d-flex justify-content-center align-items-center'>
+      <h1 className='mx-2'>Expertise</h1>  
+      <IconsTitle icon={IconExpertise}/> 
+    </Col>
+
     <Col>
       <Developer
         title={'Developer'}
@@ -40,7 +45,7 @@ return (
       />
     </Col>
 
-  <Lines/>
+  {/* <Lines/> */}
 
   <Col>
     <Designer

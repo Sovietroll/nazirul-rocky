@@ -2,7 +2,7 @@ import {Row, Col, Container,Button,Collapse, Fade, Carousel,} from 'react-bootst
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
 import { useState } from 'react';
 import CarouselContent from './CarouselContent';
-import {IconChatLeftQuoteFill} from './Icons';
+import {IconCarousel} from './Icons';
 
 
 const CarouselBootstrap = ({IconsTitle}) => {
@@ -14,9 +14,9 @@ const CarouselBootstrap = ({IconsTitle}) => {
 
   return ( 
 <Container fluid className='testimonials p-2 overflow-hidden' >
-  <Col className='mt-1 mb-1'>
-    <h1 className='fs-1'>Testimonials</h1>
-    <IconsTitle icon={IconChatLeftQuoteFill}/>
+  <Col className='mt-1 mb-1 d-flex justify-content-center align-items-center'>
+    <h1 className='mx-2'>Feedback</h1>
+    <IconsTitle icon={IconCarousel}/>
   </Col>
 
 

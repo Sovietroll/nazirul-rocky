@@ -55,7 +55,7 @@ const Developer =
   </Col >
 
   <Col className="skills-col-1-desc text-wrap 
-  fs-6 col-12 mb-2 mt-2
+  fs-6 col-12
   ">
     {description}
   </Col>

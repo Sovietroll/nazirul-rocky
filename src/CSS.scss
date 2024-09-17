@@ -31,12 +31,13 @@ $breakpoints: (
 
 body.light-mode{
   // background-color: #ffffff;
-  background-color: #f2f8f6;
+  background-color: #ffffff;
   color: black;
   font-family: $font-family-sans-serif; 
   @include transition;
   .navbar-main-closed{
     background-color: #009785;
+    @include boxShadow;
   }
   .hamburgerListDown{
     background-color: #f2f8f6;
@@ -74,9 +75,7 @@ body.light-mode{
       background-color: #007567;
     }
   }
-  .icon-testimonials-experience{
-    fill: #007567;
-  }
+
   .footer{
     background-color: #007567;
     color: white;
@@ -224,9 +223,7 @@ hr,.vr{
 
     border-radius: 0px 0px 10px 10px;
     background-color: $navBarColor;
-    -webkit-box-shadow: 0px 18px 32px -22px rgba(0,0,0,0.32);
-    -moz-box-shadow: 0px 18px 32px -22px rgba(0,0,0,0.32);
-    box-shadow: 0px 18px 32px -22px rgba(0,0,0,0.32);
+    
     .lg-container{
       &:hover{
         opacity: .5;
@@ -241,8 +238,6 @@ hr,.vr{
   border-radius: 0px 0px 0px 0px;
   }
 }
-
- 
 
 
 
@@ -320,19 +315,15 @@ hr,.vr{
  
   // background-color: #2E3039;
   @include nopadmarg;
-  border-radius: 20px;
   overflow: hidden;
   &-row{
     @include nopadmarg;
   }
 
-  &-dev-col{
-    color: white;
-    background-color: rgba(59, 12, 57, 0.5);
-  }
+
 
   .skills-col{
-    padding: 10px;
+    // padding: 10px;
 
 
     &-1{

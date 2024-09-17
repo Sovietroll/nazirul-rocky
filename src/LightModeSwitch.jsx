@@ -14,7 +14,7 @@ const LightModeSwitch = ({toggleDarkMode, isDarkMode, setDarkMode}) => {
       checked={isDarkMode}
       onChange={toggleDarkMode}
       size={25}
-      sunColor='#e5de44'
+      sunColor='#dbaf0f'
       moonColor='#151633'
     />
   );

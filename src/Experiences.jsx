@@ -2,7 +2,7 @@ import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import { initialTabs as tabs, lists } from './ExperiencesComponent';
 import { useState } from 'react';
-import {IconPaperPlane} from './Icons';
+import {IconPaperPlane,IconJourney} from './Icons';
 
 const Experiences = ({windowWidth,IconsTitle}) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -17,9 +17,9 @@ const Experiences = ({windowWidth,IconsTitle}) => {
     <Container fluid className="experiences overflow-hidden">
 
           <Row className='experiences-tab'>
-          <Col className='mt-1 mb-1'>
-            <h1 className=''>Experiences</h1>
-            <IconsTitle icon={IconPaperPlane}/>
+          <Col className='mt-1 mb-1 d-flex justify-content-center align-items-center'>
+            <h1 className='mx-2'>My Journey</h1>
+            <IconsTitle icon={IconJourney}/>
           </Col>
 
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
