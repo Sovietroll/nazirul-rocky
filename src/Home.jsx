@@ -3,7 +3,8 @@ import TransitionText from "./TransitionText";
 import MotionFlip from "./MotionFlip";
 import {useEffect, useState, useRef, useCallback} from 'react';
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
-import './CSS.scss';
+import './style.scss';
+
 import Skills from './Skills';
 import Experiences from './Experiences'
 import IntroHome from './IntroHome';

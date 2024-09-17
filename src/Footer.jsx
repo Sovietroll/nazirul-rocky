@@ -1,7 +1,6 @@
 import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import {IconLinkedin, IconEmailOutline, IconGithub } from './Icons';
-import {MyLogo} from './Icons';
 
 const Footer = ({}) => {
 
@@ -61,7 +60,7 @@ const useMediaQuery = (query) => {
 
        <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by 
         <br/>
-          <span className='footer-name'>Nazirul Rocky</span>
+          <span className='footer-name'>nazirul rocky</span>
         </Col>
      
         <Col className='col-12 d-flex mt-4 mb-4'>

@@ -1,10 +1,11 @@
-import './CSS.scss';
+import './style.scss';
+
 import { useState, useEffect } from 'react';
 import {Row, Col, Container} from 'react-bootstrap';
 import { motion, AnimatePresence,useScroll,useTransform,useViewportScroll   } from "framer-motion";
 import { Squash  as Hamburger } from 'hamburger-react';
 import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scroll';
-import {MyLogo,IconFontLogo} from './Icons';
+import {IconFontLogo,MyLogo} from './Icons';
 import LightModeSwitch from './LightModeSwitch';
 
 const NavBar = ({toggleDarkMode, setDarkMode, isDarkMode}) => {
@@ -12,8 +13,8 @@ const NavBar = ({toggleDarkMode, setDarkMode, isDarkMode}) => {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
 
-    const { scrollYProgress } = useScroll()
-    const rotate = useTransform(scrollYProgress, [0, 1], [0,180]);
+    // const { scrollYProgress } = useScroll()
+    // const rotate = useTransform(scrollYProgress, [0, 1], [0,180]);
 
     const ScrollLink = Scroll.ScrollLink;
 
@@ -60,7 +61,7 @@ return (
 
         <Col className='col-md-3 col-6 d-flex justify-content-center fw-bold logo-name'> 
 
-        <IconFontLogo fill='white' width='200px' height=''/>
+        <IconFontLogo fill='white' width='200px'/>
 
         <motion.div
             animate={{ 
@@ -74,12 +75,9 @@ return (
             whileTap= {{
                 rotate: 2
             }}
-            style={{
-                rotate: rotate
-              }}
-            className='d-flex justify-content-center mx-1'
+            className='d-flex justify-content-center mx-1 align-items-center'
         >
-            <MyLogo width='25px'/> 
+        <MyLogo widthHeight={'30px'}/>
         </motion.div> 
 
         </Col>

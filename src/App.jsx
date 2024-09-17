@@ -3,7 +3,7 @@ import Home from './Home.jsx';
 import Contact from './Contact';
 import Bar from './Bar.jsx';
 import Footer from './Footer.jsx'
-import './CSS.scss';
+import './style.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import { useState,useEffect,useCallback,useRef } from 'react';
@@ -30,7 +30,6 @@ function App() {
   //* DEFAULT IS DARK MODE - FALSE 
   const toggleDarkMode = () => {
     setDarkMode(!isDarkMode);
-    {isDarkMode? console.log('DARK') : console.log('LIGHT')};
   }
 
 useEffect(() => {
