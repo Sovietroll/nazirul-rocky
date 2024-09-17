@@ -1,4 +1,5 @@
-import './style.scss';
+import './assets/css/style.scss';
+
 
 import { useState, useEffect } from 'react';
 import {Row, Col, Container} from 'react-bootstrap';
