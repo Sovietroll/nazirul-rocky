@@ -4,13 +4,12 @@ import MotionFlip from "./MotionFlip";
 import {useEffect, useState, useRef, useCallback} from 'react';
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import './assets/css/style.scss';
-
 import Skills from './Skills';
 import Experiences from './Experiences'
 import IntroHome from './IntroHome';
 import Text from './Text';
 import CarouselBootstrap from "./CarouselBootstrap";
-
+import me from './images/me.jpg';
 
 const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}) => {
 
