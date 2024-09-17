@@ -53,24 +53,18 @@ useEffect(() => {
 
 // !   ----------RETURN--------------------------------------
   return (
-    <BrowserRouter>
+
 
     <ThemeProvider breakpoints={['xl']} minBreakpoint='sm'>
       
       <NavBar {...{toggleDarkMode, isDarkMode}} />
-      <Routes>
-        <Route path="/nazirulrocky/" element = 
-        {<Home 
+     <Home 
           {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}}
-          />} 
-        /> 
-        <Route exact path="contact" element = {<Contact />} />
-      </Routes>
-
+          />
       <Footer/>
       
       </ThemeProvider>
-    </BrowserRouter>
+
   )
 }
 
