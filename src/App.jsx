@@ -1,7 +1,6 @@
 import NavBar from './NavBar.jsx';
 import Home from './Home.jsx';
 import Contact from './Contact';
-import Bar from './Bar.jsx';
 import Footer from './Footer.jsx'
 import './assets/css/style.scss';
 
@@ -60,7 +59,7 @@ useEffect(() => {
       
       <NavBar {...{toggleDarkMode, isDarkMode}} />
       <Routes>
-        <Route path="/" element = 
+        <Route path="/nazirulrocky" element = 
         {<Home 
           {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}}
           />} 
