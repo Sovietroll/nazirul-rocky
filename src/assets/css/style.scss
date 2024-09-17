@@ -259,22 +259,13 @@ hr,.vr{
         display: inline-block;
       }
 
-      p{
-        // font-size: 50px;
-        &:first-child{
-          // background-color: black;
-        }
-      }
+
 
     }
   }
   &-section{
     text-align: center;
 
-    &-body{
-      // background-color: white
-      
-    };
 
     .Col{
       border-radius: 30px;
@@ -329,9 +320,7 @@ hr,.vr{
     &-1{
       @include paddingTopBottom;
 
-      &-desc{
-        // background-color: rgb(160, 97, 255);
-      }
+
     }
     &-2{  
       @include paddingTopBottom;
@@ -467,9 +456,7 @@ hr,.vr{
   }
 
   .carousel-container{
-    div{
-      // @include carouselMarginTB
-    }
+
     h5{
       margin: 0px;
     }
@@ -505,9 +492,7 @@ hr,.vr{
   .carousel-control-prev-icon{
     display: none;
   }
-  .quotes-icon, .paper-icon{
-    // color: $logoColor;
-  }
+
   .carousel-name{
     color: $boldTextColor;
   }
@@ -515,6 +500,5 @@ hr,.vr{
 
 // ! -------------TEXT-------------
 .button-text {
-  // width: 10%;
   @include nopadmarg;
 }
