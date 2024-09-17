@@ -24,7 +24,7 @@ const Experiences = ({windowWidth,IconsTitle}) => {
 
           {/* -------------------------EXPERIMENTS--------------------------------------------------- */}
 
-          <Col className='navbar-tab col-12 d-flex p-1 mt-2'>
+          <Col className='navbar-tab col-12 d-flex p-1'>
           {tabs.map((item) => (
             <Col 
               key={item.label}

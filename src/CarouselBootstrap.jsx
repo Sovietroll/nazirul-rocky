@@ -3,7 +3,8 @@ import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
 import { useState } from 'react';
 import CarouselContent from './CarouselContent';
 import {IconCarousel} from './Icons';
-
+import megat from './images/megat.jpeg';
+import eyra from './images/eyra.jpg';
 
 const CarouselBootstrap = ({IconsTitle}) => {
   const [index, setIndex] = useState(0);
@@ -31,7 +32,7 @@ const CarouselBootstrap = ({IconsTitle}) => {
       
       <Carousel.Item>
         <CarouselContent
-          imgSrc={'src/images/megat.jpeg'}
+          imgSrc={megat}
           caption = 
             {'"Nazirul was a pleasure to work with. His friendly approach and clear communication made collaboration easy."'}
           nameCaption={'Megat Zharif'}
@@ -41,7 +42,7 @@ const CarouselBootstrap = ({IconsTitle}) => {
 
       <Carousel.Item>
         <CarouselContent
-          imgSrc={'src/images/eyra.jpg'}
+          imgSrc={eyra}
           caption = 
             {'"Amazing job on our website. Creativity and technical expertise made the site both beautiful and easy to use."'}
           nameCaption={'Syaheera'}
