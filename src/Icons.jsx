@@ -532,9 +532,9 @@ export const IconCarousel = ({widthHeight, fill}) => {
   );
 }
 
-export const MyLogo = ({width}) => {
+export const MyLogo = ({width,height}) => {
   return <img className="lg" 
-  src='src/images/newLogo.svg' alt="logo" width={width} fill={'white'}
+  src='src/images/newLogo.svg' alt="logo" width={width} fill={'white'} height=''
   onClick = {() => {window.scrollTo(0,0);}}
   />
  }

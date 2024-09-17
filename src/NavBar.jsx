@@ -1,8 +1,7 @@
 import './CSS.scss';
 import { useState, useEffect } from 'react';
-import {Row, Col, Container, Nav ,NavItem, Navbar, NavDropdown , NavLink, Dropdown} from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from "framer-motion";
+import {Row, Col, Container} from 'react-bootstrap';
+import { motion, AnimatePresence,useScroll,useTransform,useViewportScroll   } from "framer-motion";
 import { Squash  as Hamburger } from 'hamburger-react';
 import { Link as ScrollTo, animateScroll as Scroll,scrollSpy  } from 'react-scroll';
 import {MyLogo,IconFontLogo} from './Icons';
@@ -12,6 +11,9 @@ const NavBar = ({toggleDarkMode, setDarkMode, isDarkMode}) => {
     const [isOpen, setOpen] = useState(false);/* burger icon animation */
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
+
+    const { scrollYProgress } = useScroll()
+    const rotate = useTransform(scrollYProgress, [0, 1], [0,180]);
 
     const ScrollLink = Scroll.ScrollLink;
 
@@ -56,9 +58,9 @@ return (
 
         <Row className='d-flex p-1 row-navbar' >
 
-        <Col className='col-md-3 col-5 d-flex justify-content-center fw-bold logo-name'> 
+        <Col className='col-md-3 col-6 d-flex justify-content-center fw-bold logo-name'> 
 
-        <IconFontLogo fill='white' width='120px' height=''/>
+        <IconFontLogo fill='white' width='200px' height=''/>
 
         <motion.div
             animate={{ 
@@ -72,9 +74,12 @@ return (
             whileTap= {{
                 rotate: 2
             }}
-            className='d-flex justify-content-center m-1'
+            style={{
+                rotate: rotate
+              }}
+            className='d-flex justify-content-center mx-1'
         >
-            <MyLogo width='20px'/> 
+            <MyLogo width='25px'/> 
         </motion.div> 
 
         </Col>
@@ -92,14 +97,9 @@ return (
         ))}
         </Col>
 
-        <Col className='col-md-2 col-5 justify-content-end align-items-center d-flex ps-1'>
+        <Col className='col-md-2 col-4 justify-content-end align-items-center d-flex ps-1'>
             <LightModeSwitch {...{toggleDarkMode, isDarkMode, setDarkMode}} onClick={() => toggleDarkMode()}/>
-
         </Col>
-{/* 
-        <Col className='col-md-1 d-none'>
-        </Col> */}
-{/* ---------------------HAMBURGER------------------------------ */}
 
         <Col className="col-2 d-md-none justify-content-center d-flex"> {/* Hamburger */}
 
