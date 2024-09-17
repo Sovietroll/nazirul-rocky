@@ -16,7 +16,7 @@ function App() {
   const [isClickedTwo, setIsClickedTwo] = useState(false);
   const [isDarkMode,setDarkMode] = useState(true);
 
-  document.title= "NZ blog";
+  document.title= "nazirul rocky";
 
   const logo =
   <img className="lg" 
@@ -60,7 +60,7 @@ useEffect(() => {
       
       <NavBar {...{toggleDarkMode, isDarkMode}} />
       <Routes>
-        <Route path="/" element = 
+        <Route exact path="/" element = 
         {<Home 
           {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}}
           />} 
