@@ -62,7 +62,7 @@ export const allIngredients = [
       // listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
       icon: 
       <PortfolioImage
-        links={'https://reactsvgicons.com/'}
+        links={'https://github.com/Sovietroll'}
         icon={IconGithub}
       />
     }
@@ -73,7 +73,7 @@ export const allIngredients = [
       // listTwo: 'Collaborate with clients or project managers.',
       icon: 
       <PortfolioImage
-        links={'https://reactsvgicons.com/'}
+        links={'https://drive.google.com/drive/folders/1W1z3KpBAFrqRBIr3EBMvUYBcNdbskzlt?usp=sharing'}
         icon={IconGoogleDrive}
       />
     }
@@ -88,7 +88,7 @@ export const allIngredients = [
       list: 'Design visually appealing graphics.',
       icon: 
       <PortfolioImage
-        links={'https://reactsvgicons.com/'}
+        links={'https://drive.google.com/drive/folders/1W1z3KpBAFrqRBIr3EBMvUYBcNdbskzlt?usp=sharing'}
         icon={IconGoogleDrive}
       />
     }
