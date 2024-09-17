@@ -84,7 +84,7 @@ body.light-mode{
 }
 
 body{
-  @include transition;
+  transition: ease-in-out;
   background: $body-color;
   color: white;
   font-family: $font-family-sans-serif; 
@@ -94,7 +94,6 @@ body > :not(strong, .footer,.progressBar,.navbar-main){
 }
 a{
   color: inherit;
-  @include transition;
   font-weight: normal;
   text-decoration: none;
 }
