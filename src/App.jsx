@@ -60,7 +60,7 @@ useEffect(() => {
       
       <NavBar {...{toggleDarkMode, isDarkMode}} />
       <Routes>
-        <Route exact path="/" element = 
+        <Route path="/nazirulrocky" element = 
         {<Home 
           {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}}
           />} 
