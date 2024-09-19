@@ -20,13 +20,15 @@ const IntroHome = ({TransitionText}) => {
 
 
 
-    <Col className='f-1 col-12'>
+    <Col className='f-1 col-12 col-md-6 text-start'>
     {greeting}
+
+    A self-taught web developer with a strong passion for creating tailored, innovative digital solutions!
     </Col>
     
 
-    <Col className='col-12'>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium non est ex similique nisi cupiditate error ratione fuga inventore!
+    <Col className='col-12 col-md-6'>
+    sdsdsd
     </Col>
 
 

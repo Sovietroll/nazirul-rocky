@@ -18,7 +18,7 @@ const Experiences = ({windowWidth,IconsTitle}) => {
 
           <Row className='experiences-tab'>
           <Col className='mt-1 mb-1 d-flex justify-content-center align-items-center'>
-            <h1 className='mx-2'>My Journey</h1>
+            <h1 className='mx-2 fw-bold fs-1'>My Journey</h1>
             <IconsTitle icon={IconJourney}/>
           </Col>
 
