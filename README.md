@@ -38,5 +38,3 @@ Welcome to my personal blog, where I showcase my work, projects, and skills as a
 - **Chatgpt**
 - **My stressed brain**
 - **and my closed friends**
-
-[Visit My Blog](https://ongoing(will-update-soon).com)
