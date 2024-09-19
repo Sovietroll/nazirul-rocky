@@ -6,16 +6,7 @@ import me from './images/meDisplayPic.png';
 
 const Text = () => {
 
-  // const myPic = 
-  // <motion.div
-  // initial ={{scale: 1.2, y: 10}}
-  // animate={{scale:1, y: 0}}
-  // transition={{
-  // ease: "linear",
-  // duration: .4}}>
-  //   <img  src={me} className="img-me rounded-circle img-responsive"
-  //   />
-  // </motion.div>
+
 
 const text = 
 <p>
@@ -32,10 +23,7 @@ const text =
       </Col>    
     </Col>
 
-    <Col className='col-12'>
-        {/* {myPic}  */}
-    </Col>
-    
+
 
   </Row>
   </Container>

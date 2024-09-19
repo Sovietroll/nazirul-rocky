@@ -5,7 +5,7 @@ import { useScroll, motion, useSpring, useTransform, AnimatePresence } from "fra
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 
-const Footer = ({windowWidth}) => {
+const Footer = ({windowWidth,ButtonResume}) => {
 
 const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(false);
@@ -64,25 +64,7 @@ const useMediaQuery = (query) => {
 
        <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by {windowWidth < 768? <br/> : ''} <span className='footer-name'>nazirul rocky</span>
         <br/>
-          <motion.button
-          className='button-resume fw-bold'
-          // whileHover={{ scale: 1.1 }}
-          // whileTap={{ scale: 0.9 }}
-
-          initial={{ opacity: 0, y:-20 }}
-          whileInView={{ 
-            opacity: 1,
-            y: 0,   
-            transition: {
-            type: "spring",
-            bounce: 0.4,
-            duration: 1
-          }}}
-          whileTap={{scale: 1.1}}
-  
-          >
-          Resume
-          </motion.button>
+          <ButtonResume content='Resume'/>
         </Col>
      
         <Col className='col-12 d-flex mt-4 mb-4'>

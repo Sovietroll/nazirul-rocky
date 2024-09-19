@@ -1,8 +1,10 @@
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
-import me from './images/meDisplayPic-square.jpg';
+import meLight from './images/dplight-01-01-01.jpg';
+import meDark from './images/dpdark-01-01-01.jpg';
+
 import { useScroll, motion, useSpring, useTransform, AnimatePresence } from "framer-motion";
 
-const IntroHome = ({TransitionText}) => {
+const IntroHome = ({TransitionText,toggleDarkMode, ButtonResume,isDarkMode}) => {
 
   const myPic = 
   <motion.div
@@ -11,7 +13,7 @@ const IntroHome = ({TransitionText}) => {
   transition={{
   ease: "linear",
   duration: .4}}>
-    <img  src={me} className="img-me img-responsive"
+    <img  src={isDarkMode? meDark: meLight} className="img-me img-responsive"
     />
   </motion.div>
 
@@ -33,7 +35,7 @@ const IntroHome = ({TransitionText}) => {
 
   return ( 
 <Container fluid className='my-4'>
-  <Row>
+  <Row className='gap-2'>
 
 
 
@@ -45,9 +47,10 @@ const IntroHome = ({TransitionText}) => {
 
     <Col className='col-12 col-md-6'>
     {myPic}
-    <button onClick={() => window.scrollTo(0, document.body.scrollHeight)}>Contact Me!</button>
     </Col>
-
+    <Col>
+    <ButtonResume content='Contact Me!'/>
+    </Col>
 
  
  

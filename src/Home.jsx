@@ -10,7 +10,7 @@ import IntroHome from './IntroHome';
 import Text from './Text';
 import CarouselBootstrap from "./CarouselBootstrap";
 
-const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}) => {
+const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,ButtonResume,toggleDarkMode, isDarkMode,}) => {
 
   const [hover, setHover] = useState(false);
   const [titleIndex, setTitleIndex] = useState(0);
@@ -67,10 +67,11 @@ const IconsTitle = ({icon: IconComponents}) => {
 }
  
 
+
 return ( 
 <Container  className={`about-me`}>
 
-  <IntroHome {...{ TransitionText, TitleStart }} />
+  <IntroHome {...{ TransitionText, TitleStart,toggleDarkMode, isDarkMode,ButtonResume }} />
 
    <Text {...{}}/>               
 
