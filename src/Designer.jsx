@@ -62,9 +62,9 @@ const Designer  =
   </Col>
   <Col className="skills-col-2">
     <Col>
-     <span className="fw-bold skills-title-do">
+     <span className="fw-bold">
       {titleWhatIDo}</span>
-    <Col>
+    <Col className='skills-col-2-do'>
       {iDo}
     </Col>
   <Col  className="skills-col-3 skills-ul">

@@ -1,6 +1,7 @@
 import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import {IconLinkedin, IconEmailOutline, IconGithub } from './Icons';
+import { useScroll, motion, useSpring, useTransform, AnimatePresence } from "framer-motion";
 
 const Footer = ({}) => {
 
@@ -58,9 +59,24 @@ const useMediaQuery = (query) => {
   return ( 
     <Container fluid className="footer p-2" id="footer">
 
-       <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by 
+       <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by <span className='footer-name'>nazirul rocky</span>
         <br/>
-          <span className='footer-name'>nazirul rocky</span>
+          <motion.button
+           initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.3,
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: "spring",
+          damping: 5,
+          stiffness: 100,
+          restDelta: 0.001
+        }
+      }}
+          >
+          RESUME
+          </motion.button>
         </Col>
      
         <Col className='col-12 d-flex mt-4 mb-4'>

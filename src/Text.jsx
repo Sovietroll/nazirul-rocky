@@ -2,20 +2,20 @@ import {Row, Col, Container,Button,Collapse, Fade} from 'react-bootstrap';
 import {useEffect, useState, useRef, useCallback} from 'react';
 import { useScroll, motion, useSpring, useTransform, AnimatePresence } from "framer-motion";
 import {IconArrowExpandVertical} from './Icons';
-import me from './images/me.jpg';
+import me from './images/meDisplayPic.png';
 
 const Text = () => {
 
-  const myPic = 
-  <motion.div
-  initial ={{scale: 1.2, y: 10}}
-  animate={{scale:1, y: 0}}
-  transition={{
-  ease: "linear",
-  duration: .4}}>
-    <img  src={me} className="img-me rounded-circle img-fluid img-responsive"
-    />
-  </motion.div>
+  // const myPic = 
+  // <motion.div
+  // initial ={{scale: 1.2, y: 10}}
+  // animate={{scale:1, y: 0}}
+  // transition={{
+  // ease: "linear",
+  // duration: .4}}>
+  //   <img  src={me} className="img-me rounded-circle img-responsive"
+  //   />
+  // </motion.div>
 
 const text = 
 <p>
@@ -33,7 +33,7 @@ const text =
     </Col>
 
     <Col className='col-12'>
-        {myPic} 
+        {/* {myPic}  */}
     </Col>
     
 

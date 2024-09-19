@@ -35,7 +35,7 @@ return (
       <Developer
         title={'Developer'}
         description=
-        {'I enjoy building projects from the ground up and love transforming concepts into reality in the browser.'}
+        {'As a developer, I thrive on building projects from the ground up, transforming innovative concepts into fully functional and dynamic web experiences.'}
         titleWhatIDo={'Languages I speak:'}
         iDo={'HTML, CSS, Javascript, JSX, SASS, Git'}
         tools={'Tools:'}
@@ -52,7 +52,7 @@ return (
         imgSrc={'src/images/designer-01.svg'}
         title={'Designer'}
         description=
-        {' I prioritize straightforward content organization, minimalism, elegant design principles, and user experiences.'}
+        {' I prioritize clear content organization, minimalist aesthetics, and elegant design principles, always with a focus on creating seamless and engaging user experiences.'}
         titleWhatIDo={'I can design:'}
         iDo={'Poster, logo, photo manipulation, vector, video ads'}
         tools={'Tools:'}

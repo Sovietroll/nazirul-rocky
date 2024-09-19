@@ -109,7 +109,8 @@ a{
   .img-me {
     width: 40%;
     height: auto;
-    background-color: #53feb7;
+    border-radius: 100%;
+    
   }
   .experience-rows{
     font-size: 15px;
@@ -136,7 +137,6 @@ a{
   .img-me {
     width: 40%;
     height: auto;
-
   }
   .experience-rows{
     font-size: 25px;
@@ -304,10 +304,10 @@ hr,.vr{
 
  
   // background-color: #2E3039;
-  @include nopadmarg;
+
   overflow: hidden;
   &-row{
-    @include nopadmarg;
+    
   }
 
 
@@ -317,17 +317,22 @@ hr,.vr{
 
 
     &-1{
-      @include paddingTopBottom;
+  
 
-
+      &-desc{
+        // background-color: pink;
+        height: 9rem;
+      }
     }
     &-2{  
-      @include paddingTopBottom;
-      // background-color: green;
+      &-do{
+        // background-color: purple;
+        height: 5rem;
+      }
       }
   
     &-3{
-      @include paddingTopBottom;
+
       // background-color: rgb(255, 0, 30);
     }
   }
