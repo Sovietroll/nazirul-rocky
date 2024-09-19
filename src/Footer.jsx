@@ -2,8 +2,10 @@ import {Col, Row, Container} from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import {IconLinkedin, IconEmailOutline, IconGithub } from './Icons';
 import { useScroll, motion, useSpring, useTransform, AnimatePresence } from "framer-motion";
+import { AwesomeButton } from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
 
-const Footer = ({}) => {
+const Footer = ({windowWidth}) => {
 
 const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(false);
@@ -56,26 +58,30 @@ const useMediaQuery = (query) => {
     }
   ];
   
+
   return ( 
     <Container fluid className="footer p-2" id="footer">
 
-       <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by <span className='footer-name'>nazirul rocky</span>
+       <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by {windowWidth < 768? <br/> : ''} <span className='footer-name'>nazirul rocky</span>
         <br/>
           <motion.button
-           initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.3,
-        ease: [0, 0.71, 0.2, 1.01],
-        scale: {
-          type: "spring",
-          damping: 5,
-          stiffness: 100,
-          restDelta: 0.001
-        }
-      }}
+          className='button-resume fw-bold'
+          // whileHover={{ scale: 1.1 }}
+          // whileTap={{ scale: 0.9 }}
+
+          initial={{ opacity: 0, y:-20 }}
+          whileInView={{ 
+            opacity: 1,
+            y: 0,   
+            transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 1
+          }}}
+          whileTap={{scale: 1.1}}
+  
           >
-          RESUME
+          Resume
           </motion.button>
         </Col>
      

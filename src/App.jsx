@@ -56,7 +56,7 @@ useEffect(() => {
      <Home 
           {...{windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}}
           />
-      <Footer/>
+      <Footer {...{windowWidth}}/>
       
       </ThemeProvider>
 

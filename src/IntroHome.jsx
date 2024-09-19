@@ -45,7 +45,7 @@ const IntroHome = ({TransitionText}) => {
 
     <Col className='col-12 col-md-6'>
     {myPic}
-    <button>Resume</button>
+    <button onClick={() => window.scrollTo(0, document.body.scrollHeight)}>Contact Me!</button>
     </Col>
 
 

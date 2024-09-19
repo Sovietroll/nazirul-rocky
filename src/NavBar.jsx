@@ -14,8 +14,6 @@ const NavBar = ({toggleDarkMode, setDarkMode, isDarkMode}) => {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);/* toggle burger */
     const [click, setClick] = useState(false);
 
-    // const { scrollYProgress } = useScroll()
-    // const rotate = useTransform(scrollYProgress, [0, 1], [0,180]);
 
     const ScrollLink = Scroll.ScrollLink;
 
