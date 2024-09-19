@@ -1,30 +1,43 @@
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 
-const IntroHome = ({TransitionText,TitleStart,myPic}) => {
+const IntroHome = ({TransitionText}) => {
+
+
+
+  const greeting = 
+  <TransitionText delay = {.5}>
+  <h1 className="fs-1">
+
+    <span className='fw-bold'>Hello, I'm </span> <br/>
+    <span className='fs-2'>Nazirul Syafiq</span>
+    
+  </h1>
+  </TransitionText>; 
+
   return ( 
-    <Row  className="mt-2 mb-2 gap-3 about-me-one justify-content-center align-items-center">
-          
-    <Col className="col-md-4" >
-
-      <Col>
-        <Col className="col-12">
-          <Col className="">
-            <TransitionText delay = {.5}>
-                <h1 className="fs-4 "><span>Hi, I'm </span>Nazirul Syafiq</h1>
-            </TransitionText> 
-          </Col>
-
-        </Col>
+<Container fluid className='my-4'>
+  <Row>
 
 
-      </Col>
+
+    <Col className='f-1 col-12'>
+    {greeting}
+    </Col>
+    
+
+    <Col className='col-12'>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laudantium non est ex similique nisi cupiditate error ratione fuga inventore!
     </Col>
 
-    <Col className="col-md-6 col-12">
-      {myPic} 
-    </Col>
+
+ 
+ 
+    
+
+
 
   </Row>
+</Container>
    );
 }
  

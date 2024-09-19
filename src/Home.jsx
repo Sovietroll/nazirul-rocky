@@ -9,7 +9,6 @@ import Experiences from './Experiences'
 import IntroHome from './IntroHome';
 import Text from './Text';
 import CarouselBootstrap from "./CarouselBootstrap";
-import me from './images/me.jpg';
 
 const Home = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setIsClickedTwo,toggleDarkMode, isDarkMode}) => {
 
@@ -55,16 +54,7 @@ const animationDuration = () =>{
   }
 
 
-const myPic = 
-  <motion.div
-  initial ={{scale: 1.2, y: 10}}
-  animate={{scale:1, y: 0}}
-  transition={{
-  ease: "linear",
-  duration: .4}}>
-    <img  src={me} className="img-me rounded img-fluid img-responsive"
-    />
-  </motion.div>
+
 
 
 
@@ -80,9 +70,9 @@ const IconsTitle = ({icon: IconComponents}) => {
 return ( 
 <Container  className={`about-me`}>
 
-  <IntroHome {...{ TransitionText, TitleStart, myPic }} />
-                  
-  <Text/>
+  <IntroHome {...{ TransitionText, TitleStart }} />
+
+   <Text {...{}}/>               
 
   <hr className="line border-1 rounded my-4"></hr>
 

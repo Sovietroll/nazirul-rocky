@@ -8,7 +8,7 @@ export const allIngredients = [
       icon: '🍅', 
       label: 'Now', 
       labelSelected: '2023',
-      description: 'Self Learn Web Developer.',
+      description: 'Self Taught Developer.',
     },
 
     {
@@ -58,7 +58,7 @@ export const allIngredients = [
   export const lists = [
     {
       id:1,
-      list: 'Building responsive and dynamic web experiences.',
+      list: 'Building responsive and dynamic apps and web experiences.',
       // listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
       icon: 
       <PortfolioImage

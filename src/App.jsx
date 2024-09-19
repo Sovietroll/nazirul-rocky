@@ -17,11 +17,6 @@ function App() {
 
   // document.title= "nazirul rocky";
 
-  const logo =
-  <img className="lg" 
-  src='src/images/newLogo.svg' alt="logo" fill={'white'}
-  onClick = {() => {window.scrollTo(0,0);}}
-  />
 
   const handleWindowResize = useCallback(event => {
     setWindowWidth(window.innerWidth);

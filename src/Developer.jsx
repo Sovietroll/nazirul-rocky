@@ -50,7 +50,7 @@ const Developer =
    <IconSkills icon={IconDeveloper}/>
   </Col >
 
-  <Col className="skills-col-1 fs-4 fw-bold col-12 skills-title">
+  <Col className="skills-col-1 fs-2 col-12 skills-title">
     {title}
   </Col >
 
