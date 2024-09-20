@@ -25,7 +25,7 @@ const Skills = ({windowWidth,buttonRef,isClicked, setIsClicked,isClickedTwo,setI
 return (
 
 <Container className="skills" >
-  <Row className="g-1" >
+  <Row className="g-1 gap-2" >
     <Col className='col-12 my-2 d-flex justify-content-center align-items-center'>
       <h1 className='mx-2 fw-bold '>Expertise</h1>  
       <IconsTitle icon={IconExpertise}/> 

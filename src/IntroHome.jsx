@@ -20,17 +20,17 @@ const IntroHome = ({TransitionText,toggleDarkMode, ButtonResume,isDarkMode}) => 
 
   const greeting = 
   <TransitionText delay = {.5}>
-  <h1 className="fs-1">
+  <h1 className="fw-bold">
 
-    <span className='fw-bold'>Hello, I'm </span> <br/>
-    <span className='fs-2'>Nazirul Syafiq</span>
+    <span className=''>Hello, I'm </span> <br/>
+    <span className='' style={{color: '#009785'}}>Nazirul Syafiq</span>
     
   </h1>
   </TransitionText>; 
 
   const intro = 
     <>
-    A self-taught web developer with a strong passion for creating tailored, innovative digital solutions. I'm eager to learn new skills and adapt quickly to new technologies.
+    A self-taught web developer with a passion for learning new skills and quickly adapting to emerging technologies.
     </>
 
 const text = 
@@ -40,15 +40,16 @@ In 2023, I began creating a custom website on WordPress as a hobby and quickly d
 
   return ( 
 <Container fluid className=''>
-  <Row className='gap-0'>
+  <Row className='gap-0 my-2 align-items-center justify-content-center'>
 
 
 
     <Col className='f-1 col-12 col-md-6 text-md-start p-3'>
     {greeting}
     {intro}
-      <Col className='d-none d-md-block'>
-        <h2>About Me</h2>
+    {/* DESKTOP VERSION */}
+      <Col className='d-none d-md-block my-2'>
+        <h2 className='fw-bold'>About Me</h2>
         {text}
       </Col>
     </Col>

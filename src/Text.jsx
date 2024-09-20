@@ -14,9 +14,10 @@ In 2023, I began creating a custom website on WordPress as a hobby and quickly d
 </p>;
 
   return ( 
+    // mobile version
     <Container fluid className='d-md-none'>
     <Row>
-      <h1>About me</h1>
+      <h1 className='fw-bold'>About me</h1>
     <Col className='col'>
       <Col className='col-12'>
         {text}
