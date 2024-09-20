@@ -10,7 +10,7 @@ const Text = ({}) => {
 
 const text = 
 <p>
-  In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
+In 2023, I began creating a custom website on WordPress as a hobby and quickly developed a passion for coding. Now, I'm expanding my skills in various languages and tools to pursue a career as a Front-End Developer, with the long-term goal of becoming a Full-Stack Developer.
 </p>;
 
   return ( 

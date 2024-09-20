@@ -62,7 +62,7 @@ const useMediaQuery = (query) => {
   return ( 
     <Container fluid className="footer p-2" id="footer">
 
-       <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by {windowWidth < 768? <br/> : ''} <span className='footer-name'>nazirul rocky</span>
+       <Col className="col-12 mb-2 mt-4 fw-light">Website design and code in React.js by {windowWidth < 768? <br/> : ''} <span className='footer-name'>nazirul rocky</span>
         <br/>
           <Col>
           <ButtonResume content='Resume' id={2}/>

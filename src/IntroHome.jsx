@@ -30,12 +30,12 @@ const IntroHome = ({TransitionText,toggleDarkMode, ButtonResume,isDarkMode}) => 
 
   const intro = 
     <>
-    A self-taught web developer with a strong passion for creating tailored, innovative digital solutions!
+    A self-taught web developer with a strong passion for creating tailored, innovative digital solutions. I'm eager to learn new skills and adapt quickly to new technologies.
     </>
 
 const text = 
 <p>
-  In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
+In 2023, I began creating a custom website on WordPress as a hobby and quickly developed a passion for coding. Now, I'm expanding my skills in various languages and tools to pursue a career as a Front-End Developer, with the long-term goal of becoming a Full-Stack Developer.
 </p>;
 
   return ( 
@@ -54,11 +54,11 @@ const text =
     </Col>
     
 
-    <Col className='col-12 col-md-6  align-items-center justify-content-center p-2' style={{backgroundColor: 'pink'}}>
+    <Col className='col-12 col-md-6  align-items-center justify-content-center p-2'>
     {myPic}
 
 
-    <Col className='col-12'  style={{backgroundColor: 'purple'}}>
+    <Col className='col-12' >
       <ButtonResume content='Contact Me!' id={1}/>  
     </Col>
 

@@ -80,7 +80,7 @@ const variant = {
 
 
 const ButtonResume = ({content,id}) => (
-  <a href={content === 'Resume' ? 'https://www.google.com/' : null}>
+  <a href={content === 'Resume' ? 'https://drive.google.com/file/d/1a6rkPxxt_dtIePPV2LAZAPDDr-jtq3bs/view?usp=sharing' : null}>
   <motion.button
   id={id}
     onClick={
