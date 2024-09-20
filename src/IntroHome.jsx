@@ -33,24 +33,41 @@ const IntroHome = ({TransitionText,toggleDarkMode, ButtonResume,isDarkMode}) => 
     A self-taught web developer with a strong passion for creating tailored, innovative digital solutions!
     </>
 
+const text = 
+<p>
+  In 2023, I started building a custom website on WordPress for fun and quickly got hooked on coding. Now, I'm learning different languages and tools to become a Front-End Developer, with the goal of eventually becoming a Full-Stack Developer.
+</p>;
+
   return ( 
-<Container fluid className='my-4'>
-  <Row className='gap-2'>
+<Container fluid className=''>
+  <Row className='gap-0'>
 
 
 
-    <Col className='f-1 col-12 col-md-6 text-md-start'>
+    <Col className='f-1 col-12 col-md-6 text-md-start p-3'>
     {greeting}
     {intro}
+      <Col className='d-none d-md-block'>
+        <h2>About Me</h2>
+        {text}
+      </Col>
     </Col>
     
 
-    <Col className='col-12 col-md-6'>
+    <Col className='col-12 col-md-6  align-items-center justify-content-center p-2' style={{backgroundColor: 'pink'}}>
     {myPic}
+
+
+    <Col className='col-12'  style={{backgroundColor: 'purple'}}>
+      <ButtonResume content='Contact Me!' id={1}/>  
     </Col>
-    <Col>
-    <ButtonResume content='Contact Me!'/>
+
     </Col>
+
+    {/* <Col>
+    <ButtonResume content='Contact Me!' id={1}/>  
+    </Col> */}
+  
 
  
  

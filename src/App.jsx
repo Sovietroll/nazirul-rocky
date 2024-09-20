@@ -49,30 +49,53 @@ const bgColor = {
   }
   ,
   light: {
-    backgroundColor: '#007567',
+    backgroundColor: '#009785',
     color: 'white'
   }
 } 
 
+const variant = {
+  contactMe: 
+  {
+    opacity: 1,
+    y: 0,
+    transition: 
+      {type: "spring",
+        bounce: .6,
+        duration: 1.5
+      }
+  }
+  ,   
+  resume:
+  {
+    opacity: 1,
+    scale: 1.2,
+    transition: 
+    {type: "spring",
+      bounce: .7,
+      duration: 1.5
+    }
+  }  
+}
 
-const ButtonResume = ({content}) => (
+
+const ButtonResume = ({content,id}) => (
+  <a href={content === 'Resume' ? 'https://www.google.com/' : null}>
   <motion.button
-    onClick={content === 'Contact Me!'? () => window.scrollTo(0,document.body.scrollHeight) : null}
+  id={id}
+    onClick={
+      content === 'Contact Me!'? () => window.scrollTo(0,document.body.scrollHeight)
+      : () => {}}
     className='button-resume fw-bold'
+    variants={variant}
     initial={{ opacity: 0, y:-20 }}
-    whileInView={{ 
-      opacity: 1,
-      y: 0,   
-      transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 1
-    }}}
-    whileTap={{scale: 1.1}}
+    whileInView={'contactMe'}
+    whileTap={{scale: 1.1,}}
     style={isDarkMode? bgColor.dark : bgColor.light}
     >
       {content}
   </motion.button>
+  </a>
 )
 
 

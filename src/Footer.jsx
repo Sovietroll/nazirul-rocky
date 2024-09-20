@@ -64,7 +64,9 @@ const useMediaQuery = (query) => {
 
        <Col className="col-12 mb-2 mt-4 fw-light">Website design and code by {windowWidth < 768? <br/> : ''} <span className='footer-name'>nazirul rocky</span>
         <br/>
-          <ButtonResume content='Resume'/>
+          <Col>
+          <ButtonResume content='Resume' id={2}/>
+          </Col>
         </Col>
      
         <Col className='col-12 d-flex mt-4 mb-4'>
