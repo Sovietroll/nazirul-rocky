@@ -14,7 +14,7 @@ const Experiences = ({windowWidth,IconsTitle}) => {
 
 
   return ( 
-    <Container fluid className="experiences overflow-hidden">
+    <Container fluid className='experiences'>
 
           <Row className='experiences-tab'>
           <Col className='mt-1 mb-1 d-flex justify-content-center align-items-center'>
@@ -76,6 +76,10 @@ const Experiences = ({windowWidth,IconsTitle}) => {
 
                   
                       {desc.icon}
+                      {desc.icon2}
+                      {desc.icon3}
+                      {desc.icon4}
+                      {desc.icon5}
                        
                    
                     </ul>

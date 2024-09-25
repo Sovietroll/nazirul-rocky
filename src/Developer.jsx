@@ -1,6 +1,6 @@
 import {Row, Col, Container,Button, Popover,OverlayTrigger,Tooltip ,Overlay  } from 'react-bootstrap';
 import { useState, useRef } from 'react';
-import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact,IconDeveloper} from './Icons';
+import {IconVsCode,IconBootstrapFill, IconSquareGithub, IconFramer,IconReact,IconDeveloper,IconNode} from './Icons';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 
 
@@ -34,12 +34,18 @@ const Developer =
       label: 'Framer Motion',
       seticon: <IconFramer/>
     }
-    ,   {
+    ,   
+    {
       id: 5,
       label: 'React',
       seticon: <IconReact/>
     }
     ,
+    {
+      id: 6,
+      label: 'Node.js',
+      seticon: <IconNode/>
+    }
   ]
   const [selected, setSelected] = useState(Icons[0]);
 

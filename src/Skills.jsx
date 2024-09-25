@@ -39,8 +39,7 @@ return (
         titleWhatIDo={'Languages I speak:'}
         iDo={'HTML, CSS, Javascript, JSX, SASS, Git'}
         tools={'Tools:'}
-        toolsList1={
-        <IconBootstrapFill/> }
+        // toolsList1={<IconBootstrapFill/> }
         {...{isClicked,setIsClicked,buttonRef,IconSkills,iconSizeDesktop}}
       />
     </Col>

@@ -102,6 +102,10 @@ a{
   font-weight: bold;
   text-decoration: none;
 }
+.tab-content{
+  height: 100%;
+}
+
 
 
 //! XS SIZE
@@ -124,9 +128,9 @@ a{
     width: 30%;
   }
   
-.experiences{
-  height: 14rem;
-}
+// .experiences{
+//   height: 14rem;
+// }
 .testimonials{
   height: 22rem;
 }

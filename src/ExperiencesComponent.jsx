@@ -1,4 +1,4 @@
-import {IconGoogleDrive,IconGithub} from './Icons';
+import {IconGoogleDrive,IconGithub,GifImages} from './Icons';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 
 export const allIngredients = [
@@ -65,11 +65,16 @@ export const allIngredients = [
         links={'https://github.com/Sovietroll'}
         icon={IconGithub}
       />
+      ,
+      icon2: <GifImages/>,
+      icon3: <GifImages/>,
+      icon4: <GifImages/>,
+      icon5: <GifImages/>
     }
     ,
     {
       id:2,
-      list: 'Creating impactful digital media through design, video, and motion graphics.',
+      list: 'Creating impactful digital media through design, video, and motion graphics. ',
       // listTwo: 'Collaborate with clients or project managers.',
       icon: 
       <PortfolioImage
