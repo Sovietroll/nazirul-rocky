@@ -1,0 +1,22 @@
+           {selectedTab && 
+              (
+              <>
+                <span className='fw-bold'>{selectedTab.description}</span> <br/>
+
+                {lists.filter((desc) => desc.id === selectedTab.id).map(
+                  desc => (
+                    <ul key={desc.id} className='mainDesc '>
+
+                      <li>{desc.list}</li>
+                      <li>{desc.listTwo}</li>
+                      {desc.icon}
+                      {desc.icon2}
+                      {/* {desc.icon3}
+                      {desc.icon4}
+                      {desc.icon5} */}
+                    </ul>
+                  )
+                )}
+
+              </>
+              )}

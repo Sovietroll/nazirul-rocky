@@ -105,7 +105,12 @@ a{
 .tab-content{
   height: 100%;
 }
-
+.gif-static{
+  background-color: pink;
+}
+.gif-static:hover{
+  background-color: purple;
+}
 
 
 //! XS SIZE

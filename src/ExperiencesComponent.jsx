@@ -1,5 +1,7 @@
-import {IconGoogleDrive,IconGithub,GifImages} from './Icons';
+import {IconGoogleDrive,IconGithub,GifStatic,GifAnimation} from './Icons';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
+import { useState } from 'react';
+
 
 export const allIngredients = [
 
@@ -55,8 +57,21 @@ export const allIngredients = [
     )
   }
 
+  const Gif = ({icon:IconComponent}) => {
+    return(
+      <IconComponent />
+    )
+  }
+
+  const MouseIn = ({event,gif}) => {
+    // <IconComponent/>
+    console.log('IN')
+  }
+  // const [playGif,setPlayGif] = useState(false);
+
   export const lists = [
     {
+      
       id:1,
       list: 'Building responsive and dynamic apps and web experiences.',
       // listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
@@ -66,10 +81,13 @@ export const allIngredients = [
         icon={IconGithub}
       />
       ,
-      icon2: <GifImages/>,
-      icon3: <GifImages/>,
-      icon4: <GifImages/>,
-      icon5: <GifImages/>
+      icon2: 
+      <div onMouseOver={(event) => MouseIn()}>
+          test
+      </div>
+      // icon3: <GifImages/>,
+      // icon4: <GifImages/>,
+      // icon5: <GifImages/>
     }
     ,
     {

@@ -1,8 +1,9 @@
 import {Row, Col, Container,Button,/* Collapse */ Fade} from 'react-bootstrap';
 import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
-import { initialTabs as tabs, lists } from './ExperiencesComponent';
+import { initialTabs as tabs, /* lists */ } from './ExperiencesComponent';
 import { useState } from 'react';
 import {IconPaperPlane,IconJourney} from './Icons';
+import List from './List';
 
 const Experiences = ({windowWidth,IconsTitle}) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -62,33 +63,8 @@ const Experiences = ({windowWidth,IconsTitle}) => {
                 transition={{type: 'spring', damping: 7, stiffness: 100, duration: .1}}
               >
                   
-              {selectedTab && 
-              (
-              <>
-                <span className='fw-bold'>{selectedTab.description}</span> <br/>
-
-                {lists.filter((desc) => desc.id === selectedTab.id).map(
-                  desc => (
-                    <ul key={desc.id} className='mainDesc '>
-
-                      <li>{desc.list}</li>
-                      <li>{desc.listTwo}</li>
-
-                  
-                      {desc.icon}
-                      {desc.icon2}
-                      {desc.icon3}
-                      {desc.icon4}
-                      {desc.icon5}
-                       
-                   
-                    </ul>
-                  )
-                )}
-
-              </>
-              )}
-
+              <List {...{selectedTab}} />
+ 
               
               </motion.div>
             </AnimatePresence>
