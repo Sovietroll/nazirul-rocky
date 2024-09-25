@@ -15,7 +15,7 @@ const Experiences = ({windowWidth,IconsTitle}) => {
 
   const GifRepo = ({src,widthHeight ='150px'}) => {
     return(
-      <img src={src} style={{borderRadius: '10px',width: widthHeight, height: widthHeight}}/>
+      <img src={src} style={{borderRadius: '10px',width: widthHeight, height: widthHeight, margin: '5px'}}/>
     )
    }
   

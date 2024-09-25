@@ -51,23 +51,20 @@ const List = ({selectedTab,GifAnimation,GifStatic,GifSecond}) => {
   const Gif = () => {
 
     return(
-        <Col className='col-12 d-inline'>
+      <>
           {plays.map((play) => (
-          <div 
-            className='' 
+          <Col className='p-0 d-inline'
             key={play.id} 
             onMouseOver={() => setPlayGif(play.id)} 
             onMouseLeave={() => setPlayGif(false)}
           >
-              <a href={play.link} key={play.id} 
-            onMouseOver={() => setPlayGif(play.id)} 
-            onMouseLeave={() => setPlayGif(false)}>
+              <a href={play.link}>
               {playGif === play.id? play.gifPlay : play.gifStatic}
               </a>
-            </div>
+            </Col>
      
           ))}
-        </Col>
+          </>
         // <IconComponent onMouseOver={() => setPlayGif(true)} onMouseLeave={() => setPlayGif(false)}/>
     
     )
@@ -127,18 +124,22 @@ const List = ({selectedTab,GifAnimation,GifStatic,GifSecond}) => {
 
     {lists.filter((desc) => desc.id === selectedTab.id).map(
       desc => (
-        <ul className='mainDesc' key={desc.id}>
+        <Col key={desc.id}>
+        <ul className='mainDesc '>
 
           <li>{desc.list}</li>
           <li>{desc.listTwo}</li>
 
           <li>{desc.icon}</li>
-          <Col className='d-flex img-responsive'>
-          {desc.icon2}                    
-          </Col>
+        
+        
 
         </ul>
 
+        {desc.icon2}                    
+
+
+        </Col>
      
         
    
