@@ -7,7 +7,6 @@ import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
 const Developer = 
   ({buttonRef,isClicked,setIsClicked,imgSrc, title, description, titleWhatIDo, iDo, tools,IconSkills,}) => {
   
-  //  const [isClicked, setIsClicked] = useState(false);
 
 
   const Icons = [

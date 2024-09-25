@@ -5,6 +5,7 @@ import { useState } from 'react';
 import {IconPaperPlane,IconJourney} from './Icons';
 import List from './List';
 
+
 const Experiences = ({windowWidth,IconsTitle}) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
@@ -12,6 +13,29 @@ const Experiences = ({windowWidth,IconsTitle}) => {
   const centerText = 'justify-content-center align-items-center d-flex';
   const iconSizeDesktop = windowWidth > 768;
 
+  const GifRepo = ({src,widthHeight ='150px'}) => {
+    return(
+      <img src={src} style={{borderRadius: '10px',width: widthHeight, height: widthHeight}}/>
+    )
+   }
+  
+   const GifAnimation = ({width}) => {
+    return (
+      <GifRepo src={'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2V1cXU5ZXpzMGNpbHo3M2l0a3JmNGQyOXlyOHNidjc0NXFnNXlldyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SRhvx2xUlmhiekE8MC/giphy.gif'}
+      />
+    )
+   }
+   const GifStatic = ({width}) => {
+    return (
+      <GifRepo src={'src/images/giphy-01.jpg'}/>
+    )
+  }
+   const GifSecond = ({width}) => {
+    return(
+      <GifRepo src={'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVkNHVmbXpiZW80ZXpjdTAxa21mZTBvZzhkeGV3eGl0cWxneTR2dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dRvEZLV0ORAmHT1L5u/giphy.gif'}
+      />
+    )
+  }
 
 
   return ( 
@@ -63,7 +87,7 @@ const Experiences = ({windowWidth,IconsTitle}) => {
                 transition={{type: 'spring', damping: 7, stiffness: 100, duration: .1}}
               >
                   
-              <List {...{selectedTab}} />
+              <List {...{selectedTab,GifAnimation,GifStatic,GifSecond}} />
  
               
               </motion.div>

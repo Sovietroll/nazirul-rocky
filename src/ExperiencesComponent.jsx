@@ -1,7 +1,3 @@
-import {IconGoogleDrive,IconGithub,GifStatic,GifAnimation} from './Icons';
-import {AnimatePresence, motion, useAnimationControls } from "framer-motion";
-import { useState } from 'react';
-
 
 export const allIngredients = [
 
@@ -48,74 +44,6 @@ export const allIngredients = [
 
   ]
 
-  const PortfolioImage = ({links, icon: IconComponent}) => {
-    return(
-      <a className ='portfolio-links fw-semibold p-1 mt-1 rounded justify-content-center align-items-center d-flex' href={links}>
-        Portfolio 
-         <IconComponent width = '30px' height= '30px'/>
-      </a>
-    )
-  }
-
-  const Gif = ({icon:IconComponent}) => {
-    return(
-      <IconComponent />
-    )
-  }
-
-  const MouseIn = ({event,gif}) => {
-    // <IconComponent/>
-    console.log('IN')
-  }
-  // const [playGif,setPlayGif] = useState(false);
-
-  export const lists = [
-    {
-      
-      id:1,
-      list: 'Building responsive and dynamic apps and web experiences.',
-      // listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
-      icon: 
-      <PortfolioImage
-        links={'https://github.com/Sovietroll'}
-        icon={IconGithub}
-      />
-      ,
-      icon2: 
-      <div onMouseOver={(event) => MouseIn()}>
-          test
-      </div>
-      // icon3: <GifImages/>,
-      // icon4: <GifImages/>,
-      // icon5: <GifImages/>
-    }
-    ,
-    {
-      id:2,
-      list: 'Creating impactful digital media through design, video, and motion graphics. ',
-      // listTwo: 'Collaborate with clients or project managers.',
-      icon: 
-      <PortfolioImage
-        links={'https://drive.google.com/drive/folders/1W1z3KpBAFrqRBIr3EBMvUYBcNdbskzlt?usp=sharing'}
-        icon={IconGoogleDrive}
-      />
-    }
-    ,
-    {
-      id:3,
-      list: 'Opened my first ever agriculture company.',
-    }
-    ,
-    {
-      id:4,
-      list: 'Design visually appealing graphics.',
-      icon: 
-      <PortfolioImage
-        links={'https://drive.google.com/drive/folders/1W1z3KpBAFrqRBIr3EBMvUYBcNdbskzlt?usp=sharing'}
-        icon={IconGoogleDrive}
-      />
-    }
-  ]
 
   const [tomato,orange, apple, lettuce ] = allIngredients;
 

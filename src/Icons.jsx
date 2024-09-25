@@ -573,16 +573,3 @@ export const MyLogo = ({widthHeight}) => {
   );
  }
 
- export const GifAnimation = ({widthHeight = '200px'}) => {
-  return (
-   
-<img style={{borderRadius: '10px'}}src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2V1cXU5ZXpzMGNpbHo3M2l0a3JmNGQyOXlyOHNidjc0NXFnNXlldyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SRhvx2xUlmhiekE8MC/giphy.gif" width={widthHeight}height={widthHeight}></img>
-   
-  )
- }
-
- export const GifStatic = ({widthHeight = '200px'}) => {
-  return (
-    <img src='src\images\giphy-01.jpg'  width={widthHeight}height={widthHeight}/>
-  )
-}

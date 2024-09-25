@@ -1,10 +1,10 @@
-import {IconGoogleDrive,IconGithub,GifStatic,GifAnimation} from './Icons';
+import {IconGoogleDrive,IconGithub} from './Icons';
 import { useState } from 'react';
+import {Row, Col, Container,Button, Popover,OverlayTrigger,Tooltip ,Overlay  } from 'react-bootstrap';
 
 
-const List = ({selectedTab}) => {
-  const [playGif,setPlayGif] = useState(false);
-
+const List = ({selectedTab,GifAnimation,GifStatic,GifSecond}) => {
+ 
   const PortfolioImage = ({links, icon: IconComponent}) => {
     return(
       <a className ='portfolio-links fw-semibold p-1 mt-1 rounded justify-content-center align-items-center d-flex' href={links}>
@@ -14,15 +14,62 @@ const List = ({selectedTab}) => {
     )
   }
 
-  const MouseIn = ({event,gif}) => {
-    // <IconComponent/>
-    console.log('IN')
-  }
 
-  const Gif = ({icon:IconComponent}) => {
+  const plays = 
+  [
+    {
+      id: 1,
+      gifStatic: <GifStatic/>,
+      gifPlay: <GifAnimation/>,
+      link: 'https://www.google.com/'
+    }
+    ,
+    {
+      id: 2,
+      gifStatic: <GifStatic/>,
+      gifPlay: <GifSecond/>,
+      link: 'https://www.bing.com/'
+    }
+    ,
+    {
+      id: 3,
+      gifStatic: <GifStatic/>,
+      gifPlay: <GifSecond/>,
+      link: 'https://www.bing.com/'
+    }
+    ,
+    {
+      id: 4,
+      gifStatic: <GifStatic/>,
+      gifPlay: <GifSecond/>,
+      link: 'https://www.bing.com/'
+    }
+    
+  ]
+  const [playGif,setPlayGif] = useState(plays[0]);
+
+  const Gif = () => {
+
     return(
-      <IconComponent />
-
+        <Col className='col-12 d-inline'>
+          {plays.map((play) => (
+          <div 
+            className='' 
+            key={play.id} 
+            onMouseOver={() => setPlayGif(play.id)} 
+            onMouseLeave={() => setPlayGif(false)}
+          >
+              <a href={play.link} key={play.id} 
+            onMouseOver={() => setPlayGif(play.id)} 
+            onMouseLeave={() => setPlayGif(false)}>
+              {playGif === play.id? play.gifPlay : play.gifStatic}
+              </a>
+            </div>
+     
+          ))}
+        </Col>
+        // <IconComponent onMouseOver={() => setPlayGif(true)} onMouseLeave={() => setPlayGif(false)}/>
+    
     )
   }
 
@@ -38,10 +85,8 @@ const List = ({selectedTab}) => {
         icon={IconGithub}
       />
       ,
-      icon2: 
-      <div onMouseOver={() => setPlayGif(true)} onMouseLeave={() => setPlayGif(false)}>
-          <Gif icon={playGif? GifAnimation : GifStatic}/>
-      </div>
+      icon2: <Gif/>,
+      // icon3: <Gif icon={playGif? GifAnimation : GifStatic}/>
       // icon3: <GifImages/>,
       // icon4: <GifImages/>,
       // icon5: <GifImages/>
@@ -82,17 +127,22 @@ const List = ({selectedTab}) => {
 
     {lists.filter((desc) => desc.id === selectedTab.id).map(
       desc => (
-        <ul key={desc.id} className='mainDesc '>
+        <ul className='mainDesc' key={desc.id}>
 
           <li>{desc.list}</li>
           <li>{desc.listTwo}</li>
 
-      
-          {desc.icon}
-          {desc.icon2}
-           
-       
+          <li>{desc.icon}</li>
+          <Col className='d-flex img-responsive'>
+          {desc.icon2}                    
+          </Col>
+
         </ul>
+
+     
+        
+   
+      
       )
     )}
 
