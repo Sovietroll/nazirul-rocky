@@ -46,7 +46,7 @@ const CarouselBootstrap = ({IconsTitle}) => {
           caption = 
             {'"Amazing job on our website. Creativity and technical expertise made the site both beautiful and easy to use."'}
           nameCaption={'Syaheera'}
-          locationCaption={'W&G CEO'}
+          locationCaption={'W&G Founder'}
         />
       </Carousel.Item>
 
