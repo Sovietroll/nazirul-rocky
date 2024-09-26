@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {Row, Col, Container,Button, Popover,OverlayTrigger,Tooltip ,Overlay  } from 'react-bootstrap';
 
 
-const List = ({selectedTab,GifAnimation,GifStatic,GifSecond}) => {
+const List = ({selectedTab,GifOneStatic,GifTwoStatic,GifOneAnimated,GifSecondAnimated}) => {
  
   const PortfolioImage = ({links, icon: IconComponent}) => {
     return(
@@ -19,30 +19,15 @@ const List = ({selectedTab,GifAnimation,GifStatic,GifSecond}) => {
   [
     {
       id: 1,
-      gifStatic: <GifStatic/>,
-      gifPlay: <GifAnimation/>,
-      link: 'https://www.google.com/'
+      gifStatic: <GifOneStatic/>,
+      gifPlay: <GifOneAnimated/>,
     }
     ,
     {
       id: 2,
-      gifStatic: <GifStatic/>,
-      gifPlay: <GifSecond/>,
-      link: 'https://www.bing.com/'
-    }
-    ,
-    {
-      id: 3,
-      gifStatic: <GifStatic/>,
-      gifPlay: <GifSecond/>,
-      link: 'https://www.bing.com/'
-    }
-    ,
-    {
-      id: 4,
-      gifStatic: <GifStatic/>,
-      gifPlay: <GifSecond/>,
-      link: 'https://www.bing.com/'
+      gifStatic: <GifTwoStatic/>,
+      gifPlay: <GifSecondAnimated/>,
+      link: 'https://sovietroll.github.io/JS-shelfStock/'
     }
     
   ]
@@ -75,18 +60,8 @@ const List = ({selectedTab,GifAnimation,GifStatic,GifSecond}) => {
       
       id:1,
       list: 'Building responsive and dynamic apps and web experiences.',
-      // listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
-      icon: 
-      <PortfolioImage
-        links={'https://github.com/Sovietroll'}
-        icon={IconGithub}
-      />
-      ,
+      listTwo: 'Targeting to become official Full Stack developer at the height of my career.',
       icon2: <Gif/>,
-      // icon3: <Gif icon={playGif? GifAnimation : GifStatic}/>
-      // icon3: <GifImages/>,
-      // icon4: <GifImages/>,
-      // icon5: <GifImages/>
     }
     ,
     {

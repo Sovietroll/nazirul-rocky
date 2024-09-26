@@ -39,7 +39,7 @@ const useMediaQuery = (query) => {
     {
       id:1,
       icon: IconLinkedin,
-      url: 'https://www.linkedin.com/in/nazirul-syafiq-young-rockie-359289311/',
+      url: 'https://www.linkedin.com/in/nazirul-syafiq',
 
     }
     ,

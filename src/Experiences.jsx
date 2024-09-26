@@ -4,6 +4,8 @@ import { initialTabs as tabs, /* lists */ } from './ExperiencesComponent';
 import { useState } from 'react';
 import {IconPaperPlane,IconJourney} from './Icons';
 import List from './List';
+import StaticOne from './images/thumbnail1project-01.jpg';
+import StaticTwo from './images/thumbnail2project-01.jpg';
 
 // 
 const Experiences = ({windowWidth,IconsTitle}) => {
@@ -13,26 +15,32 @@ const Experiences = ({windowWidth,IconsTitle}) => {
   const centerText = 'justify-content-center align-items-center d-flex';
   const iconSizeDesktop = windowWidth > 768;
 
-  const GifRepo = ({src,widthHeight ='150px'}) => {
+  const GifRepo = ({src}) => {
     return(
-      <img src={src} style={{borderRadius: '10px',width: widthHeight, height: widthHeight, margin: '5px'}}/>
+      <img src={src} style={{borderRadius: '10px',width: '150px', height: '250px', margin: '5px'}}/>
     )
    }
   
-   const GifAnimation = ({width}) => {
+   const GifOneAnimated = ({width}) => {
     return (
-      <GifRepo src={'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2V1cXU5ZXpzMGNpbHo3M2l0a3JmNGQyOXlyOHNidjc0NXFnNXlldyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SRhvx2xUlmhiekE8MC/giphy.gif'}
+      <GifRepo src={'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNqYnpuNmtzeHYzYWU0ZnE1azIxOW1kcXMybzlsbDQ4aWNtMnp5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GVDxefwHDmUGVhLbgM/giphy.gif'}
       />
     )
    }
-   const GifStatic = ({width}) => {
+   const GifOneStatic = ({width}) => {
     return (
-      <GifRepo src={'src/images/giphy-01.jpg'}/>
+      <GifRepo src={StaticOne}/>
     )
   }
-   const GifSecond = ({width}) => {
+  const GifTwoStatic = ({width}) => {
+    return (
+      <GifRepo src={StaticTwo}/>
+    )
+  }
+
+   const GifSecondAnimated = ({width}) => {
     return(
-      <GifRepo src={'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVkNHVmbXpiZW80ZXpjdTAxa21mZTBvZzhkeGV3eGl0cWxneTR2dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dRvEZLV0ORAmHT1L5u/giphy.gif'}
+      <GifRepo src={'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtzcnB5aWNpeXkwb3VjcXU0bXJzZ3IwaDhzbXR3Mm16ZWZjNWU5biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/N0fXlymbNPizIRiqEZ/giphy.gif'}
       />
     )
   }
@@ -87,7 +95,7 @@ const Experiences = ({windowWidth,IconsTitle}) => {
                 transition={{type: 'spring', damping: 7, stiffness: 100, duration: .1}}
               >
                   
-              <List {...{selectedTab,GifAnimation,GifStatic,GifSecond}} />
+              <List {...{selectedTab,GifOneAnimated,GifOneStatic,GifOneStatic,GifTwoStatic,GifSecondAnimated}} />
  
               
               </motion.div>
